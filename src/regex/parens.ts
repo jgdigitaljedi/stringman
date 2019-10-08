@@ -6,7 +6,7 @@
  * ```js
  * const parens = require('stringman').parens; // or `import {parens} from 'stringman'`;
  * const noParens = parens.remove('this will come back (and this will be removed)');
- * console.log('noParens'); // 'this will come back'
+ * console.log(noParens); // 'this will come back'
  * ```
  * 
  * @param {string} str
