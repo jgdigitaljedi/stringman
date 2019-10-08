@@ -11,3 +11,7 @@ test('verifies string is semver', () => {
 test('verifies string is NOT semver', () => {
   expect(semver.isValid('not semver 10')).toBe(false);
 });
+
+test('removes semver from string', () => {
+  expect(semver.remove('remove this stuff 10.11.12')).toBe('remove this stuff');
+});
