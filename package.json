@@ -9,7 +9,7 @@
     "test": "jest --config jestconfig.json",
     "_clear": "rimraf lib/*",
     "_tsc": "tsc",
-    "build": "run-s _clear _tsc",
+    "build": "run-s _clear _tsc docs",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
@@ -17,7 +17,8 @@
     "postversion": "git push && git push --tags",
     "watch": "tsc --watch",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "docs": "typedoc --out docs/ src/"
   },
   "keywords": [
     "javascript",
@@ -35,6 +36,7 @@
     "ts-jest": "^24.1.0",
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.15.0",
     "typescript": "^3.6.3",
     "uglify-es": "^3.3.9"
   }
