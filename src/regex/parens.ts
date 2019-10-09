@@ -1,4 +1,3 @@
-
 /**
  * Takes string and returns string with parenthesis and contain between parenthesis removed
  *
@@ -8,7 +7,7 @@
  * const noParens = parens.remove('this will come back (and this will be removed)');
  * console.log(noParens); // 'this will come back'
  * ```
- * 
+ *
  * @param {string} str
  * @returns {string}
  */
@@ -18,6 +17,13 @@ function remove(str: string): string {
 
 /**
  * Takes string and returns array of strings containing what was inside any number of sets of parenthesis
+ *
+ * Basic usage example:
+ * ```js
+ * const parens = require('stringman').parens; // or `import {parens} from 'stringman'`;
+ * const fromInside = parens.inside('this is ignored (and this is returned)');
+ * console.log(fromInside); // 'this is returned'
+ * ```
  *
  * @param {string} str
  * @returns {(string[] | null)}

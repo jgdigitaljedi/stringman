@@ -8,6 +8,13 @@ const semverStr = /(?<=^v?|\sv?)(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?
 /**
  * returns semver from string if present
  *
+ * Basic usage example:
+ * ```js
+ * const semver = require('stringman').semver; // or `import {semver} from 'stringman'`;
+ * const justSemver = semver.retrieve('this project started on version 0.1.0');
+ * console.log(justSemver); // ['0.1.0']
+ * ```
+ *
  * @param {string} str
  * @returns {(RegExpMatchArray | null)}
  */
@@ -17,6 +24,15 @@ function retrieve(str: string): RegExpMatchArray | null {
 
 /**
  * Tests if argument is valid semver
+ *
+ * Basic usage example:
+ * ```js
+ * const semver = require('stringman').semver; // or `import {semver} from 'stringman'`;
+ * const valid = semver.isValid('0.1.0');
+ * const invalid = semver.isValid('0,1.0-rt');
+ * console.log(valid); // true
+ * console.log(invalid); // false
+ * ```
  *
  * @param {string} str
  * @returns {boolean}
@@ -28,13 +44,19 @@ function isValid(str: string): boolean {
 /**
  * Removes semver from string, trims, and returns result
  *
+ * Basic usage example:
+ * ```js
+ * const semver = require('stringman').semver; // or `import {semver} from 'stringman'`;
+ * const removed = semver.remove('this project started on version 0.1.0');
+ * console.log(removed); // 'this project started on version'
+ * ```
+ *
  * @param {string} str
  * @returns {string}
  */
 function remove(str: string): string {
   return str.replace(semverStr, '').trim();
 }
-
 
 /**
  * Returns RegExp variable used to test for semver

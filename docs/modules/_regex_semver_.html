@@ -102,7 +102,7 @@
 					<div class="tsd-signature tsd-kind-icon">semver<wbr>Str<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(?&lt;&#x3D;^v?|\sv?)(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-(?:[1-9]\d*|[\da-z-]*[a-z-][\da-z-]*)(?:\.(?:[1-9]\d*|[\da-z-]*[a-z-][\da-z-]*))*)?(?:\+[\da-z-]+(?:\.[\da-z-]+)*)?(?&#x3D;$|\s)/gi</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/2157dbd/src/regex/semver.ts#L6">regex/semver.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e00be14/src/regex/semver.ts#L6">regex/semver.ts:6</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -125,7 +125,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/2157dbd/src/regex/semver.ts#L44">regex/semver.ts:44</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e00be14/src/regex/semver.ts#L66">regex/semver.ts:66</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -147,13 +147,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/2157dbd/src/regex/semver.ts#L24">regex/semver.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e00be14/src/regex/semver.ts#L40">regex/semver.ts:40</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Tests if argument is valid semver</p>
 								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> semver = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).semver; <span class="hljs-comment">// or `import {semver} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> valid = semver.isValid(<span class="hljs-string">'0.1.0'</span>);
+<span class="hljs-keyword">const</span> invalid = semver.isValid(<span class="hljs-string">'0,1.0-rt'</span>);
+<span class="hljs-built_in">console</span>.log(valid); <span class="hljs-comment">// true</span>
+<span class="hljs-built_in">console</span>.log(invalid); <span class="hljs-comment">// false</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -175,13 +181,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/2157dbd/src/regex/semver.ts#L34">regex/semver.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e00be14/src/regex/semver.ts#L57">regex/semver.ts:57</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Removes semver from string, trims, and returns result</p>
 								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> semver = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).semver; <span class="hljs-comment">// or `import {semver} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> removed = semver.remove(<span class="hljs-string">'this project started on version 0.1.0'</span>);
+<span class="hljs-built_in">console</span>.log(removed); <span class="hljs-comment">// 'this project started on version'</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -203,13 +213,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/2157dbd/src/regex/semver.ts#L14">regex/semver.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e00be14/src/regex/semver.ts#L21">regex/semver.ts:21</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>returns semver from string if present</p>
 								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> semver = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).semver; <span class="hljs-comment">// or `import {semver} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> justSemver = semver.retrieve(<span class="hljs-string">'this project started on version 0.1.0'</span>);
+<span class="hljs-built_in">console</span>.log(justSemver); <span class="hljs-comment">// ['0.1.0']</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -233,7 +247,7 @@
 					<div class="tsd-signature tsd-kind-icon">semver<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/2157dbd/src/regex/semver.ts#L48">regex/semver.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e00be14/src/regex/semver.ts#L70">regex/semver.ts:70</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -242,7 +256,7 @@
 						<div class="tsd-signature tsd-kind-icon">expression<span class="tsd-signature-symbol">:</span> <a href="_regex_semver_.html#expression" class="tsd-signature-type">expression</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/2157dbd/src/regex/semver.ts#L52">regex/semver.ts:52</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e00be14/src/regex/semver.ts#L74">regex/semver.ts:74</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -252,7 +266,7 @@
 						<div class="tsd-signature tsd-kind-icon">is<wbr>Valid<span class="tsd-signature-symbol">:</span> <a href="_regex_semver_.html#isvalid" class="tsd-signature-type">isValid</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/2157dbd/src/regex/semver.ts#L50">regex/semver.ts:50</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e00be14/src/regex/semver.ts#L72">regex/semver.ts:72</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -262,7 +276,7 @@
 						<div class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">:</span> <a href="_regex_semver_.html#remove" class="tsd-signature-type">remove</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/2157dbd/src/regex/semver.ts#L51">regex/semver.ts:51</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e00be14/src/regex/semver.ts#L73">regex/semver.ts:73</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -272,7 +286,7 @@
 						<div class="tsd-signature tsd-kind-icon">retrieve<span class="tsd-signature-symbol">:</span> <a href="_regex_semver_.html#retrieve" class="tsd-signature-type">retrieve</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/2157dbd/src/regex/semver.ts#L49">regex/semver.ts:49</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e00be14/src/regex/semver.ts#L71">regex/semver.ts:71</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -287,6 +301,9 @@
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_index_.html">"index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_regex_email_.html">"regex/email"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_regex_parens_.html">"regex/parens"</a>

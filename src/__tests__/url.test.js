@@ -15,3 +15,7 @@ test('verfies string is NOT a url', () => {
 test('removes url from string', () => {
   expect(url.remove('will it remove https://joeyg.me')).toBe('will it remove');
 });
+
+test('gets the domain from a string', () => {
+  expect(url.getDomain('https://www.google.com/test')).toBe('google.com');
+});
