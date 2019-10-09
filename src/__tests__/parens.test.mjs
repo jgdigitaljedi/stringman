@@ -1,4 +1,5 @@
-const parens = require('../../lib').parens;
+// const parens = require('../../lib').parens;
+import { parens } from '../../lib';
 
 test('removes parenthesis from string and returns string', () => {
   expect(parens.remove('this is a test (and this should go away)')).toBe('this is a test');
