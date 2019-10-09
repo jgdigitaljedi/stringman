@@ -68,10 +68,10 @@ function expression(): RegExp {
 }
 
 const semver = {
-  retrieve,
+  expression,
   isValid,
   remove,
-  expression
+  retrieve
 };
 
 export { semver };

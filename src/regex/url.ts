@@ -83,11 +83,11 @@ function expression(): RegExp {
 }
 
 const url = {
-  retrieve,
+  expression,
+  getDomain,
   isValid,
   remove,
-  getDomain,
-  expression
+  retrieve
 };
 
 export { url };

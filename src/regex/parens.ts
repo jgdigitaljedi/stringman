@@ -34,8 +34,8 @@ function inside(str: string): string[] | null {
 }
 
 const parens = {
-  remove,
-  inside
+  inside,
+  remove
 };
 
 export { parens };

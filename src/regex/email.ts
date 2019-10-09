@@ -73,9 +73,9 @@ function swap(str: string, newEmail: string): string {
 }
 
 const email = {
-  retrieve,
   isValid,
   remove,
+  retrieve,
   swap
 };
 
