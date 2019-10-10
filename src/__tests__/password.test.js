@@ -71,7 +71,7 @@ describe('validates a password with the given params', () => {
           special: '-_'
         },
         {
-          cap: 2,
+          capital: 2,
           num: 2,
           special: 1
         }
@@ -86,12 +86,32 @@ describe('validates a password with the given params', () => {
           capital: true,
           lc: true,
           num: true,
-          min: 12,
+          min: 10,
           max: 15,
           special: '-_'
         },
         {
-          cap: 4,
+          capital: 4,
+          num: 2,
+          special: 1
+        }
+      )
+    ).toBe(false);
+
+    // meets 3rd argument requirements but not options requirements
+    expect(
+      pwd.isValidAdvanced(
+        'Test-1234_A',
+        {
+          capital: true,
+          lc: true,
+          num: true,
+          min: 22,
+          max: 55,
+          special: '-_'
+        },
+        {
+          capital: 4,
           num: 2,
           special: 1
         }
