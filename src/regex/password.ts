@@ -1,4 +1,4 @@
-import { IPwOptions, IPwOptionsCount, IPwCheckerObj } from '../models/password.model';
+import { IPwOptions, IPwOptionsCount } from '../models/password.model';
 
 /**
  * Takes min, max, and string of special characters and returns a RegExp for validating passwords
@@ -16,7 +16,7 @@ import { IPwOptions, IPwOptionsCount, IPwCheckerObj } from '../models/password.m
 function buildRegex(options: IPwOptions): RegExp {
   return new RegExp(
     `^[${options.lc ? 'a-z' : ''}${options.capital ? 'A-Z' : ''}${
-      options.num ? '0-9' : ''
+    options.num ? '0-9' : ''
     }${options.special || ''}]{${options.min},${options.max}}$`
   );
 }
