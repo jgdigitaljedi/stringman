@@ -1,6 +1,6 @@
 const pwd = require('../../lib').pwd;
 
-describe('validates a password with the given params', () => {
+describe('isValid => validates a password with the given params', () => {
   test('retutrns true when password meets params', () => {
     expect(
       pwd.isValid('Test_-123', {
