@@ -1,7 +1,6 @@
-
 /**
  * Takes string and returns boolean for whether string contains at least 1 number
- * 
+ *
  * Basic usage example:
  * ```js
  * const numbers = require('stringman').numbers; // or `import {numbers} from 'stringman'`;
@@ -20,7 +19,7 @@ function containsNum(num: string | number): boolean {
 
 /**
  * Takes a string or a number and returns boolean for whether it is a valid whole number
- * 
+ *
  * Basic usage example:
  * ```js
  * const numbers = require('stringman').numbers; // or `import {numbers} from 'stringman'`;
@@ -42,7 +41,7 @@ function whole(num: string | number): boolean {
 
 /**
  * Takes a string or a number and returns a boolean for whether it is a valid decimal
- * 
+ *
  * Basic usage example:
  * ```js
  * const numbers = require('stringman').numbers; // or `import {numbers} from 'stringman'`;
@@ -62,9 +61,30 @@ function decimal(num: string | number): boolean {
   return !!num.toString().match(/^-?\d*\.\d+$/g);
 }
 
+/**
+ * Takes a string and returns a boolean for whether it is a valid fraction.
+ * ```js
+ * const numbers = require('stringman').numbers; // or `import {numbers} from 'stringman'`;
+ * const valid = numbers.fraction('1/3');
+ * const invalid = numbers.fraction('3.33');
+ * console.log(isDec); // true
+ * console.log(notDec); // false
+ * ```
+ *
+ * @param {(number | string)} num
+ * @returns {boolean}
+ */
+function fraction(num: string): boolean {
+  if (typeof num !== 'string' && typeof num !== 'number') {
+    return false;
+  }
+  return !!num.toString().match(/^-?\d*\/\d+$/g);
+}
+
 const numbers = {
   containsNum,
   decimal,
+  fraction,
   whole
 };
 

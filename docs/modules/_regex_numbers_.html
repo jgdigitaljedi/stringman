@@ -75,6 +75,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_numbers_.html#containsnum" class="tsd-kind-icon">contains<wbr>Num</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_numbers_.html#decimal" class="tsd-kind-icon">decimal</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_numbers_.html#fraction" class="tsd-kind-icon">fraction</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_numbers_.html#whole" class="tsd-kind-icon">whole</a></li>
 							</ul>
 						</section>
@@ -99,7 +100,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/a194e10/src/regex/numbers.ts#L17">regex/numbers.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L16">regex/numbers.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -133,7 +134,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/a194e10/src/regex/numbers.ts#L58">regex/numbers.ts:58</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L57">regex/numbers.ts:57</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -158,6 +159,39 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="fraction" class="tsd-anchor"></a>
+					<h3>fraction</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">fraction<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L77">regex/numbers.ts:77</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes a string and returns a boolean for whether it is a valid fraction.</p>
+									<pre><code class="language-js"><span class="hljs-keyword">const</span> numbers = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).numbers; <span class="hljs-comment">// or `import {numbers} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> valid = numbers.fraction(<span class="hljs-string">'1/3'</span>);
+<span class="hljs-keyword">const</span> invalid = numbers.fraction(<span class="hljs-string">'3.33'</span>);
+<span class="hljs-built_in">console</span>.log(isDec); <span class="hljs-comment">// true</span>
+<span class="hljs-built_in">console</span>.log(notDec); <span class="hljs-comment">// false</span></code></pre>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>num: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="whole" class="tsd-anchor"></a>
 					<h3>whole</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
@@ -167,7 +201,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/a194e10/src/regex/numbers.ts#L36">regex/numbers.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L35">regex/numbers.ts:35</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -200,7 +234,7 @@
 					<div class="tsd-signature tsd-kind-icon">numbers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/a194e10/src/regex/numbers.ts#L65">regex/numbers.ts:65</a></li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L84">regex/numbers.ts:84</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -209,7 +243,7 @@
 						<div class="tsd-signature tsd-kind-icon">contains<wbr>Num<span class="tsd-signature-symbol">:</span> <a href="_regex_numbers_.html#containsnum" class="tsd-signature-type">containsNum</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/a194e10/src/regex/numbers.ts#L66">regex/numbers.ts:66</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L85">regex/numbers.ts:85</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -219,7 +253,17 @@
 						<div class="tsd-signature tsd-kind-icon">decimal<span class="tsd-signature-symbol">:</span> <a href="_regex_numbers_.html#decimal" class="tsd-signature-type">decimal</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/a194e10/src/regex/numbers.ts#L67">regex/numbers.ts:67</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L86">regex/numbers.ts:86</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="numbers.fraction-1" class="tsd-anchor"></a>
+						<h3>fraction</h3>
+						<div class="tsd-signature tsd-kind-icon">fraction<span class="tsd-signature-symbol">:</span> <a href="_regex_numbers_.html#fraction" class="tsd-signature-type">fraction</a></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L87">regex/numbers.ts:87</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -229,7 +273,7 @@
 						<div class="tsd-signature tsd-kind-icon">whole<span class="tsd-signature-symbol">:</span> <a href="_regex_numbers_.html#whole" class="tsd-signature-type">whole</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/a194e10/src/regex/numbers.ts#L68">regex/numbers.ts:68</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L88">regex/numbers.ts:88</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -275,6 +319,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_regex_numbers_.html#decimal" class="tsd-kind-icon">decimal</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_regex_numbers_.html#fraction" class="tsd-kind-icon">fraction</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_regex_numbers_.html#whole" class="tsd-kind-icon">whole</a>

@@ -19,11 +19,21 @@ describe('whole => determines if passed value is a whole number', () => {
 });
 
 describe('decimal => determines if passed value is a decimal', () => {
-  test('verfies that the passed value is a decimal or string that parses todecimal', () => {
+  test('verfies that the passed value is a decimal or string that parses to decimal', () => {
     expect(numbers.decimal(33)).toBe(false);
     expect(numbers.decimal('-33')).toBe(false);
     expect(numbers.decimal('33.326')).toBe(true);
     expect(numbers.decimal(-33.326)).toBe(true);
     expect(numbers.decimal('nope')).toBe(false);
+  });
+});
+
+describe('fraction => determines if passed value is a fraction', () => {
+  test('verfies that the passed value is a string that parses to a fraction', () => {
+    expect(numbers.fraction(33)).toBe(false);
+    expect(numbers.fraction('-33')).toBe(false);
+    expect(numbers.fraction('1/3')).toBe(true);
+    expect(numbers.fraction('-22/33')).toBe(true);
+    expect(numbers.fraction('nope')).toBe(false);
   });
 });
