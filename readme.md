@@ -8,17 +8,21 @@ Stringman is in the very early stages right now and I am still figuring out how 
 - return text from inside of parenthesis
 - validate whether string is a valid semantic version
 - remove an email address from a string
+- convert a hex color to rgb and vice versa
 - much more
 
 Also, typescript types are included.
 
 ## Install
+
 ```
 npm i -S stringman
 ```
 
 ## Documentation
+
 [https://jgdigitaljedi.github.io/stringman/](https://jgdigitaljedi.github.io/stringman/)
 
 ## Contributing
+
 I haven't though too much about this yet as the project is very young. Just contact me if you are interested in contributing.

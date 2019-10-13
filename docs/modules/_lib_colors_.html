@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;regex/numbers&quot; | stringman</title>
+	<title>&quot;lib/colors&quot; | stringman</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_regex_numbers_.html">&quot;regex/numbers&quot;</a>
+					<a href="_lib_colors_.html">&quot;lib/colors&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;regex/numbers&quot;</h1>
+			<h1>External module &quot;lib/colors&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -73,16 +73,15 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_numbers_.html#containsnum" class="tsd-kind-icon">contains<wbr>Num</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_numbers_.html#decimal" class="tsd-kind-icon">decimal</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_numbers_.html#fraction" class="tsd-kind-icon">fraction</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_numbers_.html#whole" class="tsd-kind-icon">whole</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_colors_.html#hextorgb" class="tsd-kind-icon">hex<wbr>ToRgb</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_colors_.html#ishex" class="tsd-kind-icon">is<wbr>Hex</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_colors_.html#rgbtohex" class="tsd-kind-icon">rgb<wbr>ToHex</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Object literals</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_numbers_.html#numbers" class="tsd-kind-icon">numbers</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_colors_.html#colors" class="tsd-kind-icon">colors</a></li>
 							</ul>
 						</section>
 					</div>
@@ -91,33 +90,68 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="containsnum" class="tsd-anchor"></a>
-					<h3>contains<wbr>Num</h3>
+					<a name="hextorgb" class="tsd-anchor"></a>
+					<h3>hex<wbr>ToRgb</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">contains<wbr>Num<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">hex<wbr>ToRgb<span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L16">regex/numbers.ts:16</a></li>
+									<li>Defined in lib/colors.ts:57</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Takes string and returns boolean for whether string contains at least 1 number</p>
+									<p>Takes a hexidecimal color string and returns the rgb value</p>
 								</div>
-								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> numbers = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).numbers; <span class="hljs-comment">// or `import {numbers} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> yes = numbers.containsNum(<span class="hljs-string">'this has a number 33'</span>);
-<span class="hljs-keyword">const</span> no = numbers.containsNum(<span class="hljs-string">'this has a number 33'</span>);
-<span class="hljs-built_in">console</span>.log(yes); <span class="hljs-comment">// true</span>
-<span class="hljs-built_in">console</span>.log(no); <span class="hljs-comment">// false</span></code></pre>
+								<p> Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> colors = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).colors; <span class="hljs-comment">// or `import {colors} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> test = colors.hexToRgb(<span class="hljs-string">'#16212c'</span>);
+<span class="hljs-built_in">console</span>.log(test); <span class="hljs-comment">// [22, 33, 44]</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>num: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5>hex: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">null</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="ishex" class="tsd-anchor"></a>
+					<h3>is<wbr>Hex</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Hex<span class="tsd-signature-symbol">(</span>color<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/colors.ts:37</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes a string and returns boolean indicating whether it is a valid hexidecimal color</p>
+								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> colors = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).colors; <span class="hljs-comment">// or `import {colors} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> valid = colors.isHex(<span class="hljs-string">'16212c'</span>);
+<span class="hljs-keyword">const</span> invalid = colors.isHex(<span class="hljs-string">'nope'</span>);
+<span class="hljs-built_in">console</span>.log(valid); <span class="hljs-comment">// true</span>
+<span class="hljs-built_in">console</span>.log(invalid); <span class="hljs-comment">// false</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>color: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -125,103 +159,40 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="decimal" class="tsd-anchor"></a>
-					<h3>decimal</h3>
+					<a name="rgbtohex" class="tsd-anchor"></a>
+					<h3>rgb<wbr>ToHex</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">decimal<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">rgb<wbr>ToHex<span class="tsd-signature-symbol">(</span>r<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, g<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L57">regex/numbers.ts:57</a></li>
+									<li>Defined in lib/colors.ts:18</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Takes a string or a number and returns a boolean for whether it is a valid decimal</p>
+									<p>Takes rgb color values and returns hexidecimal equivalent</p>
 								</div>
 								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> numbers = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).numbers; <span class="hljs-comment">// or `import {numbers} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> isDec = numbers.decimal(<span class="hljs-number">123456.789</span>);
-<span class="hljs-keyword">const</span> notDec = numbers.whole(<span class="hljs-number">123456</span>);
-<span class="hljs-built_in">console</span>.log(isDec); <span class="hljs-comment">// true</span>
-<span class="hljs-built_in">console</span>.log(notDec); <span class="hljs-comment">// false</span></code></pre>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> colors = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).colors; <span class="hljs-comment">// or `import {colors} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> test = colors.rgbToHex(<span class="hljs-number">22</span>, <span class="hljs-number">33</span>, <span class="hljs-number">44</span>);
+<span class="hljs-built_in">console</span>.log(test); <span class="hljs-comment">// '#16212C'</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>num: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5>r: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="fraction" class="tsd-anchor"></a>
-					<h3>fraction</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">fraction<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L77">regex/numbers.ts:77</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Takes a string and returns a boolean for whether it is a valid fraction.</p>
-									<pre><code class="language-js"><span class="hljs-keyword">const</span> numbers = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).numbers; <span class="hljs-comment">// or `import {numbers} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> valid = numbers.fraction(<span class="hljs-string">'1/3'</span>);
-<span class="hljs-keyword">const</span> invalid = numbers.fraction(<span class="hljs-string">'3.33'</span>);
-<span class="hljs-built_in">console</span>.log(isDec); <span class="hljs-comment">// true</span>
-<span class="hljs-built_in">console</span>.log(notDec); <span class="hljs-comment">// false</span></code></pre>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
 								<li>
-									<h5>num: <span class="tsd-signature-type">string</span></h5>
+									<h5>g: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="whole" class="tsd-anchor"></a>
-					<h3>whole</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">whole<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L35">regex/numbers.ts:35</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Takes a string or a number and returns boolean for whether it is a valid whole number</p>
-								</div>
-								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> numbers = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).numbers; <span class="hljs-comment">// or `import {numbers} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> isWhole = numbers.whole(<span class="hljs-number">123456</span>);
-<span class="hljs-keyword">const</span> notWhole = numbers.whole(<span class="hljs-number">123456.789</span>);
-<span class="hljs-built_in">console</span>.log(isWhole); <span class="hljs-comment">// true</span>
-<span class="hljs-built_in">console</span>.log(notWhole); <span class="hljs-comment">// false</span></code></pre>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
 								<li>
-									<h5>num: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5>b: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -229,51 +200,41 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Object literals</h2>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="numbers" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> numbers</h3>
-					<div class="tsd-signature tsd-kind-icon">numbers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<a name="colors" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> colors</h3>
+					<div class="tsd-signature tsd-kind-icon">colors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L84">regex/numbers.ts:84</a></li>
+							<li>Defined in lib/colors.ts:87</li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="numbers.containsnum-1" class="tsd-anchor"></a>
-						<h3>contains<wbr>Num</h3>
-						<div class="tsd-signature tsd-kind-icon">contains<wbr>Num<span class="tsd-signature-symbol">:</span> <a href="_regex_numbers_.html#containsnum" class="tsd-signature-type">containsNum</a></div>
+						<a name="colors.hextorgb-1" class="tsd-anchor"></a>
+						<h3>hex<wbr>ToRgb</h3>
+						<div class="tsd-signature tsd-kind-icon">hex<wbr>ToRgb<span class="tsd-signature-symbol">:</span> <a href="_lib_colors_.html#hextorgb" class="tsd-signature-type">hexToRgb</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L85">regex/numbers.ts:85</a></li>
+								<li>Defined in lib/colors.ts:88</li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="numbers.decimal-1" class="tsd-anchor"></a>
-						<h3>decimal</h3>
-						<div class="tsd-signature tsd-kind-icon">decimal<span class="tsd-signature-symbol">:</span> <a href="_regex_numbers_.html#decimal" class="tsd-signature-type">decimal</a></div>
+						<a name="colors.ishex-1" class="tsd-anchor"></a>
+						<h3>is<wbr>Hex</h3>
+						<div class="tsd-signature tsd-kind-icon">is<wbr>Hex<span class="tsd-signature-symbol">:</span> <a href="_lib_colors_.html#ishex" class="tsd-signature-type">isHex</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L86">regex/numbers.ts:86</a></li>
+								<li>Defined in lib/colors.ts:89</li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="numbers.fraction-1" class="tsd-anchor"></a>
-						<h3>fraction</h3>
-						<div class="tsd-signature tsd-kind-icon">fraction<span class="tsd-signature-symbol">:</span> <a href="_regex_numbers_.html#fraction" class="tsd-signature-type">fraction</a></div>
+						<a name="colors.rgbtohex-1" class="tsd-anchor"></a>
+						<h3>rgb<wbr>ToHex</h3>
+						<div class="tsd-signature tsd-kind-icon">rgb<wbr>ToHex<span class="tsd-signature-symbol">:</span> <a href="_lib_colors_.html#rgbtohex" class="tsd-signature-type">rgbToHex</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L87">regex/numbers.ts:87</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="numbers.whole-1" class="tsd-anchor"></a>
-						<h3>whole</h3>
-						<div class="tsd-signature tsd-kind-icon">whole<span class="tsd-signature-symbol">:</span> <a href="_regex_numbers_.html#whole" class="tsd-signature-type">whole</a></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/numbers.ts#L88">regex/numbers.ts:88</a></li>
+								<li>Defined in lib/colors.ts:90</li>
 							</ul>
 						</aside>
 					</section>
@@ -289,45 +250,45 @@
 					<li class=" tsd-kind-external-module">
 						<a href="_index_.html">"index"</a>
 					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="_lib_colors_.html">"lib/colors"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_email_.html">"lib/email"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_numbers_.html">"lib/numbers"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_parens_.html">"lib/parens"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_password_.html">"lib/password"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_semver_.html">"lib/semver"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_url_.html">"lib/url"</a>
+					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_models_password_model_.html">"models/password.model"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_regex_email_.html">"regex/email"</a>
-					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="_regex_numbers_.html">"regex/numbers"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_regex_parens_.html">"regex/parens"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_regex_password_.html">"regex/password"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_regex_semver_.html">"regex/semver"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_regex_url_.html">"regex/url"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_numbers_.html#containsnum" class="tsd-kind-icon">contains<wbr>Num</a>
+						<a href="_lib_colors_.html#hextorgb" class="tsd-kind-icon">hex<wbr>ToRgb</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_numbers_.html#decimal" class="tsd-kind-icon">decimal</a>
+						<a href="_lib_colors_.html#ishex" class="tsd-kind-icon">is<wbr>Hex</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_numbers_.html#fraction" class="tsd-kind-icon">fraction</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_numbers_.html#whole" class="tsd-kind-icon">whole</a>
+						<a href="_lib_colors_.html#rgbtohex" class="tsd-kind-icon">rgb<wbr>ToHex</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_numbers_.html#numbers" class="tsd-kind-icon">numbers</a>
+						<a href="_lib_colors_.html#colors" class="tsd-kind-icon">colors</a>
 					</li>
 				</ul>
 			</nav>

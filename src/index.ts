@@ -1,8 +1,9 @@
-import { email } from './regex/email';
-import { numbers } from './regex/numbers';
-import { parens } from './regex/parens';
-import { pwd } from './regex/password';
-import { semver } from './regex/semver';
-import { url } from './regex/url';
+import { colors } from './lib/colors';
+import { email } from './lib/email';
+import { numbers } from './lib/numbers';
+import { parens } from './lib/parens';
+import { pwd } from './lib/password';
+import { semver } from './lib/semver';
+import { url } from './lib/url';
 
-export { email, numbers, parens, pwd, semver, url };
+export { colors, email, numbers, parens, pwd, semver, url };

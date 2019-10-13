@@ -1,7 +1,7 @@
 const pwd = require('../../lib').pwd;
 
-describe('isValid => validates a password with the given params', () => {
-  test('retutrns true when password meets params', () => {
+describe('tests the various methods of "password"', () => {
+  test('isValid => basic validity check to see if password meets given params', () => {
     expect(
       pwd.isValid('Test_-123', {
         capital: true,
@@ -12,9 +12,7 @@ describe('isValid => validates a password with the given params', () => {
         special: '-_'
       })
     ).toBe(true);
-  });
 
-  test('returns false when password does not meet given params', () => {
     // does not meet min requirement
     expect(
       pwd.isValid('Test_-123', {
@@ -57,7 +55,7 @@ describe('isValid => validates a password with the given params', () => {
     ).toBe(false);
   });
 
-  test('returns expected value when doing advanced tests', () => {
+  test('isValidAdvanced => takes password and more complicated validation arguments and checks if password meets requirements', () => {
     // password has minimum requirements
     expect(
       pwd.isValidAdvanced(

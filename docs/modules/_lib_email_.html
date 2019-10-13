@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;regex/semver&quot; | stringman</title>
+	<title>&quot;lib/email&quot; | stringman</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_regex_semver_.html">&quot;regex/semver&quot;</a>
+					<a href="_lib_email_.html">&quot;lib/email&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;regex/semver&quot;</h1>
+			<h1>External module &quot;lib/email&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -73,22 +73,22 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_semver_.html#semverstr" class="tsd-kind-icon">semver<wbr>Str</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_email_.html#getemail" class="tsd-kind-icon">get<wbr>Email</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_semver_.html#expression" class="tsd-kind-icon">expression</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_semver_.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_semver_.html#remove" class="tsd-kind-icon">remove</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_semver_.html#retrieve" class="tsd-kind-icon">retrieve</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_email_.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_email_.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_email_.html#retrieve" class="tsd-kind-icon">retrieve</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_email_.html#swap" class="tsd-kind-icon">swap</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Object literals</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_semver_.html#semver" class="tsd-kind-icon">semver</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_email_.html#email" class="tsd-kind-icon">email</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,46 +97,18 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="semverstr" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> semver<wbr>Str</h3>
-					<div class="tsd-signature tsd-kind-icon">semver<wbr>Str<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(?&lt;&#x3D;^v?|\sv?)(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-(?:[1-9]\d*|[\da-z-]*[a-z-][\da-z-]*)(?:\.(?:[1-9]\d*|[\da-z-]*[a-z-][\da-z-]*))*)?(?:\+[\da-z-]+(?:\.[\da-z-]+)*)?(?&#x3D;$|\s)/gi</span></div>
+					<a name="getemail" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Email</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>Email<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/[a-z0-9!#$%&amp;&#x27;*+/&#x3D;?^_&#x60;{|}~-]+(?:\.[a-z0-9!#$%&amp;&#x27;*+/&#x3D;?^_&#x60;{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/semver.ts#L6">regex/semver.ts:6</a></li>
+							<li>Defined in lib/email.ts:1</li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Credit to <a href="https://github.com/sindresorhus/semver-regex">https://github.com/sindresorhus/semver-regex</a> for the regex string
-							I use this and wanted to include it in my own library for convenience</p>
-						</div>
-					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="expression" class="tsd-anchor"></a>
-					<h3>expression</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">expression<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RegExp</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/semver.ts#L66">regex/semver.ts:66</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Returns RegExp variable used to test for semver</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">RegExp</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="isvalid" class="tsd-anchor"></a>
 					<h3>is<wbr>Valid</h3>
@@ -147,17 +119,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/semver.ts#L40">regex/semver.ts:40</a></li>
+									<li>Defined in lib/email.ts:36</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Tests if argument is valid semver</p>
+									<p>Takes a string and returns boolean to represent whether or not string is a valid email address</p>
 								</div>
 								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> semver = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).semver; <span class="hljs-comment">// or `import {semver} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> valid = semver.isValid(<span class="hljs-string">'0.1.0'</span>);
-<span class="hljs-keyword">const</span> invalid = semver.isValid(<span class="hljs-string">'0,1.0-rt'</span>);
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> email = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).email; <span class="hljs-comment">// or `import {email} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> valid = email.isValid(<span class="hljs-string">'joey@joeyg.me'</span>);
+<span class="hljs-keyword">const</span> invalid = email.isValid(<span class="hljs-string">'joey-joeyg.me'</span>);
 <span class="hljs-built_in">console</span>.log(valid); <span class="hljs-comment">// true</span>
 <span class="hljs-built_in">console</span>.log(invalid); <span class="hljs-comment">// false</span></code></pre>
 							</div>
@@ -181,17 +153,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/semver.ts#L57">regex/semver.ts:57</a></li>
+									<li>Defined in lib/email.ts:53</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Removes semver from string, trims, and returns result</p>
+									<p>Takes a string and returns the string with any email addresses removed</p>
 								</div>
 								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> semver = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).semver; <span class="hljs-comment">// or `import {semver} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> removed = semver.remove(<span class="hljs-string">'this project started on version 0.1.0'</span>);
-<span class="hljs-built_in">console</span>.log(removed); <span class="hljs-comment">// 'this project started on version'</span></code></pre>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> email = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).email; <span class="hljs-comment">// or `import {email} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> test = email.remove(<span class="hljs-string">'my email address is joey@joeyg.me'</span>);
+<span class="hljs-built_in">console</span>.log(test); <span class="hljs-comment">// 'my email address is';</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -207,23 +179,23 @@
 					<a name="retrieve" class="tsd-anchor"></a>
 					<h3>retrieve</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">retrieve<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RegExpMatchArray</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+						<li class="tsd-signature tsd-kind-icon">retrieve<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/semver.ts#L21">regex/semver.ts:21</a></li>
+									<li>Defined in lib/email.ts:16</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>returns semver from string if present</p>
+									<p>Takes a string and returns a valid email address if one is present in the string</p>
 								</div>
 								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> semver = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).semver; <span class="hljs-comment">// or `import {semver} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> justSemver = semver.retrieve(<span class="hljs-string">'this project started on version 0.1.0'</span>);
-<span class="hljs-built_in">console</span>.log(justSemver); <span class="hljs-comment">// ['0.1.0']</span></code></pre>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> email = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).email; <span class="hljs-comment">// or `import {email} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> test = email.retrieve(<span class="hljs-string">'this is my email address joey@joeyg.me'</span>);
+<span class="hljs-built_in">console</span>.log(test); <span class="hljs-comment">// 'joey@joeyg.me'</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -231,10 +203,45 @@
 									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">RegExpMatchArray</span>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">null</span>
 							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="swap" class="tsd-anchor"></a>
+					<h3>swap</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">swap<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, newEmail<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/email.ts:71</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes 2 strings (a string with an email address and another string that is a different email address) and returns the first string with the new address swapped</p>
+								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> email = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).email; <span class="hljs-comment">// or `import {email} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> test = email.swap(<span class="hljs-string">'my email address is joey@joeyg.me'</span>, <span class="hljs-string">'test@test.com'</span>);
+<span class="hljs-built_in">console</span>.log(;test); <span class="hljs-comment">// 'my email address is test@test.com'</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>newEmail: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -242,51 +249,51 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Object literals</h2>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="semver" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> semver</h3>
-					<div class="tsd-signature tsd-kind-icon">semver<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<a name="email" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> email</h3>
+					<div class="tsd-signature tsd-kind-icon">email<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/semver.ts#L70">regex/semver.ts:70</a></li>
+							<li>Defined in lib/email.ts:75</li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="semver.expression-1" class="tsd-anchor"></a>
-						<h3>expression</h3>
-						<div class="tsd-signature tsd-kind-icon">expression<span class="tsd-signature-symbol">:</span> <a href="_regex_semver_.html#expression" class="tsd-signature-type">expression</a></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/semver.ts#L71">regex/semver.ts:71</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="semver.isvalid-1" class="tsd-anchor"></a>
+						<a name="email.isvalid-1" class="tsd-anchor"></a>
 						<h3>is<wbr>Valid</h3>
-						<div class="tsd-signature tsd-kind-icon">is<wbr>Valid<span class="tsd-signature-symbol">:</span> <a href="_regex_semver_.html#isvalid" class="tsd-signature-type">isValid</a></div>
+						<div class="tsd-signature tsd-kind-icon">is<wbr>Valid<span class="tsd-signature-symbol">:</span> <a href="_lib_email_.html#isvalid" class="tsd-signature-type">isValid</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/semver.ts#L72">regex/semver.ts:72</a></li>
+								<li>Defined in lib/email.ts:76</li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="semver.remove-1" class="tsd-anchor"></a>
+						<a name="email.remove-1" class="tsd-anchor"></a>
 						<h3>remove</h3>
-						<div class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">:</span> <a href="_regex_semver_.html#remove" class="tsd-signature-type">remove</a></div>
+						<div class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">:</span> <a href="_lib_email_.html#remove" class="tsd-signature-type">remove</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/semver.ts#L73">regex/semver.ts:73</a></li>
+								<li>Defined in lib/email.ts:77</li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="semver.retrieve-1" class="tsd-anchor"></a>
+						<a name="email.retrieve-1" class="tsd-anchor"></a>
 						<h3>retrieve</h3>
-						<div class="tsd-signature tsd-kind-icon">retrieve<span class="tsd-signature-symbol">:</span> <a href="_regex_semver_.html#retrieve" class="tsd-signature-type">retrieve</a></div>
+						<div class="tsd-signature tsd-kind-icon">retrieve<span class="tsd-signature-symbol">:</span> <a href="_lib_email_.html#retrieve" class="tsd-signature-type">retrieve</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/semver.ts#L74">regex/semver.ts:74</a></li>
+								<li>Defined in lib/email.ts:78</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="email.swap-1" class="tsd-anchor"></a>
+						<h3>swap</h3>
+						<div class="tsd-signature tsd-kind-icon">swap<span class="tsd-signature-symbol">:</span> <a href="_lib_email_.html#swap" class="tsd-signature-type">swap</a></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in lib/email.ts:79</li>
 							</ul>
 						</aside>
 					</section>
@@ -303,47 +310,50 @@
 						<a href="_index_.html">"index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_models_password_model_.html">"models/password.model"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_regex_email_.html">"regex/email"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_regex_numbers_.html">"regex/numbers"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_regex_parens_.html">"regex/parens"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_regex_password_.html">"regex/password"</a>
+						<a href="_lib_colors_.html">"lib/colors"</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_regex_semver_.html">"regex/semver"</a>
+						<a href="_lib_email_.html">"lib/email"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_regex_url_.html">"regex/url"</a>
+						<a href="_lib_numbers_.html">"lib/numbers"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_parens_.html">"lib/parens"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_password_.html">"lib/password"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_semver_.html">"lib/semver"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_url_.html">"lib/url"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_models_password_model_.html">"models/password.model"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_semver_.html#semverstr" class="tsd-kind-icon">semver<wbr>Str</a>
+						<a href="_lib_email_.html#getemail" class="tsd-kind-icon">get<wbr>Email</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_semver_.html#expression" class="tsd-kind-icon">expression</a>
+						<a href="_lib_email_.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_semver_.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>
+						<a href="_lib_email_.html#remove" class="tsd-kind-icon">remove</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_semver_.html#remove" class="tsd-kind-icon">remove</a>
+						<a href="_lib_email_.html#retrieve" class="tsd-kind-icon">retrieve</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_semver_.html#retrieve" class="tsd-kind-icon">retrieve</a>
+						<a href="_lib_email_.html#swap" class="tsd-kind-icon">swap</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_semver_.html#semver" class="tsd-kind-icon">semver</a>
+						<a href="_lib_email_.html#email" class="tsd-kind-icon">email</a>
 					</li>
 				</ul>
 			</nav>

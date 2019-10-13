@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;regex/email&quot; | stringman</title>
+	<title>&quot;lib/url&quot; | stringman</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_regex_email_.html">&quot;regex/email&quot;</a>
+					<a href="_lib_url_.html">&quot;lib/url&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;regex/email&quot;</h1>
+			<h1>External module &quot;lib/url&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -73,22 +73,24 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_email_.html#getemail" class="tsd-kind-icon">get<wbr>Email</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_url_.html#domainexp" class="tsd-kind-icon">domain<wbr>Exp</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_url_.html#urlstr" class="tsd-kind-icon">url<wbr>Str</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_email_.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_email_.html#remove" class="tsd-kind-icon">remove</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_email_.html#retrieve" class="tsd-kind-icon">retrieve</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_email_.html#swap" class="tsd-kind-icon">swap</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_url_.html#expression" class="tsd-kind-icon">expression</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_url_.html#getdomain" class="tsd-kind-icon">get<wbr>Domain</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_url_.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_url_.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_url_.html#retrieve" class="tsd-kind-icon">retrieve</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Object literals</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_regex_email_.html#email" class="tsd-kind-icon">email</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_url_.html#url" class="tsd-kind-icon">url</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,18 +99,85 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="getemail" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Email</h3>
-					<div class="tsd-signature tsd-kind-icon">get<wbr>Email<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/[a-z0-9!#$%&amp;&#x27;*+/&#x3D;?^_&#x60;{|}~-]+(?:\.[a-z0-9!#$%&amp;&#x27;*+/&#x3D;?^_&#x60;{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi</span></div>
+					<a name="domainexp" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> domain<wbr>Exp</h3>
+					<div class="tsd-signature tsd-kind-icon">domain<wbr>Exp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)/im</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/email.ts#L1">regex/email.ts:1</a></li>
+							<li>Defined in lib/url.ts:3</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="urlstr" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> url<wbr>Str</h3>
+					<div class="tsd-signature tsd-kind-icon">url<wbr>Str<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gm</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in lib/url.ts:1</li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="expression" class="tsd-anchor"></a>
+					<h3>expression</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">expression<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RegExp</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/url.ts:81</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns RegExp for testing URLs</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">RegExp</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="getdomain" class="tsd-anchor"></a>
+					<h3>get<wbr>Domain</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Domain<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/url.ts:71</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes url string, tries to return just the domain</p>
+								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).url; <span class="hljs-comment">// or `import {url} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> domain = url.getDomain(<span class="hljs-string">'https://www.google.com/test'</span>);
+<span class="hljs-built_in">console</span>.log(domain); <span class="hljs-comment">// 'google.com'</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">null</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="isvalid" class="tsd-anchor"></a>
 					<h3>is<wbr>Valid</h3>
@@ -119,17 +188,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/email.ts#L36">regex/email.ts:36</a></li>
+									<li>Defined in lib/url.ts:37</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Takes a string and returns boolean to represent whether or not string is a valid email address</p>
+									<p>Takes a string and returns whether string is a valid URL as a boolean</p>
 								</div>
 								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> email = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).email; <span class="hljs-comment">// or `import {email} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> valid = email.isValid(<span class="hljs-string">'joey@joeyg.me'</span>);
-<span class="hljs-keyword">const</span> invalid = email.isValid(<span class="hljs-string">'joey-joeyg.me'</span>);
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).url; <span class="hljs-comment">// or `import {url} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> valid = url.isValid(<span class="hljs-string">'https://joeyg.me'</span>);
+<span class="hljs-keyword">const</span> invalid = url.isValid(<span class="hljs-string">'https/joeyg.me'</span>);
 <span class="hljs-built_in">console</span>.log(valid); <span class="hljs-comment">// true</span>
 <span class="hljs-built_in">console</span>.log(invalid); <span class="hljs-comment">// false</span></code></pre>
 							</div>
@@ -153,17 +222,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/email.ts#L53">regex/email.ts:53</a></li>
+									<li>Defined in lib/url.ts:54</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Takes a string and returns the string with any email addresses removed</p>
+									<p>Takes string, removes any URLs, trims, and returns string</p>
 								</div>
 								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> email = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).email; <span class="hljs-comment">// or `import {email} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> test = email.remove(<span class="hljs-string">'my email address is joey@joeyg.me'</span>);
-<span class="hljs-built_in">console</span>.log(test); <span class="hljs-comment">// 'my email address is';</span></code></pre>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).url; <span class="hljs-comment">// or `import {url} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> removed = url.remove(<span class="hljs-string">'the url to my portfolio is https://joeyg.me'</span>);
+<span class="hljs-built_in">console</span>.log(removed); <span class="hljs-comment">// 'the url to my portfolio is'</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -179,23 +248,23 @@
 					<a name="retrieve" class="tsd-anchor"></a>
 					<h3>retrieve</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">retrieve<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+						<li class="tsd-signature tsd-kind-icon">retrieve<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/email.ts#L16">regex/email.ts:16</a></li>
+									<li>Defined in lib/url.ts:18</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Takes a string and returns a valid email address if one is present in the string</p>
+									<p>Takes string and returns any matches for a valid URL from the string</p>
 								</div>
 								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> email = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).email; <span class="hljs-comment">// or `import {email} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> test = email.retrieve(<span class="hljs-string">'this is my email address joey@joeyg.me'</span>);
-<span class="hljs-built_in">console</span>.log(test); <span class="hljs-comment">// 'joey@joeyg.me'</span></code></pre>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).url; <span class="hljs-comment">// or `import {url} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> justUrl = url.retrieve(<span class="hljs-string">'the url to my portfolio is https://joeyg.me'</span>);
+<span class="hljs-built_in">console</span>.log(justUrl); <span class="hljs-comment">// 'https://joeyg.me'</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -203,45 +272,10 @@
 									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">null</span>
 							</h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="swap" class="tsd-anchor"></a>
-					<h3>swap</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">swap<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, newEmail<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/email.ts#L71">regex/email.ts:71</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Takes 2 strings (a string with an email address and another string that is a different email address) and returns the first string with the new address swapped</p>
-								</div>
-								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> email = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).email; <span class="hljs-comment">// or `import {email} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> test = email.swap(<span class="hljs-string">'my email address is joey@joeyg.me'</span>, <span class="hljs-string">'test@test.com'</span>);
-<span class="hljs-built_in">console</span>.log(;test); <span class="hljs-comment">// 'my email address is test@test.com'</span></code></pre>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>str: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>newEmail: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -249,51 +283,61 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Object literals</h2>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="email" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> email</h3>
-					<div class="tsd-signature tsd-kind-icon">email<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<a name="url" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> url</h3>
+					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/email.ts#L75">regex/email.ts:75</a></li>
+							<li>Defined in lib/url.ts:85</li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="email.isvalid-1" class="tsd-anchor"></a>
+						<a name="url.expression-1" class="tsd-anchor"></a>
+						<h3>expression</h3>
+						<div class="tsd-signature tsd-kind-icon">expression<span class="tsd-signature-symbol">:</span> <a href="_lib_url_.html#expression" class="tsd-signature-type">expression</a></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in lib/url.ts:86</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="url.getdomain-1" class="tsd-anchor"></a>
+						<h3>get<wbr>Domain</h3>
+						<div class="tsd-signature tsd-kind-icon">get<wbr>Domain<span class="tsd-signature-symbol">:</span> <a href="_lib_url_.html#getdomain" class="tsd-signature-type">getDomain</a></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in lib/url.ts:87</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="url.isvalid-1" class="tsd-anchor"></a>
 						<h3>is<wbr>Valid</h3>
-						<div class="tsd-signature tsd-kind-icon">is<wbr>Valid<span class="tsd-signature-symbol">:</span> <a href="_regex_email_.html#isvalid" class="tsd-signature-type">isValid</a></div>
+						<div class="tsd-signature tsd-kind-icon">is<wbr>Valid<span class="tsd-signature-symbol">:</span> <a href="_lib_url_.html#isvalid" class="tsd-signature-type">isValid</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/email.ts#L76">regex/email.ts:76</a></li>
+								<li>Defined in lib/url.ts:88</li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="email.remove-1" class="tsd-anchor"></a>
+						<a name="url.remove-1" class="tsd-anchor"></a>
 						<h3>remove</h3>
-						<div class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">:</span> <a href="_regex_email_.html#remove" class="tsd-signature-type">remove</a></div>
+						<div class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">:</span> <a href="_lib_url_.html#remove" class="tsd-signature-type">remove</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/email.ts#L77">regex/email.ts:77</a></li>
+								<li>Defined in lib/url.ts:89</li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="email.retrieve-1" class="tsd-anchor"></a>
+						<a name="url.retrieve-1" class="tsd-anchor"></a>
 						<h3>retrieve</h3>
-						<div class="tsd-signature tsd-kind-icon">retrieve<span class="tsd-signature-symbol">:</span> <a href="_regex_email_.html#retrieve" class="tsd-signature-type">retrieve</a></div>
+						<div class="tsd-signature tsd-kind-icon">retrieve<span class="tsd-signature-symbol">:</span> <a href="_lib_url_.html#retrieve" class="tsd-signature-type">retrieve</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/email.ts#L78">regex/email.ts:78</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="email.swap-1" class="tsd-anchor"></a>
-						<h3>swap</h3>
-						<div class="tsd-signature tsd-kind-icon">swap<span class="tsd-signature-symbol">:</span> <a href="_regex_email_.html#swap" class="tsd-signature-type">swap</a></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6aa3657/src/regex/email.ts#L79">regex/email.ts:79</a></li>
+								<li>Defined in lib/url.ts:90</li>
 							</ul>
 						</aside>
 					</section>
@@ -310,47 +354,56 @@
 						<a href="_index_.html">"index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_models_password_model_.html">"models/password.model"</a>
+						<a href="_lib_colors_.html">"lib/colors"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_email_.html">"lib/email"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_numbers_.html">"lib/numbers"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_parens_.html">"lib/parens"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_password_.html">"lib/password"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_lib_semver_.html">"lib/semver"</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_regex_email_.html">"regex/email"</a>
+						<a href="_lib_url_.html">"lib/url"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_regex_numbers_.html">"regex/numbers"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_regex_parens_.html">"regex/parens"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_regex_password_.html">"regex/password"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_regex_semver_.html">"regex/semver"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_regex_url_.html">"regex/url"</a>
+						<a href="_models_password_model_.html">"models/password.model"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_email_.html#getemail" class="tsd-kind-icon">get<wbr>Email</a>
+						<a href="_lib_url_.html#domainexp" class="tsd-kind-icon">domain<wbr>Exp</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_lib_url_.html#urlstr" class="tsd-kind-icon">url<wbr>Str</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_email_.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>
+						<a href="_lib_url_.html#expression" class="tsd-kind-icon">expression</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_email_.html#remove" class="tsd-kind-icon">remove</a>
+						<a href="_lib_url_.html#getdomain" class="tsd-kind-icon">get<wbr>Domain</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_email_.html#retrieve" class="tsd-kind-icon">retrieve</a>
+						<a href="_lib_url_.html#isvalid" class="tsd-kind-icon">is<wbr>Valid</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_email_.html#swap" class="tsd-kind-icon">swap</a>
+						<a href="_lib_url_.html#remove" class="tsd-kind-icon">remove</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_lib_url_.html#retrieve" class="tsd-kind-icon">retrieve</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_regex_email_.html#email" class="tsd-kind-icon">email</a>
+						<a href="_lib_url_.html#url" class="tsd-kind-icon">url</a>
 					</li>
 				</ul>
 			</nav>
