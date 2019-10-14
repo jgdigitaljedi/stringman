@@ -1,9 +1,9 @@
-import { colors } from './lib/colors';
-import { email } from './lib/email';
-import { numbers } from './lib/numbers';
-import { parens } from './lib/parens';
-import { pwd } from './lib/password';
-import { semver } from './lib/semver';
-import { url } from './lib/url';
+import { colors } from './source/colors';
+import { email } from './source/email';
+import { numbers } from './source/numbers';
+import { parens } from './source/parens';
+import { pwd } from './source/password';
+import { semver } from './source/semver';
+import { url } from './source/url';
 
 export { colors, email, numbers, parens, pwd, semver, url };

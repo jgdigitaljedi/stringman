@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;lib/colors&quot; | Stringman</title>
+	<title>&quot;source/parens&quot; | Stringman</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_lib_colors_.html">&quot;lib/colors&quot;</a>
+					<a href="_source_parens_.html">&quot;source/parens&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;lib/colors&quot;</h1>
+			<h1>External module &quot;source/parens&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -73,15 +73,14 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_colors_.html#hextorgb" class="tsd-kind-icon">hex<wbr>ToRgb</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_colors_.html#ishex" class="tsd-kind-icon">is<wbr>Hex</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_colors_.html#rgbtohex" class="tsd-kind-icon">rgb<wbr>ToHex</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_parens_.html#inside" class="tsd-kind-icon">inside</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_parens_.html#remove" class="tsd-kind-icon">remove</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Object literals</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_colors_.html#colors" class="tsd-kind-icon">colors</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_parens_.html#parens" class="tsd-kind-icon">parens</a></li>
 							</ul>
 						</section>
 					</div>
@@ -90,34 +89,34 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="hextorgb" class="tsd-anchor"></a>
-					<h3>hex<wbr>ToRgb</h3>
+					<a name="inside" class="tsd-anchor"></a>
+					<h3>inside</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">hex<wbr>ToRgb<span class="tsd-signature-symbol">(</span>hex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+						<li class="tsd-signature tsd-kind-icon">inside<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in lib/colors.ts:57</li>
+									<li>Defined in source/parens.ts:31</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Takes a hexidecimal color string and returns the rgb value</p>
+									<p>Takes string and returns array of strings containing what was inside any number of sets of parenthesis</p>
 								</div>
-								<p> Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> colors = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).colors; <span class="hljs-comment">// or `import {colors} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> test = colors.hexToRgb(<span class="hljs-string">'#16212c'</span>);
-<span class="hljs-built_in">console</span>.log(test); <span class="hljs-comment">// [22, 33, 44]</span></code></pre>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> parens = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).parens; <span class="hljs-comment">// or `import {parens} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> fromInside = parens.inside(<span class="hljs-string">'this is ignored (and this is returned)'</span>);
+<span class="hljs-built_in">console</span>.log(fromInside); <span class="hljs-comment">// 'this is returned'</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>hex: <span class="tsd-signature-type">string</span></h5>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">null</span>
 							</h4>
@@ -125,71 +124,31 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="ishex" class="tsd-anchor"></a>
-					<h3>is<wbr>Hex</h3>
+					<a name="remove" class="tsd-anchor"></a>
+					<h3>remove</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Hex<span class="tsd-signature-symbol">(</span>color<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in lib/colors.ts:37</li>
+									<li>Defined in source/parens.ts:14</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Takes a string and returns boolean indicating whether it is a valid hexidecimal color</p>
+									<p>Takes string and returns string with parenthesis and contain between parenthesis removed</p>
 								</div>
 								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> colors = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).colors; <span class="hljs-comment">// or `import {colors} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> valid = colors.isHex(<span class="hljs-string">'16212c'</span>);
-<span class="hljs-keyword">const</span> invalid = colors.isHex(<span class="hljs-string">'nope'</span>);
-<span class="hljs-built_in">console</span>.log(valid); <span class="hljs-comment">// true</span>
-<span class="hljs-built_in">console</span>.log(invalid); <span class="hljs-comment">// false</span></code></pre>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> parens = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).parens; <span class="hljs-comment">// or `import {parens} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> noParens = parens.remove(<span class="hljs-string">'this will come back (and this will be removed)'</span>);
+<span class="hljs-built_in">console</span>.log(noParens); <span class="hljs-comment">// 'this will come back'</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>color: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="rgbtohex" class="tsd-anchor"></a>
-					<h3>rgb<wbr>ToHex</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">rgb<wbr>ToHex<span class="tsd-signature-symbol">(</span>r<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, g<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in lib/colors.ts:18</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Takes rgb color values and returns hexidecimal equivalent</p>
-								</div>
-								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> colors = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).colors; <span class="hljs-comment">// or `import {colors} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> test = colors.rgbToHex(<span class="hljs-number">22</span>, <span class="hljs-number">33</span>, <span class="hljs-number">44</span>);
-<span class="hljs-built_in">console</span>.log(test); <span class="hljs-comment">// '#16212C'</span></code></pre>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>r: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>g: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>b: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -200,41 +159,31 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Object literals</h2>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="colors" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> colors</h3>
-					<div class="tsd-signature tsd-kind-icon">colors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<a name="parens" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> parens</h3>
+					<div class="tsd-signature tsd-kind-icon">parens<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lib/colors.ts:87</li>
+							<li>Defined in source/parens.ts:36</li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="colors.hextorgb-1" class="tsd-anchor"></a>
-						<h3>hex<wbr>ToRgb</h3>
-						<div class="tsd-signature tsd-kind-icon">hex<wbr>ToRgb<span class="tsd-signature-symbol">:</span> <a href="_lib_colors_.html#hextorgb" class="tsd-signature-type">hexToRgb</a></div>
+						<a name="parens.inside-1" class="tsd-anchor"></a>
+						<h3>inside</h3>
+						<div class="tsd-signature tsd-kind-icon">inside<span class="tsd-signature-symbol">:</span> <a href="_source_parens_.html#inside" class="tsd-signature-type">inside</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in lib/colors.ts:88</li>
+								<li>Defined in source/parens.ts:37</li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="colors.ishex-1" class="tsd-anchor"></a>
-						<h3>is<wbr>Hex</h3>
-						<div class="tsd-signature tsd-kind-icon">is<wbr>Hex<span class="tsd-signature-symbol">:</span> <a href="_lib_colors_.html#ishex" class="tsd-signature-type">isHex</a></div>
+						<a name="parens.remove-1" class="tsd-anchor"></a>
+						<h3>remove</h3>
+						<div class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">:</span> <a href="_source_parens_.html#remove" class="tsd-signature-type">remove</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in lib/colors.ts:89</li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="colors.rgbtohex-1" class="tsd-anchor"></a>
-						<h3>rgb<wbr>ToHex</h3>
-						<div class="tsd-signature tsd-kind-icon">rgb<wbr>ToHex<span class="tsd-signature-symbol">:</span> <a href="_lib_colors_.html#rgbtohex" class="tsd-signature-type">rgbToHex</a></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in lib/colors.ts:90</li>
+								<li>Defined in source/parens.ts:38</li>
 							</ul>
 						</aside>
 					</section>
@@ -247,45 +196,42 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="_lib_colors_.html">"lib/colors"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_lib_email_.html">"lib/email"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_lib_numbers_.html">"lib/numbers"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_lib_parens_.html">"lib/parens"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_lib_password_.html">"lib/password"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_lib_semver_.html">"lib/semver"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_lib_url_.html">"lib/url"</a>
-					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_models_password_model_.html">"models/password.model"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_colors_.html">"source/colors"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_email_.html">"source/email"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_numbers_.html">"source/numbers"</a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="_source_parens_.html">"source/parens"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_password_.html">"source/password"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_semver_.html">"source/semver"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_url_.html">"source/url"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_lib_colors_.html#hextorgb" class="tsd-kind-icon">hex<wbr>ToRgb</a>
+						<a href="_source_parens_.html#inside" class="tsd-kind-icon">inside</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_lib_colors_.html#ishex" class="tsd-kind-icon">is<wbr>Hex</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_lib_colors_.html#rgbtohex" class="tsd-kind-icon">rgb<wbr>ToHex</a>
+						<a href="_source_parens_.html#remove" class="tsd-kind-icon">remove</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_lib_colors_.html#colors" class="tsd-kind-icon">colors</a>
+						<a href="_source_parens_.html#parens" class="tsd-kind-icon">parens</a>
 					</li>
 				</ul>
 			</nav>
