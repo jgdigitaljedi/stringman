@@ -48,9 +48,22 @@ describe('test various methods for "numbers"', () => {
     expect(numbers.containsDecimal('nope')).toBe(false);
   });
 
-  test('convertToHex => takes a number is string or number form and returns the hexidecimal equivalent', () => {
+  test('convertToHex => takes a string or number from 0 to 255 and returns the hexidecimal equivalent', () => {
     expect(numbers.convertToHex(255)).toBe('FF');
     expect(numbers.convertToHex('0')).toBe('00');
     expect(numbers.convertToHex('nope')).toBe('NAN');
+  });
+
+  test('isPhoneNumber => takes a number or string and validates whether it is a valid phone number', () => {
+    expect(numbers.isPhoneNumber('(888) 555-1234')).toBe(true);
+    expect(numbers.isPhoneNumber('(123)456-7890')).toBe(true);
+    expect(numbers.isPhoneNumber('123-456-7890')).toBe(true);
+    expect(numbers.isPhoneNumber('123.456.7890')).toBe(true);
+    expect(numbers.isPhoneNumber(1234567890)).toBe(true);
+    expect(numbers.isPhoneNumber('+31636363634')).toBe(true);
+    expect(numbers.isPhoneNumber('075-63546725')).toBe(true);
+    expect(numbers.isPhoneNumber('333-44-5555')).toBe(false);
+    expect(numbers.isPhoneNumber('nope')).toBe(false);
+    expect(numbers.isPhoneNumber(100)).toBe(false);
   });
 });

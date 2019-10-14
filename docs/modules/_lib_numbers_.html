@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;lib/numbers&quot; | stringman</title>
+	<title>&quot;lib/numbers&quot; | Stringman</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">stringman</a>
+					<a href="../index.html" class="title">Stringman</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -79,6 +79,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_numbers_.html#converttohex" class="tsd-kind-icon">convert<wbr>ToHex</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_numbers_.html#decimal" class="tsd-kind-icon">decimal</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_numbers_.html#fraction" class="tsd-kind-icon">fraction</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_numbers_.html#isphonenumber" class="tsd-kind-icon">is<wbr>Phone<wbr>Number</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_numbers_.html#whole" class="tsd-kind-icon">whole</a></li>
 							</ul>
 						</section>
@@ -205,7 +206,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in lib/numbers.ts:146</li>
+									<li>Defined in lib/numbers.ts:148</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -216,8 +217,10 @@
 								<pre><code class="language-js"><span class="hljs-keyword">const</span> numbers = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).numbers; <span class="hljs-comment">// or `import {numbers} from 'stringman'`;</span>
 <span class="hljs-keyword">const</span> hex = numbers.convertToHex(<span class="hljs-string">'255'</span>);
 <span class="hljs-keyword">const</span> moreHex = numbers.convertToHex(<span class="hljs-number">0</span>);
+<span class="hljs-keyword">const</span> notHex = numbers.convertToHex(<span class="hljs-string">'nope'</span>);
 <span class="hljs-built_in">console</span>.log(hex) <span class="hljs-comment">// 'ff'</span>
-<span class="hljs-built_in">console</span>.log(moreHex) <span class="hljs-comment">// '00'</span></code></pre>
+<span class="hljs-built_in">console</span>.log(moreHex) <span class="hljs-comment">// '00'</span>
+<span class="hljs-built_in">console</span>.log(notHex) <span class="hljs-comment">// 'NAN'</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -300,6 +303,48 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="isphonenumber" class="tsd-anchor"></a>
+					<h3>is<wbr>Phone<wbr>Number</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Phone<wbr>Number<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/numbers.ts:183</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes a string or number and validates whether it is a valid phone number format.</p>
+								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> numbers = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).numbers; <span class="hljs-comment">// or `import {numbers} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> valid = numbers.isPhoneNumber(<span class="hljs-string">'(888) 555-1234'</span>);
+<span class="hljs-keyword">const</span> invalid = numbers.isPhoneNumber(<span class="hljs-string">'888-55-2345'</span>);
+<span class="hljs-built_in">console</span>.log(valid); <span class="hljs-comment">// true</span>
+<span class="hljs-built_in">console</span>.log(invalid); <span class="hljs-comment">// false</span></code></pre>
+								<p>Valid formats:</p>
+								<pre><code>(<span class="hljs-number">123</span>) <span class="hljs-number">456</span><span class="hljs-number">-7890</span>
+(<span class="hljs-number">123</span>)<span class="hljs-number">456</span><span class="hljs-number">-7890</span>
+<span class="hljs-number">123</span><span class="hljs-number">-456</span><span class="hljs-number">-7890</span>
+<span class="hljs-number">123.456</span><span class="hljs-number">.7890</span>
+<span class="hljs-number">1234567890</span>
++<span class="hljs-number">31636363634</span>
+<span class="hljs-number">075</span><span class="hljs-number">-63546725</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="whole" class="tsd-anchor"></a>
 					<h3>whole</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
@@ -342,7 +387,7 @@
 					<div class="tsd-signature tsd-kind-icon">numbers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in lib/numbers.ts:155</li>
+							<li>Defined in lib/numbers.ts:191</li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -351,7 +396,7 @@
 						<div class="tsd-signature tsd-kind-icon">contains<wbr>Decimal<span class="tsd-signature-symbol">:</span> <a href="_lib_numbers_.html#containsdecimal" class="tsd-signature-type">containsDecimal</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in lib/numbers.ts:156</li>
+								<li>Defined in lib/numbers.ts:192</li>
 							</ul>
 						</aside>
 					</section>
@@ -361,7 +406,7 @@
 						<div class="tsd-signature tsd-kind-icon">contains<wbr>Fraction<span class="tsd-signature-symbol">:</span> <a href="_lib_numbers_.html#containsfraction" class="tsd-signature-type">containsFraction</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in lib/numbers.ts:157</li>
+								<li>Defined in lib/numbers.ts:193</li>
 							</ul>
 						</aside>
 					</section>
@@ -371,7 +416,7 @@
 						<div class="tsd-signature tsd-kind-icon">contains<wbr>Num<span class="tsd-signature-symbol">:</span> <a href="_lib_numbers_.html#containsnum" class="tsd-signature-type">containsNum</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in lib/numbers.ts:158</li>
+								<li>Defined in lib/numbers.ts:194</li>
 							</ul>
 						</aside>
 					</section>
@@ -381,7 +426,7 @@
 						<div class="tsd-signature tsd-kind-icon">convert<wbr>ToHex<span class="tsd-signature-symbol">:</span> <a href="_lib_numbers_.html#converttohex" class="tsd-signature-type">convertToHex</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in lib/numbers.ts:159</li>
+								<li>Defined in lib/numbers.ts:195</li>
 							</ul>
 						</aside>
 					</section>
@@ -391,7 +436,7 @@
 						<div class="tsd-signature tsd-kind-icon">decimal<span class="tsd-signature-symbol">:</span> <a href="_lib_numbers_.html#decimal" class="tsd-signature-type">decimal</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in lib/numbers.ts:160</li>
+								<li>Defined in lib/numbers.ts:196</li>
 							</ul>
 						</aside>
 					</section>
@@ -401,7 +446,17 @@
 						<div class="tsd-signature tsd-kind-icon">fraction<span class="tsd-signature-symbol">:</span> <a href="_lib_numbers_.html#fraction" class="tsd-signature-type">fraction</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in lib/numbers.ts:161</li>
+								<li>Defined in lib/numbers.ts:197</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="numbers.isphonenumber-1" class="tsd-anchor"></a>
+						<h3>is<wbr>Phone<wbr>Number</h3>
+						<div class="tsd-signature tsd-kind-icon">is<wbr>Phone<wbr>Number<span class="tsd-signature-symbol">:</span> <a href="_lib_numbers_.html#isphonenumber" class="tsd-signature-type">isPhoneNumber</a></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in lib/numbers.ts:198</li>
 							</ul>
 						</aside>
 					</section>
@@ -411,7 +466,7 @@
 						<div class="tsd-signature tsd-kind-icon">whole<span class="tsd-signature-symbol">:</span> <a href="_lib_numbers_.html#whole" class="tsd-signature-type">whole</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in lib/numbers.ts:162</li>
+								<li>Defined in lib/numbers.ts:199</li>
 							</ul>
 						</aside>
 					</section>
@@ -423,9 +478,6 @@
 				<ul>
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="_lib_colors_.html">"lib/colors"</a>
@@ -472,6 +524,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_lib_numbers_.html#fraction" class="tsd-kind-icon">fraction</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_lib_numbers_.html#isphonenumber" class="tsd-kind-icon">is<wbr>Phone<wbr>Number</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_lib_numbers_.html#whole" class="tsd-kind-icon">whole</a>

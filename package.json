@@ -1,7 +1,7 @@
 {
   "name": "stringman",
-  "version": "0.4.0",
-  "description": "Stringman does a lot of the slightly unusual string manipulation and regex operations for you.",
+  "version": "0.4.1",
+  "description": "Stringman does a lot of string manipulation and regex operations for you.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "source": "src/index.ts",
@@ -18,15 +18,21 @@
     "watch": "tsc --watch",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "docs": "rimraf ./docs && typedoc --out docs/ src/ && touch ./docs/.nojekyll"
+    "docs": "rimraf ./docs && typedoc --exclude src/index.ts --name Stringman --out docs/ src/ && touch ./docs/.nojekyll"
   },
   "keywords": [
     "javascript",
     "regex",
-    "string",
-    "manipulation"
+    "string manipulation",
+    "manipulation",
+    "colors",
+    "numbers"
   ],
-  "author": "Joey Gauthier",
+  "author": {
+    "name": "Joey Gauthier",
+    "email": "joey@joeyg.me",
+    "url": "https://joeyg.me"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^24.0.18",
@@ -37,7 +43,6 @@
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.15.0",
-    "typescript": "^3.6.3",
-    "uglify-es": "^3.3.9"
+    "typescript": "^3.6.3"
   }
 }
