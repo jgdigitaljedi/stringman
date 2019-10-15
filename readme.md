@@ -26,3 +26,59 @@ npm i -S stringman
 ## Contributing
 
 I haven't though too much about this yet as the project is very young. Just contact me if you are interested in contributing.
+
+## Functionality
+
+Stringman is written in modules with a variety of functionality and that can be imported individually. See the documentation for more details and usage examples.
+
+#### colors module
+
+- rgbToHex => Takes rgb color values and returns hexidecimal equivalent
+- isHex => Takes a string and returns boolean indicating whether it is a valid hexidecimal color
+- hexToRgb => Takes a hexidecimal color string and returns the rgb value
+
+#### email module
+
+- retrieve => Takes a string and returns a valid email address if one is present in the string
+- isValid => Takes a string and returns boolean to represent whether or not string is a valid email address
+- remove => Takes a string and returns the string with any email addresses removed
+- swap => Takes 2 strings (a string with an email address and another string that is a different email address) and returns the first string with the new address swapped
+
+#### numbers module
+
+- containsNum => returns boolean indicating whether argument contains a number
+- whole => Takes a string or a number and returns boolean for whether it is a valid whole number (integer)
+- decimal => Takes a string or a number and returns a boolean for whether it is a valid decimal (float)
+- fraction => Takes a string and returns a boolean for whether it is a valid fraction.
+- containsDecimal => Takes a string and returns boolean indicating whether string contains a decimal (float) somwhere in it
+- containsFraction => Takes a string and returns a boolean indicating whether the string contains a fraction
+- convertToHex => Takes a number as a string or number form and returns the hexidecimal equivalent
+- isPhoneNumber => Takes a string or number and validates whether it is a valid phone number format.
+
+#### parens module
+
+- remove => Takes string and returns string with parenthesis and contain between parenthesis removed
+- inside => Takes string and returns array of strings containing what was inside any number of sets of parenthesis
+
+#### password module
+
+- buildRegex => Takes min, max, and string of special characters and returns a RegExp for validating passwords
+- isValid => Takes parameters for building a regular expression then validates the string sent and returns a boolean value
+- isValidAdvanced => Validates using regex like isValid but also checks for specific number of different types of characters (slightly slower than 'isValid')
+
+#### semver module
+
+NOTE: This module uses look-behinds right now so it will not work in IE, Edge, and older versions of other browsers. I plan on revisiting this module to see if the same functionality can be achieved without this restriction.
+
+- retrieve => returns semantic version from string if present
+- isValid => Tests if argument is valid semantic version
+- remove => Removes semantic version from string, trims, and returns result
+- expression => Returns RegExp variable used to test for semantic version
+
+#### url module
+
+- retrieve => Takes string and returns any matches for a valid URL from the string
+- isValid => Takes a string and returns whether string is a valid URL as a boolean
+- remove => Takes string, removes any URLs, trims, and returns string
+- getDomain => Takes url string, tries to return just the domain
+- expression => Returns RegExp for testing URLs

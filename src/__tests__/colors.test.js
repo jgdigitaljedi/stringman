@@ -16,4 +16,10 @@ describe('tests the various methods for "colors"', () => {
     expect(colors.hexToRgb('#00ff00')).toContain(255);
     expect(colors.hexToRgb('nope')).toBe(null);
   });
+
+  test('luminance => lighten or darken a color', () => {
+    expect(colors.luminance('#63C6FF', 40)).toBe('#8affff');
+    expect(colors.luminance('#63C6FF', -40)).toBe('#3b7699');
+    expect(colors.luminance('nope', -40)).toBe(null);
+  });
 });

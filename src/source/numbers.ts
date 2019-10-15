@@ -14,7 +14,13 @@
  * @returns {boolean}
  */
 function containsNum(num: string | number): boolean {
-  return !!num.toString().match(/-?\d/g);
+  if (typeof num === 'number') {
+    return true;
+  }
+  if (typeof num === 'string') {
+    return !!num.match(/-?\d/g);
+  }
+  return false;
 }
 
 /**
@@ -129,7 +135,7 @@ function containsFraction(num: string): boolean {
 }
 
 /**
- * Takes a number is string or number form and returns the hexidecimal equivalent
+ * Takes a number as a string or number form and returns the hexidecimal equivalent
  *
  * Basic usage example:
  * ```js

@@ -38,7 +38,8 @@ function isHex(color: string): boolean {
   if (typeof color !== 'string') {
     return false;
   }
-  return !!color.match(/^#?([a-f0-9]{6}|[a-f0-9]{3})$/);
+  const colorCleaned = color.charAt(0) === '#' ? color.slice(1) : color;
+  return !!colorCleaned.match(/^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/);
 }
 
 /**
@@ -84,9 +85,55 @@ function hexToRgb(hex: string): number[] | null {
   return [r, g, b];
 }
 
+/**
+ * Takes a hex color value and a percentage and returns a hex color string that is the result of lightening or darkening the original color by the percentage
+ * NOTE: this does not work on black or white!
+ *
+ * Basic usage example:
+ * ```js
+ * const colors = require('stringman').colors; // or `import {colors} from 'stringman'`;
+ * const lightened = colors.luminance('#63C6FF', 40);
+ * const darkened = colors.luminance('#63C6FF', -40);
+ * console.log(lightened); // '#8affff'
+ * console.log(darkened); // '#3b7699'
+ * ```
+ *
+ * @param {string} color
+ * @param {number} percent
+ * @returns {string}
+ */
+function luminance(color: string, percent: number): string | null {
+  // if color argument isn't actually a color
+  if (!isHex(color)) {
+    return null;
+  }
+  // convert to hex
+  const Rhex = parseInt(color.substring(1, 3), 16);
+  const Ghex = parseInt(color.substring(3, 5), 16);
+  const Bhex = parseInt(color.substring(5, 7), 16);
+
+  // lighten or darken
+  const Rcon = (Rhex * (100 + percent)) / 100;
+  const Gcon = (Ghex * (100 + percent)) / 100;
+  const Bcon = (Bhex * (100 + percent)) / 100;
+
+  // make sure values aren't greater than 255 (max hex value)
+  const R = Rcon < 255 ? parseInt(Rcon.toString(), 10) : 255;
+  const G = Gcon < 255 ? parseInt(Gcon.toString(), 10) : 255;
+  const B = Bcon < 255 ? parseInt(Bcon.toString(), 10) : 255;
+
+  // make sure each color value is 2 characters and convert back to hex
+  const RR = R.toString(16).length === 1 ? '0' + R.toString(16) : R.toString(16);
+  const GG = G.toString(16).length === 1 ? '0' + G.toString(16) : G.toString(16);
+  const BB = B.toString(16).length === 1 ? '0' + B.toString(16) : B.toString(16);
+
+  return '#' + RR + GG + BB;
+}
+
 const colors = {
   hexToRgb,
   isHex,
+  luminance,
   rgbToHex
 };
 

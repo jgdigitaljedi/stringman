@@ -90,6 +90,75 @@
 					<h2>Contributing</h2>
 				</a>
 				<p>I haven&#39;t though too much about this yet as the project is very young. Just contact me if you are interested in contributing.</p>
+				<a href="#functionality" id="functionality" style="color: inherit; text-decoration: none;">
+					<h2>Functionality</h2>
+				</a>
+				<p>Stringman is written in modules with a variety of functionality and that can be imported individually. See the documentation for more details and usage examples.</p>
+				<a href="#colors-module" id="colors-module" style="color: inherit; text-decoration: none;">
+					<h4>colors module</h4>
+				</a>
+				<ul>
+					<li>rgbToHex =&gt; Takes rgb color values and returns hexidecimal equivalent</li>
+					<li>isHex =&gt; Takes a string and returns boolean indicating whether it is a valid hexidecimal color</li>
+					<li>hexToRgb =&gt; Takes a hexidecimal color string and returns the rgb value</li>
+				</ul>
+				<a href="#email-module" id="email-module" style="color: inherit; text-decoration: none;">
+					<h4>email module</h4>
+				</a>
+				<ul>
+					<li>retrieve =&gt; Takes a string and returns a valid email address if one is present in the string</li>
+					<li>isValid =&gt; Takes a string and returns boolean to represent whether or not string is a valid email address</li>
+					<li>remove =&gt; Takes a string and returns the string with any email addresses removed</li>
+					<li>swap =&gt; Takes 2 strings (a string with an email address and another string that is a different email address) and returns the first string with the new address swapped</li>
+				</ul>
+				<a href="#numbers-module" id="numbers-module" style="color: inherit; text-decoration: none;">
+					<h4>numbers module</h4>
+				</a>
+				<ul>
+					<li>containsNum =&gt; returns boolean indicating whether argument contains a number</li>
+					<li>whole =&gt; Takes a string or a number and returns boolean for whether it is a valid whole number (integer)</li>
+					<li>decimal =&gt; Takes a string or a number and returns a boolean for whether it is a valid decimal (float)</li>
+					<li>fraction =&gt; Takes a string and returns a boolean for whether it is a valid fraction.</li>
+					<li>containsDecimal =&gt; Takes a string and returns boolean indicating whether string contains a decimal (float) somwhere in it</li>
+					<li>containsFraction =&gt; Takes a string and returns a boolean indicating whether the string contains a fraction</li>
+					<li>convertToHex =&gt; Takes a number as a string or number form and returns the hexidecimal equivalent</li>
+					<li>isPhoneNumber =&gt; Takes a string or number and validates whether it is a valid phone number format.</li>
+				</ul>
+				<a href="#parens-module" id="parens-module" style="color: inherit; text-decoration: none;">
+					<h4>parens module</h4>
+				</a>
+				<ul>
+					<li>remove =&gt; Takes string and returns string with parenthesis and contain between parenthesis removed</li>
+					<li>inside =&gt; Takes string and returns array of strings containing what was inside any number of sets of parenthesis</li>
+				</ul>
+				<a href="#password-module" id="password-module" style="color: inherit; text-decoration: none;">
+					<h4>password module</h4>
+				</a>
+				<ul>
+					<li>buildRegex =&gt; Takes min, max, and string of special characters and returns a RegExp for validating passwords</li>
+					<li>isValid =&gt; Takes parameters for building a regular expression then validates the string sent and returns a boolean value</li>
+					<li>isValidAdvanced =&gt; Validates using regex like isValid but also checks for specific number of different types of characters (slightly slower than &#39;isValid&#39;)</li>
+				</ul>
+				<a href="#semver-module" id="semver-module" style="color: inherit; text-decoration: none;">
+					<h4>semver module</h4>
+				</a>
+				<p>NOTE: This module uses look-behinds right now so it will not work in IE, Edge, and older versions of other browsers. I plan on revisiting this module to see if the same functionality can be achieved without this restriction.</p>
+				<ul>
+					<li>retrieve =&gt; returns semantic version from string if present</li>
+					<li>isValid =&gt; Tests if argument is valid semantic version</li>
+					<li>remove =&gt; Removes semantic version from string, trims, and returns result</li>
+					<li>expression =&gt; Returns RegExp variable used to test for semantic version</li>
+				</ul>
+				<a href="#url-module" id="url-module" style="color: inherit; text-decoration: none;">
+					<h4>url module</h4>
+				</a>
+				<ul>
+					<li>retrieve =&gt; Takes string and returns any matches for a valid URL from the string</li>
+					<li>isValid =&gt; Takes a string and returns whether string is a valid URL as a boolean</li>
+					<li>remove =&gt; Takes string, removes any URLs, trims, and returns string</li>
+					<li>getDomain =&gt; Takes url string, tries to return just the domain</li>
+					<li>expression =&gt; Returns RegExp for testing URLs</li>
+				</ul>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">

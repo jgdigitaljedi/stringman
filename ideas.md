@@ -7,11 +7,11 @@ Just a file where I can jot down my ideas of functionality to add to this librar
 - forbidden characters
 - password strength
 
-## numbers
+## escapes
 
-- is whole number
-- is decimal
-- contains number
+- remove escapes
+- add escapes
+- retrieve escaped characters
 
 ## IP Address
 
@@ -22,8 +22,6 @@ Just a file where I can jot down my ideas of functionality to add to this librar
 ## Time
 
 ## Duplicates
-
-## Phone Numbers
 
 ## File Path
 
