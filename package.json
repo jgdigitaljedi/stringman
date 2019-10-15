@@ -1,6 +1,6 @@
 {
   "name": "stringman",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Stringman does a lot of string manipulation and regex operations for you.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
