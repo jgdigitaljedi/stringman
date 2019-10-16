@@ -43,7 +43,15 @@ Stringman is written in modules with a variety of functionality and that can be 
 - retrieve => Takes a string and returns a valid email address if one is present in the string
 - isValid => Takes a string and returns boolean to represent whether or not string is a valid email address
 - remove => Takes a string and returns the string with any email addresses removed
-- swap => Takes 2 strings (a string with an email address and another string that is a different email address) and returns the first string with the new address swapped
+- swap => Takes 2 strings (a string with an email address and another string) and returns the first string with the email address swapped for the second string
+
+#### ip module
+
+- isValid => Takes a string and returns boolean to represent whether or not string is a valid IP address
+- retrieve => Takes a string and returns a valid IP address if one is present in the string
+- remove => Takes a string and returns the string with any ip addresses removed
+- swap => Takes 2 strings (a string with an IP address and another string) and returns the first string with the IP address swapped for the second string
+- expression => optionally takes boolean to add global flag and returns regular expression used for matching an IP address
 
 #### numbers module
 

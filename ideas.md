@@ -13,8 +13,6 @@ Just a file where I can jot down my ideas of functionality to add to this librar
 - add escapes
 - retrieve escaped characters
 
-## IP Address
-
 ## HTML tags
 
 ## Dates
