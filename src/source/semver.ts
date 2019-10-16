@@ -16,10 +16,10 @@ const semverStr = /(?<=^v?|\sv?)(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?
  * ```
  *
  * @param {string} str
- * @returns {(RegExpMatchArray | null)}
+ * @returns {(RegExpMatchArray)}
  */
-function retrieve(str: string): RegExpMatchArray | null {
-  return str.match(semverStr);
+function retrieve(str: string): RegExpMatchArray {
+  return str.match(semverStr) || [];
 }
 
 /**

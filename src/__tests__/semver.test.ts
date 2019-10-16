@@ -1,4 +1,5 @@
-const semver = require('../../lib').semver;
+// const semver = require('../../lib').semver;
+import { semver } from '../../lib';
 
 describe('tests various methods of "semver"', () => {
   test('retrieve => returns semver from string', () => {

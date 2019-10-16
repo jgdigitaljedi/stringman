@@ -1,4 +1,5 @@
-const url = require('../../lib').url;
+// const url = require('../../lib').url;
+import { url } from '../../lib';
 
 describe('test various methods of "url"', () => {
   test('retrieve => returns url from string', () => {

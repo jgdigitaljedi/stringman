@@ -26,11 +26,11 @@ function remove(str: string): string {
  * ```
  *
  * @param {string} str
- * @returns {(string[] | null)}
+ * @returns {(string[])}
  */
-function inside(str: string): string[] | null {
+function inside(str: string): string[] {
   const matched = str.match(/\(([^()]+)\)/g);
-  return matched ? matched.map(m => m.replace('(', '').replace(')', '')) : null;
+  return matched ? matched.map(m => m.replace('(', '').replace(')', '')) : [];
 }
 
 const parens = {

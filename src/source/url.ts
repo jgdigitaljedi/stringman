@@ -13,10 +13,10 @@ const domainExp = /^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)/im;
  * ```
  *
  * @param {string} str
- * @returns {(string[] | null)}
+ * @returns {(string[])}
  */
-function retrieve(str: string): string[] | null {
-  return str.match(urlStr);
+function retrieve(str: string): string[] {
+  return str.match(urlStr) || [];
 }
 
 /**

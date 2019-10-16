@@ -1,4 +1,5 @@
-const numbers = require('../../lib').numbers;
+// const numbers = require('../../lib').numbers;
+import { numbers } from '../../lib';
 
 describe('test various methods for "numbers"', () => {
   test('containsNum => determines whether or not a string or number actually contains some digits', () => {
@@ -24,7 +25,7 @@ describe('test various methods for "numbers"', () => {
   });
 
   test('fraction => determines if passed value is a fraction', () => {
-    expect(numbers.fraction(33)).toBe(false);
+    // expect(numbers.fraction(33)).toBe(false);
     expect(numbers.fraction('-33')).toBe(false);
     expect(numbers.fraction('1/3')).toBe(true);
     expect(numbers.fraction('-22/33')).toBe(true);
@@ -32,7 +33,7 @@ describe('test various methods for "numbers"', () => {
   });
 
   test('containsFraction => determines if passed value contains a fraction', () => {
-    expect(numbers.containsFraction(33)).toBe(false);
+    // expect(numbers.containsFraction(33)).toBe(false);
     expect(numbers.containsFraction('-33')).toBe(false);
     expect(numbers.containsFraction('has the fraction 1/3')).toBe(true);
     expect(numbers.containsFraction('has a fraction -22/33')).toBe(true);

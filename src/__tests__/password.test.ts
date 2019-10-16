@@ -1,4 +1,5 @@
-const pwd = require('../../lib').pwd;
+// const pwd = require('../../lib').pwd;
+import { pwd } from '../../lib';
 
 describe('tests the various methods of "password"', () => {
   test('isValid => basic validity check to see if password meets given params', () => {

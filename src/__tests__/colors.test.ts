@@ -1,4 +1,5 @@
-const colors = require('../../lib').colors;
+// const colors = require('../../lib').colors;
+import { colors } from '../../lib';
 
 describe('tests the various methods for "colors"', () => {
   test('isHex => verifies that string passed is hexidecimal color', () => {

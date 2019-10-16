@@ -1,4 +1,5 @@
-const email = require('../../lib').email;
+// const email = require('../../lib').email;
+import { email } from '../../lib';
 
 describe('tests the various methods for "email"', () => {
   test('retrieve => retrieves an email from a string', () => {
