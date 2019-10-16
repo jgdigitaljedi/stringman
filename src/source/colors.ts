@@ -1,4 +1,5 @@
 import { numbers } from './numbers';
+import { common } from './utility/common';
 
 /**
  * Takes rgb color values and returns hexidecimal equivalent
@@ -39,7 +40,7 @@ function isHex(color: string): boolean {
     return false;
   }
   const colorCleaned = color.charAt(0) === '#' ? color.slice(1) : color;
-  return !!colorCleaned.match(/^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/);
+  return common.isValid(colorCleaned, /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/);
 }
 
 /**

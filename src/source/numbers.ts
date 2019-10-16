@@ -1,3 +1,5 @@
+import { common } from './utility/common';
+
 /**
  * Takes string and returns boolean for whether string contains at least 1 number
  *
@@ -18,7 +20,7 @@ function containsNum(num: string | number): boolean {
     return true;
   }
   if (typeof num === 'string') {
-    return !!num.match(/-?\d/g);
+    return common.isValid(num, /-?\d/g);
   }
   return false;
 }
@@ -42,7 +44,7 @@ function whole(num: string | number): boolean {
   if (typeof num !== 'string' && typeof num !== 'number') {
     return false;
   }
-  return !!num.toString().match(/^-?\d+$/g);
+  return common.isValid(num.toString(), /^-?\d+$/g);
 }
 
 /**
@@ -64,7 +66,7 @@ function decimal(num: string | number): boolean {
   if (typeof num !== 'string' && typeof num !== 'number') {
     return false;
   }
-  return !!num.toString().match(/^-?\d*\.\d+$/g);
+  return common.isValid(num.toString(), /^-?\d*\.\d+$/g);
 }
 
 /**
@@ -84,7 +86,7 @@ function decimal(num: string | number): boolean {
  */
 function containsDecimal(num: string | number): boolean {
   if (typeof num === 'string') {
-    return !!num.match(/-?\d*\.\d+/g);
+    return common.isValid(num.toString(), /-?\d*\.\d+/g);
   }
   if (typeof num === 'number') {
     return decimal(num);
@@ -109,7 +111,7 @@ function fraction(num: string): boolean {
   if (typeof num !== 'string') {
     return false;
   }
-  return !!num.toString().match(/^-?\d*\/\d+$/g);
+  return common.isValid(num.toString(), /^-?\d*\/\d+$/g);
 }
 
 /**
@@ -131,7 +133,7 @@ function containsFraction(num: string): boolean {
   if (typeof num !== 'string') {
     return false;
   }
-  return !!num.match(/-?\d*\/\d+/g);
+  return common.isValid(num, /-?\d*\/\d+/g);
 }
 
 /**
@@ -191,7 +193,7 @@ function isPhoneNumber(str: string | number): boolean {
     return false;
   }
   const test = typeof str === 'number' ? str.toString() : str;
-  return !!test.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
+  return common.isValid(test, /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
 }
 
 const numbers = {

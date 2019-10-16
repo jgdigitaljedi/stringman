@@ -1,3 +1,5 @@
+import { common } from './utility/common';
+
 const getEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi;
 
 /**
@@ -34,7 +36,7 @@ function retrieve(str: string): string | null {
  * @returns {boolean}
  */
 function isValid(str: string): boolean {
-  return getEmail.test(str);
+  return common.isValid(str, getEmail);
 }
 
 /**
@@ -69,7 +71,7 @@ function remove(str: string): string {
  * @returns {string}
  */
 function swap(str: string, newEmail: string): string {
-  return str.replace(getEmail, newEmail);
+  return common.swap(str, newEmail, getEmail);
 }
 
 const email = {

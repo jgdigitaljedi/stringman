@@ -1,6 +1,6 @@
 {
   "name": "stringman",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Stringman does a lot of string manipulation and regex operations for you.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -18,7 +18,7 @@
     "watch": "tsc --watch",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "docs": "rimraf ./docs && typedoc --exclude src/index.ts --name Stringman --out docs/ src/ && touch ./docs/.nojekyll"
+    "docs": "rimraf ./docs && typedoc --exclude \"**/**/*+(index|test|spec|common).ts\" --name Stringman --out docs/ src/ && touch ./docs/.nojekyll"
   },
   "keywords": [
     "javascript",

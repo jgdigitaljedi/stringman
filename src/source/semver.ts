@@ -3,6 +3,8 @@
  * I use this and wanted to include it in my own library for convenience
  */
 
+import { common } from './utility/common';
+
 const semverStr = /(?<=^v?|\sv?)(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-(?:[1-9]\d*|[\da-z-]*[a-z-][\da-z-]*)(?:\.(?:[1-9]\d*|[\da-z-]*[a-z-][\da-z-]*))*)?(?:\+[\da-z-]+(?:\.[\da-z-]+)*)?(?=$|\s)/gi;
 
 /**
@@ -38,7 +40,8 @@ function retrieve(str: string): RegExpMatchArray {
  * @returns {boolean}
  */
 function isValid(str: string): boolean {
-  return semverStr.test(str);
+  // return semverStr.test(str);
+  return common.isValid(str, semverStr);
 }
 
 /**

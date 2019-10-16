@@ -1,3 +1,5 @@
+import { common } from './utility/common';
+
 const ipAddrOnly = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/m;
 
 const ipAddrContains = /(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)/gm;
@@ -18,10 +20,7 @@ const ipAddrContains = /(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][
  * @returns {boolean}
  */
 function isValid(addr: string): boolean {
-  if (typeof addr !== 'string') {
-    return false;
-  }
-  return ipAddrOnly.test(addr);
+  return common.isValid(addr, ipAddrOnly);
 }
 
 /**
@@ -101,10 +100,11 @@ function remove(str: string): string {
  * @returns {string}
  */
 function swap(str: string, newStr: string): string {
-  if (!str || typeof str !== 'string') {
-    return '';
-  }
-  return str.replace(ipAddrContains, newStr);
+  // if (!str || typeof str !== 'string') {
+  //   return '';
+  // }
+  // return str.replace(ipAddrContains, newStr);
+  return common.swap(str, newStr, ipAddrContains);
 }
 
 const ip = {
