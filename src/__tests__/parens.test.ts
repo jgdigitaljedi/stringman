@@ -9,4 +9,10 @@ describe('tests the various methods for "parens"', () => {
   test('inside => returns array of what is inside parenthesis', () => {
     expect(parens.inside('this (is a test) of the (inside function)')[1]).toBe('inside function');
   });
+
+  test('swap => Takes 2 strings, swaps anything in parenthesis INCLUDING THE PARENTHESIS from the first string with the second string', () => {
+    expect(parens.swap('replaces things (inside) parens with other things', 'within')).toBe(
+      'replaces things within parens with other things'
+    );
+  });
 });

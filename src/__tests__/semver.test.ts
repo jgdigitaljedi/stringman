@@ -14,4 +14,10 @@ describe('tests various methods of "semver"', () => {
   test('remove => removes semver from string', () => {
     expect(semver.remove('remove this stuff 10.11.12')).toBe('remove this stuff');
   });
+
+  test('swap => takes 2 strings and returns string with any semantic versions in the first string replaced by the second string', () => {
+    expect(semver.swap('this project is version 1.0.1', '2.2.5')).toBe(
+      'this project is version 2.2.5'
+    );
+  });
 });

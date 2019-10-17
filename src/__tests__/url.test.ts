@@ -16,6 +16,12 @@ describe('test various methods of "url"', () => {
   });
 
   test('getDomain => gets the domain from a string', () => {
-    expect(url.getDomain('https://www.google.com/test')).toBe('google.com');
+    expect(url.getDomain('https://www.google.com/test')[0]).toBe('google.com');
+  });
+
+  test('swap => swaps any URLS with second string', () => {
+    expect(url.swap('this is a test at https://test.com', 'https://www.fakesite.com')).toBe(
+      'this is a test at https://www.fakesite.com'
+    );
   });
 });

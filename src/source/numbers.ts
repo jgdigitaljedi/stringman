@@ -104,14 +104,14 @@ function containsDecimal(num: string | number): boolean {
  * console.log(notDec); // false
  * ```
  *
- * @param {(number | string)} num
+ * @param {string} num
  * @returns {boolean}
  */
 function fraction(num: string): boolean {
   if (typeof num !== 'string') {
     return false;
   }
-  return common.isValid(num.toString(), /^-?\d*\/\d+$/g);
+  return common.isValid(num, /^-?\d*\/\d+$/g);
 }
 
 /**

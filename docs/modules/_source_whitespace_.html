@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IPwOptionsCount | Stringman</title>
+	<title>&quot;source/whitespace&quot; | Stringman</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,84 +56,91 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_models_password_model_.html">&quot;models/password.model&quot;</a>
-				</li>
-				<li>
-					<a href="_models_password_model_.ipwoptionscount.html">IPwOptionsCount</a>
+					<a href="_source_whitespace_.html">&quot;source/whitespace&quot;</a>
 				</li>
 			</ul>
-			<h1>Interface IPwOptionsCount</h1>
+			<h1>External module &quot;source/whitespace&quot;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="target">IPwOptionsCount</span>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_models_password_model_.ipwoptionscount.html#capital" class="tsd-kind-icon">capital</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_models_password_model_.ipwoptionscount.html#lc" class="tsd-kind-icon">lc</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_models_password_model_.ipwoptionscount.html#num" class="tsd-kind-icon">num</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_models_password_model_.ipwoptionscount.html#special" class="tsd-kind-icon">special</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_whitespace_.html#removebreaks" class="tsd-kind-icon">remove<wbr>Breaks</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_whitespace_.html#whitespace" class="tsd-kind-icon">whitespace</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="capital" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> capital</h3>
-					<div class="tsd-signature tsd-kind-icon">capital<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/bb92c22/src/models/password.model.ts#L11">models/password.model.ts:11</a></li>
-						</ul>
-					</aside>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="removebreaks" class="tsd-anchor"></a>
+					<h3>remove<wbr>Breaks</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Breaks<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in source/whitespace.ts:16</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes a string and returns that string with all carriage returns and line breaks removed</p>
+								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">import</span> {whitespace} <span class="hljs-keyword">from</span> <span class="hljs-string">'stringman'</span> <span class="hljs-comment">// or const whitespace = require('stringman').whitespace;</span>
+<span class="hljs-keyword">const</span> removed = whitespace.removeBreaks(<span class="hljs-string">'this line\n has a\r dumb amount of\n line breaks'</span>);
+<span class="hljs-built_in">console</span>.log(removed); <span class="hljs-comment">// 'this line has a dumb amount of line breaks'</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="lc" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> lc</h3>
-					<div class="tsd-signature tsd-kind-icon">lc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="whitespace" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> whitespace</h3>
+					<div class="tsd-signature tsd-kind-icon">whitespace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/bb92c22/src/models/password.model.ts#L12">models/password.model.ts:12</a></li>
+							<li>Defined in source/whitespace.ts:20</li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="num" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> num</h3>
-					<div class="tsd-signature tsd-kind-icon">num<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/bb92c22/src/models/password.model.ts#L13">models/password.model.ts:13</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="special" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> special</h3>
-					<div class="tsd-signature tsd-kind-icon">special<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/bb92c22/src/models/password.model.ts#L14">models/password.model.ts:14</a></li>
-						</ul>
-					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="whitespace.removebreaks-1" class="tsd-anchor"></a>
+						<h3>remove<wbr>Breaks</h3>
+						<div class="tsd-signature tsd-kind-icon">remove<wbr>Breaks<span class="tsd-signature-symbol">:</span> <a href="_source_whitespace_.html#removebreaks" class="tsd-signature-type">removeBreaks</a></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in source/whitespace.ts:21</li>
+							</ul>
+						</aside>
+					</section>
 				</section>
 			</section>
 		</div>
@@ -143,67 +150,46 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_models_password_model_.html">"models/password.model"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_colors_.html">"source/colors"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_email_.html">"source/email"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_ip_.html">"source/ip"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_numbers_.html">"source/numbers"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_parens_.html">"source/parens"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_password_.html">"source/password"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_semver_.html">"source/semver"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_url_.html">"source/url"</a>
+					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_models_password_model_.html">"models/password.model"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_source_colors_.html">"source/colors"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_source_email_.html">"source/email"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_source_ip_.html">"source/ip"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_source_numbers_.html">"source/numbers"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_source_parens_.html">"source/parens"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_source_password_.html">"source/password"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_source_semver_.html">"source/semver"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_source_url_.html">"source/url"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_source_whitespace_.html">"source/whitespace"</a>
+						<a href="_source_whitespace_.html">"source/whitespace"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_models_password_model_.ipwcheckerobj.html" class="tsd-kind-icon">IPw<wbr>Checker<wbr>Obj</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_source_whitespace_.html#removebreaks" class="tsd-kind-icon">remove<wbr>Breaks</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_models_password_model_.ipwoptions.html" class="tsd-kind-icon">IPw<wbr>Options</a>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_source_whitespace_.html#whitespace" class="tsd-kind-icon">whitespace</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_models_password_model_.ipwoptionscount.html" class="tsd-kind-icon">IPw<wbr>Options<wbr>Count</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_models_password_model_.ipwoptionscount.html#capital" class="tsd-kind-icon">capital</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_models_password_model_.ipwoptionscount.html#lc" class="tsd-kind-icon">lc</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_models_password_model_.ipwoptionscount.html#num" class="tsd-kind-icon">num</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_models_password_model_.ipwoptionscount.html#special" class="tsd-kind-icon">special</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>

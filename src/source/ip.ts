@@ -37,10 +37,7 @@ function isValid(addr: string): boolean {
  * @returns {string[]}
  */
 function retrieve(str: string): string[] {
-  if (typeof str !== 'string') {
-    return [];
-  }
-  return str.match(ipAddrContains) || [];
+  return common.retrieve(str, ipAddrContains);
 }
 
 /**
@@ -79,10 +76,7 @@ function expression(global?: boolean): RegExp {
  * @returns {string}
  */
 function remove(str: string): string {
-  if (typeof str !== 'string') {
-    return '';
-  }
-  return str.replace(ipAddrContains, '').trim();
+  return common.remove(str, ipAddrContains);
 }
 
 /**

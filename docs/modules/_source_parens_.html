@@ -75,6 +75,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_parens_.html#inside" class="tsd-kind-icon">inside</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_parens_.html#remove" class="tsd-kind-icon">remove</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_parens_.html#swap" class="tsd-kind-icon">swap</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
@@ -98,7 +99,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/a44b830/src/source/parens.ts#L31">source/parens.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/bb92c22/src/source/parens.ts#L33">source/parens.ts:33</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -130,7 +131,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/a44b830/src/source/parens.ts#L14">source/parens.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/bb92c22/src/source/parens.ts#L16">source/parens.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -152,6 +153,43 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="swap" class="tsd-anchor"></a>
+					<h3>swap</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">swap<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, other<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/bb92c22/src/source/parens.ts#L54">source/parens.ts:54</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes 2 strings, swaps anything in parenthesis INCLUDING THE PARENTHESIS from the first string with the second string</p>
+								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> parens = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).parens; <span class="hljs-comment">// or `import {parens} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> noParens = parens.swap(<span class="hljs-string">'this has (stuff) in parens'</span>, <span class="hljs-string">'things'</span>);
+<span class="hljs-keyword">const</span> withParens = parens.swap(<span class="hljs-string">'this has (other stuff) in parens too'</span>, <span class="hljs-string">'(more things)'</span>);
+<span class="hljs-built_in">console</span>.log(noParens); <span class="hljs-comment">// 'this has things in parens'</span>
+<span class="hljs-built_in">console</span>.log(withParens); <span class="hljs-comment">// 'this has (more things) in parens too'</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>other: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Object literals</h2>
@@ -161,7 +199,7 @@
 					<div class="tsd-signature tsd-kind-icon">parens<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/a44b830/src/source/parens.ts#L36">source/parens.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/bb92c22/src/source/parens.ts#L58">source/parens.ts:58</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -170,7 +208,7 @@
 						<div class="tsd-signature tsd-kind-icon">inside<span class="tsd-signature-symbol">:</span> <a href="_source_parens_.html#inside" class="tsd-signature-type">inside</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/a44b830/src/source/parens.ts#L37">source/parens.ts:37</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/bb92c22/src/source/parens.ts#L59">source/parens.ts:59</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -180,7 +218,17 @@
 						<div class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">:</span> <a href="_source_parens_.html#remove" class="tsd-signature-type">remove</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/a44b830/src/source/parens.ts#L38">source/parens.ts:38</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/bb92c22/src/source/parens.ts#L60">source/parens.ts:60</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="parens.swap-1" class="tsd-anchor"></a>
+						<h3>swap</h3>
+						<div class="tsd-signature tsd-kind-icon">swap<span class="tsd-signature-symbol">:</span> <a href="_source_parens_.html#swap" class="tsd-signature-type">swap</a></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/bb92c22/src/source/parens.ts#L61">source/parens.ts:61</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -220,6 +268,9 @@
 					<li class=" tsd-kind-external-module">
 						<a href="_source_url_.html">"source/url"</a>
 					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_source_whitespace_.html">"source/whitespace"</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -229,6 +280,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_source_parens_.html#remove" class="tsd-kind-icon">remove</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_source_parens_.html#swap" class="tsd-kind-icon">swap</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_source_parens_.html#parens" class="tsd-kind-icon">parens</a>

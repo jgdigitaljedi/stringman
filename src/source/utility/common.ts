@@ -13,8 +13,24 @@ function swap(str: string, str2: string, exp: RegExp): string {
   }
 }
 
+function remove(str: string, exp: RegExp): string {
+  if (typeof str !== 'string') {
+    return str;
+  }
+  return str.replace(exp, '').trim();
+}
+
+function retrieve(str: string, exp: RegExp): string[] {
+  if (typeof str !== 'string') {
+    return [];
+  }
+  return str.match(exp) || [];
+}
+
 const common = {
   isValid,
+  remove,
+  retrieve,
   swap
 };
 

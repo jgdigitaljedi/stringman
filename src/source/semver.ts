@@ -21,7 +21,7 @@ const semverStr = /(?<=^v?|\sv?)(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?
  * @returns {(RegExpMatchArray)}
  */
 function retrieve(str: string): RegExpMatchArray {
-  return str.match(semverStr) || [];
+  return common.retrieve(str, semverStr);
 }
 
 /**
@@ -40,7 +40,6 @@ function retrieve(str: string): RegExpMatchArray {
  * @returns {boolean}
  */
 function isValid(str: string): boolean {
-  // return semverStr.test(str);
   return common.isValid(str, semverStr);
 }
 
@@ -58,7 +57,25 @@ function isValid(str: string): boolean {
  * @returns {string}
  */
 function remove(str: string): string {
-  return str.replace(semverStr, '').trim();
+  return common.remove(str, semverStr);
+}
+
+/**
+ * Takes a string with a semver, a second string, returns first string with semver swapped for second string
+ *
+ * Basic usage example:
+ * ```js
+ * const semver = require('stringman').semver; // or `import {semver} from 'stringman'`;
+ * const swapped = semver.swapped('this project started on version 0.1.0', '1.5.8');
+ * console.log(removed); // 'this project started on version 1.5.8'
+ * ```
+ *
+ * @param {string} str
+ * @param {string} newVer
+ * @returns {string}
+ */
+function swap(str: string, newVer: string): string {
+  return common.swap(str, newVer, semverStr);
 }
 
 /**
@@ -74,7 +91,8 @@ const semver = {
   expression,
   isValid,
   remove,
-  retrieve
+  retrieve,
+  swap
 };
 
 export { semver };

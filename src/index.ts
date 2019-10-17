@@ -6,5 +6,6 @@ import { parens } from './source/parens';
 import { pwd } from './source/password';
 import { semver } from './source/semver';
 import { url } from './source/url';
+import { whitespace } from './source/whitespace';
 
-export { colors, email, ip, numbers, parens, pwd, semver, url };
+export { colors, email, ip, numbers, parens, pwd, semver, url, whitespace };

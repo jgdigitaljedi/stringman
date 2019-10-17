@@ -9,15 +9,14 @@ const getEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)
  * ```js
  * const email = require('stringman').email; // or `import {email} from 'stringman'`;
  * const test = email.retrieve('this is my email address joey@joeyg.me');
- * console.log(test); // 'joey@joeyg.me'
+ * console.log(test); // '[joey@joeyg.me]'
  * ```
  *
  * @param {string} str
- * @returns {(string | null)}
+ * @returns {(string[])}
  */
-function retrieve(str: string): string | null {
-  const matched = str.match(getEmail);
-  return matched && matched.length ? matched[0] : null;
+function retrieve(str: string): string[] {
+  return common.retrieve(str, getEmail);
 }
 
 /**
@@ -53,7 +52,7 @@ function isValid(str: string): boolean {
  * @returns {string}
  */
 function remove(str: string): string {
-  return str.replace(getEmail, '').trim();
+  return common.remove(str, getEmail);
 }
 
 /**
@@ -63,7 +62,7 @@ function remove(str: string): string {
  * ```js
  * const email = require('stringman').email; // or `import {email} from 'stringman'`;
  * const test = email.swap('my email address is joey@joeyg.me', 'test@test.com');
- * console.log(;test); // 'my email address is test@test.com'
+ * console.log(test); // 'my email address is test@test.com'
  * ```
  *
  * @param {string} str

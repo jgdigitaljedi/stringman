@@ -141,6 +141,7 @@
 				<ul>
 					<li>remove =&gt; Takes string and returns string with parenthesis and contain between parenthesis removed</li>
 					<li>inside =&gt; Takes string and returns array of strings containing what was inside any number of sets of parenthesis</li>
+					<li>swap =&gt; Takes 2 strings, swaps anything in parenthesis INCLUDING THE PARENTHESIS from the first string with the second string</li>
 				</ul>
 				<a href="#password-module" id="password-module" style="color: inherit; text-decoration: none;">
 					<h4>password module</h4>
@@ -159,6 +160,7 @@
 					<li>isValid =&gt; Tests if argument is valid semantic version</li>
 					<li>remove =&gt; Removes semantic version from string, trims, and returns result</li>
 					<li>expression =&gt; Returns RegExp variable used to test for semantic version</li>
+					<li>swap =&gt; takes 2 strings and returns string with any semantic versions in the first string replaced by the second string</li>
 				</ul>
 				<a href="#url-module" id="url-module" style="color: inherit; text-decoration: none;">
 					<h4>url module</h4>
@@ -169,6 +171,13 @@
 					<li>remove =&gt; Takes string, removes any URLs, trims, and returns string</li>
 					<li>getDomain =&gt; Takes url string, tries to return just the domain</li>
 					<li>expression =&gt; Returns RegExp for testing URLs</li>
+					<li>swap =&gt; takes a string with a url and a second string, swaps any urls in the first string with the second string, and returns the result</li>
+				</ul>
+				<a href="#whitespace-module" id="whitespace-module" style="color: inherit; text-decoration: none;">
+					<h4>whitespace module</h4>
+				</a>
+				<ul>
+					<li>removeBreaks =&gt; Takes a string and returns that string with all carriage returns and line breaks removed</li>
 				</ul>
 			</div>
 		</div>
@@ -204,6 +213,9 @@
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_source_url_.html">"source/url"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_source_whitespace_.html">"source/whitespace"</a>
 					</li>
 				</ul>
 			</nav>

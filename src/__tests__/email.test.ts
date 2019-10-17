@@ -3,10 +3,10 @@ import { email } from '../../lib';
 
 describe('tests the various methods for "email"', () => {
   test('retrieve => retrieves an email from a string', () => {
-    expect(email.retrieve('my email address is joey@joeyg.me')).toBe('joey@joeyg.me');
-    expect(email.retrieve('this one is a little trickier because @ is in it. joey@joeyg.me')).toBe(
-      'joey@joeyg.me'
-    );
+    expect(email.retrieve('my email address is joey@joeyg.me')[0]).toBe('joey@joeyg.me');
+    expect(
+      email.retrieve('this one is a little trickier because @ is in it. joey@joeyg.me')[0]
+    ).toBe('joey@joeyg.me');
   });
 
   test('isValid => determines if string is valid email address', () => {

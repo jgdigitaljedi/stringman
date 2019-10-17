@@ -18,7 +18,7 @@ const domainExp = /^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)/im;
  * @returns {(string[])}
  */
 function retrieve(str: string): string[] {
-  return str.match(urlStr) || [];
+  return common.retrieve(str, urlStr);
 }
 
 /**
@@ -54,7 +54,25 @@ function isValid(str: string): boolean {
  * @returns {string}
  */
 function remove(str: string): string {
-  return str.replace(urlStr, '').trim();
+  return common.remove(str, urlStr);
+}
+
+/**
+ * takes a string with a url and a second string, swaps any urls in the first string with the second string, and returns the result
+ *
+ * Basic usage example:
+ * ```js
+ * const url = require('stringman').url; // or `import {url} from 'stringman'`;
+ * const swapped = url.swap('this is a test for https://test.com', 'http://www.fakesite.org');
+ * console.log(swapped); // 'this is a test for http://www.fakesite.org'
+ * ```
+ *
+ * @param {string} str
+ * @param {string} other
+ * @returns {string}
+ */
+function swap(str: string, other: string): string {
+  return common.swap(str, other, urlStr);
 }
 
 /**
@@ -64,15 +82,14 @@ function remove(str: string): string {
  * ```js
  * const url = require('stringman').url; // or `import {url} from 'stringman'`;
  * const domain = url.getDomain('https://www.google.com/test');
- * console.log(domain); // 'google.com'
+ * console.log(domain); // '[google.com]'
  * ```
  *
  * @param {string} str
- * @returns {(string | null)}
+ * @returns {(string[])}
  */
-function getDomain(str: string): string | null {
-  const matched = str.match(domainExp);
-  return matched && matched.length ? matched[1] : null;
+function getDomain(str: string): string[] {
+  return common.retrieve(str, domainExp).splice(1);
 }
 
 /**
@@ -89,7 +106,8 @@ const url = {
   getDomain,
   isValid,
   remove,
-  retrieve
+  retrieve,
+  swap
 };
 
 export { url };

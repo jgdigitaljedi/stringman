@@ -68,6 +68,7 @@ Stringman is written in modules with a variety of functionality and that can be 
 
 - remove => Takes string and returns string with parenthesis and contain between parenthesis removed
 - inside => Takes string and returns array of strings containing what was inside any number of sets of parenthesis
+- swap => Takes 2 strings, swaps anything in parenthesis INCLUDING THE PARENTHESIS from the first string with the second string
 
 #### password module
 
@@ -83,6 +84,7 @@ NOTE: This module uses look-behinds right now so it will not work in IE, Edge, a
 - isValid => Tests if argument is valid semantic version
 - remove => Removes semantic version from string, trims, and returns result
 - expression => Returns RegExp variable used to test for semantic version
+- swap => takes 2 strings and returns string with any semantic versions in the first string replaced by the second string
 
 #### url module
 
@@ -91,3 +93,8 @@ NOTE: This module uses look-behinds right now so it will not work in IE, Edge, a
 - remove => Takes string, removes any URLs, trims, and returns string
 - getDomain => Takes url string, tries to return just the domain
 - expression => Returns RegExp for testing URLs
+- swap => takes a string with a url and a second string, swaps any urls in the first string with the second string, and returns the result
+
+#### whitespace module
+
+- removeBreaks => Takes a string and returns that string with all carriage returns and line breaks removed
