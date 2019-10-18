@@ -2,7 +2,9 @@
 
 Stringman (short for "string manipulator") aims to make some of the common types of string manipulation easier. Most of the functionality contained within Stringman isn't particularly difficult to write, but the value it provides lies within the fact that Stringman has an ever-growing collection of functionality that will save you time and headaches. A lot of the typical regular expression scenarios that JavaScript developers encounter are covered here.
 
-Stringman is in the very early stages right now and I am still figuring out how I want to structure this and what functionality to include. Examples of the type of functionality include (but are not limited to):
+Stringman is in the early stages right now and I am adding functionality fairly regularly while making so I don't make breaking changes to existing methods.
+
+Examples of the type of functionality include (but are not limited to):
 
 - validate whether string is url
 - return text from inside of parenthesis
@@ -11,7 +13,7 @@ Stringman is in the very early stages right now and I am still figuring out how 
 - convert a hex color to rgb and vice versa
 - much more
 
-Also, typescript types are included.
+Also, typescript types are included. A full list of funtionality/features is below.
 
 ## Install
 
@@ -98,3 +100,7 @@ NOTE: This module uses look-behinds right now so it will not work in IE, Edge, a
 #### whitespace module
 
 - removeBreaks => Takes a string and returns that string with all carriage returns and line breaks removed
+- removeTabs => Takes a string and returns that string with alltabs removed
+- removeAll => Takes a string and returns that string with all whitespace removed
+- singleSpace => Takes a string, replaces all instances or 2 or more consecutive spaces with a single space, and returns string
+- replaceWith => Takes a string, an enumerable object with boolean values to detrermine what will be replaced, and another string to replace things with and returns the result of replacing the values designated in the 2nd argument with the contents of the 3 argument
