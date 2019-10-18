@@ -66,29 +66,36 @@ function removeAll(str: string): string {
  * @returns {string}
  */
 function singleSpace(str: string): string {
-  return str.replace(/  +/gm, ' ');
+  return str.replace(/  +/gm, ' ').trim();
 }
 
 /**
- * Takes a string, an enumerable object with boolean values to detrermine what will be replaced, and another string to replace things with and returns the result of replacing
+ * Takes a string, an enumerable object with boolean values to detrermine what will be replaced, another string to replace things, and an optional 4th argument
+ * for whether it should be returned with multiple consecutive spaces changed to single spaces with and returns the result of replacing
  * the values designated in the 2nd argument with the contents of the 3 argument
  *
  * Basic usage example:
  * ```js
  * import {whitespace} from 'stringman' // or const whitespace = require('stringman').whitespace;
- * const simple = whitespace.replaceWith('gonna just\n remove breaks\n from this\n', {breaks: true}, ' ');
+ * const simple = whitespace.replaceWith('gonna just\n remove breaks\n from this\n', {breaks: true}, ' ' true);
  * const goofy = whitespace.replaceWith('gonna   make\t a   \nridiculous example', {tabs: true, breaks: true, multiSpace: true}, '$');
- * console.log(simple); // 'gonna just  remove breaks  from this '
+ * console.log(simple); // 'gonna just remove breaks from this'
  * console.log(goofy); // 'gonna$make$ a$$ridiculous example'
  * ```
  *
  * @param {string} str
  * @param {IReplaceWith} toReplace
  * @param {string} newStr
+ * @param {boolean} [single]
  * @returns {string}
  */
-function replaceWith(str: string, toReplace: IReplaceWith, newStr: string): string {
-  // I went with self assigning because other there would be a ton of variable declarations which slows things down. I'm not married to it though.
+function replaceWith(
+  str: string,
+  toReplace: IReplaceWith,
+  newStr: string,
+  single?: boolean
+): string {
+  // I went with self assigning because otherwise there would be a ton of variable declarations which slows things down. I'm not married to it though.
   let result = str;
   if (toReplace.tabs) {
     result = result.replace(/\t|\\t/gim, newStr);
@@ -98,6 +105,9 @@ function replaceWith(str: string, toReplace: IReplaceWith, newStr: string): stri
   }
   if (toReplace.multiSpace) {
     result = result.replace(/  +/gm, newStr);
+  }
+  if (single) {
+    return singleSpace(result);
   }
   return result;
 }

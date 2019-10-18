@@ -101,7 +101,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/5490c2c/src/source/whitespace.ts#L51">source/whitespace.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/68b67f7/src/source/whitespace.ts#L51">source/whitespace.ts:51</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -133,7 +133,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/5490c2c/src/source/whitespace.ts#L17">source/whitespace.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/68b67f7/src/source/whitespace.ts#L17">source/whitespace.ts:17</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -165,7 +165,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/5490c2c/src/source/whitespace.ts#L34">source/whitespace.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/68b67f7/src/source/whitespace.ts#L34">source/whitespace.ts:34</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -191,25 +191,26 @@
 					<a name="replacewith" class="tsd-anchor"></a>
 					<h3>replace<wbr>With</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">replace<wbr>With<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, toReplace<span class="tsd-signature-symbol">: </span><a href="../interfaces/_models_whitespace_model_.ireplacewith.html" class="tsd-signature-type">IReplaceWith</a>, newStr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">replace<wbr>With<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, toReplace<span class="tsd-signature-symbol">: </span><a href="../interfaces/_models_whitespace_model_.ireplacewith.html" class="tsd-signature-type">IReplaceWith</a>, newStr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, single<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/5490c2c/src/source/whitespace.ts#L90">source/whitespace.ts:90</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/68b67f7/src/source/whitespace.ts#L92">source/whitespace.ts:92</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Takes a string, an enumerable object with boolean values to detrermine what will be replaced, and another string to replace things with and returns the result of replacing
+									<p>Takes a string, an enumerable object with boolean values to detrermine what will be replaced, another string to replace things, and an optional 4th argument
+										for whether it should be returned with multiple consecutive spaces changed to single spaces with and returns the result of replacing
 									the values designated in the 2nd argument with the contents of the 3 argument</p>
 								</div>
 								<p>Basic usage example:</p>
 								<pre><code class="language-js"><span class="hljs-keyword">import</span> {whitespace} <span class="hljs-keyword">from</span> <span class="hljs-string">'stringman'</span> <span class="hljs-comment">// or const whitespace = require('stringman').whitespace;</span>
-<span class="hljs-keyword">const</span> simple = whitespace.replaceWith(<span class="hljs-string">'gonna just\n remove breaks\n from this\n'</span>, {<span class="hljs-attr">breaks</span>: <span class="hljs-literal">true</span>}, <span class="hljs-string">' '</span>);
+<span class="hljs-keyword">const</span> simple = whitespace.replaceWith(<span class="hljs-string">'gonna just\n remove breaks\n from this\n'</span>, {<span class="hljs-attr">breaks</span>: <span class="hljs-literal">true</span>}, <span class="hljs-string">' '</span> <span class="hljs-literal">true</span>);
 <span class="hljs-keyword">const</span> goofy = whitespace.replaceWith(<span class="hljs-string">'gonna   make\t a   \nridiculous example'</span>, {<span class="hljs-attr">tabs</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">breaks</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">multiSpace</span>: <span class="hljs-literal">true</span>}, <span class="hljs-string">'$'</span>);
-<span class="hljs-built_in">console</span>.log(simple); <span class="hljs-comment">// 'gonna just  remove breaks  from this '</span>
+<span class="hljs-built_in">console</span>.log(simple); <span class="hljs-comment">// 'gonna just remove breaks from this'</span>
 <span class="hljs-built_in">console</span>.log(goofy); <span class="hljs-comment">// 'gonna$make$ a$$ridiculous example'</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -222,6 +223,9 @@
 								</li>
 								<li>
 									<h5>newStr: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> single: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -238,7 +242,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/5490c2c/src/source/whitespace.ts#L68">source/whitespace.ts:68</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/68b67f7/src/source/whitespace.ts#L68">source/whitespace.ts:68</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -269,7 +273,7 @@
 					<div class="tsd-signature tsd-kind-icon">whitespace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/5490c2c/src/source/whitespace.ts#L105">source/whitespace.ts:105</a></li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/68b67f7/src/source/whitespace.ts#L115">source/whitespace.ts:115</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -278,7 +282,7 @@
 						<div class="tsd-signature tsd-kind-icon">remove<wbr>All<span class="tsd-signature-symbol">:</span> <a href="_source_whitespace_.html#removeall" class="tsd-signature-type">removeAll</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/5490c2c/src/source/whitespace.ts#L106">source/whitespace.ts:106</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/68b67f7/src/source/whitespace.ts#L116">source/whitespace.ts:116</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -288,7 +292,7 @@
 						<div class="tsd-signature tsd-kind-icon">remove<wbr>Breaks<span class="tsd-signature-symbol">:</span> <a href="_source_whitespace_.html#removebreaks" class="tsd-signature-type">removeBreaks</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/5490c2c/src/source/whitespace.ts#L107">source/whitespace.ts:107</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/68b67f7/src/source/whitespace.ts#L117">source/whitespace.ts:117</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -298,7 +302,7 @@
 						<div class="tsd-signature tsd-kind-icon">remove<wbr>Tabs<span class="tsd-signature-symbol">:</span> <a href="_source_whitespace_.html#removetabs" class="tsd-signature-type">removeTabs</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/5490c2c/src/source/whitespace.ts#L108">source/whitespace.ts:108</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/68b67f7/src/source/whitespace.ts#L118">source/whitespace.ts:118</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -308,7 +312,7 @@
 						<div class="tsd-signature tsd-kind-icon">replace<wbr>With<span class="tsd-signature-symbol">:</span> <a href="_source_whitespace_.html#replacewith" class="tsd-signature-type">replaceWith</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/5490c2c/src/source/whitespace.ts#L109">source/whitespace.ts:109</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/68b67f7/src/source/whitespace.ts#L119">source/whitespace.ts:119</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -318,7 +322,7 @@
 						<div class="tsd-signature tsd-kind-icon">single<wbr>Space<span class="tsd-signature-symbol">:</span> <a href="_source_whitespace_.html#singlespace" class="tsd-signature-type">singleSpace</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/5490c2c/src/source/whitespace.ts#L110">source/whitespace.ts:110</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/68b67f7/src/source/whitespace.ts#L120">source/whitespace.ts:120</a></li>
 							</ul>
 						</aside>
 					</section>

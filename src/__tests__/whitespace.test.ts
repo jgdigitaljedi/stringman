@@ -29,8 +29,13 @@ describe('tests various methods of "whitespace"', () => {
 
   test('replaceWith => Takes a string, an enumerable object with boolean values to detrermine what will be replaced, and another string to replace things with and returns the result of replacing the values designated in the 2nd argument with the contents of the 3 argument', () => {
     expect(
-      whitespace.replaceWith('gonna just\n remove breaks\n from this\n', { breaks: true }, ' ')
-    ).toBe('gonna just  remove breaks  from this ');
+      whitespace.replaceWith(
+        'gonna just\n remove breaks\n from this\n',
+        { breaks: true },
+        ' ',
+        true
+      )
+    ).toBe('gonna just remove breaks from this');
 
     expect(
       whitespace.replaceWith(
