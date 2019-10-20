@@ -23,4 +23,11 @@ describe('tests the various methods for "colors"', () => {
     expect(colors.luminance('#63C6FF', -40)).toBe('#3b7699');
     expect(colors.luminance('nope', -40)).toBe(null);
   });
+
+  test('hexToHsl => converts hex color to hsl', () => {
+    expect(colors.hexToHsl('#63C6FF')!['h']).toBe(201.9); // {h: 201.9, s: 100, l: 69.4}
+    expect(colors.hexToHsl('#63C6FF')!['s']).toBe(100); // {h: 201.9, s: 100, l: 69.4}
+    expect(colors.hexToHsl('63C6FF')!['l']).toBe(69.4);
+    expect(colors.hexToHsl('nope')).toBe(null);
+  });
 });

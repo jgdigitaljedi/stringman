@@ -6,11 +6,12 @@ Stringman is in the early stages right now and I am adding functionality fairly 
 
 Examples of the type of functionality include (but are not limited to):
 
-- validate whether string is url
-- return text from inside of parenthesis
-- validate whether string is a valid semantic version
+- validate whether string is url, email, ip address, fraction, semantic version, and more
+- return text from inside or outside of parenthesis
 - remove an email address from a string
 - convert a hex color to rgb and vice versa
+- remove extra whitespace, line breaks, tabs, etc from a string
+- validate passwords with given parameters
 - much more
 
 Also, typescript types are included. A full list of funtionality/features is below.
@@ -19,6 +20,16 @@ Also, typescript types are included. A full list of funtionality/features is bel
 
 ```
 npm i -S stringman
+```
+
+## Example usage
+
+The documentation has examples for every single method, but here is a simple example to get an idea of how to use Stringman:
+
+```js
+import { parens } from 'stringman'; // const parens = require('stringman').parens;
+const noParens = parens.remove('this will come back (and this will be removed)');
+console.log(noParens); // 'this will come back'
 ```
 
 ## Documentation
@@ -31,7 +42,7 @@ I haven't though too much about this yet as the project is very young. Just cont
 
 ## Functionality
 
-Stringman is written in modules with a variety of functionality and that can be imported individually. See the documentation for more details and usage examples.
+Stringman is written in modules with a variety of functionality and that can be imported individually. See the documentation in the link above for more details and usage examples.
 
 #### colors module
 

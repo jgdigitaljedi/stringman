@@ -71,11 +71,12 @@
 				<p>Stringman is in the early stages right now and I am adding functionality fairly regularly while making so I don&#39;t make breaking changes to existing methods.</p>
 				<p>Examples of the type of functionality include (but are not limited to):</p>
 				<ul>
-					<li>validate whether string is url</li>
-					<li>return text from inside of parenthesis</li>
-					<li>validate whether string is a valid semantic version</li>
+					<li>validate whether string is url, email, ip address, fraction, semantic version, and more</li>
+					<li>return text from inside or outside of parenthesis</li>
 					<li>remove an email address from a string</li>
 					<li>convert a hex color to rgb and vice versa</li>
+					<li>remove extra whitespace, line breaks, tabs, etc from a string</li>
+					<li>validate passwords with given parameters</li>
 					<li>much more</li>
 				</ul>
 				<p>Also, typescript types are included. A full list of funtionality/features is below.</p>
@@ -83,6 +84,13 @@
 					<h2>Install</h2>
 				</a>
 				<pre><code>npm <span class="hljs-selector-tag">i</span> -S stringman</code></pre>
+				<a href="#example-usage" id="example-usage" style="color: inherit; text-decoration: none;">
+					<h2>Example usage</h2>
+				</a>
+				<p>The documentation has examples for every single method, but here is a simple example to get an idea of how to use Stringman:</p>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> { parens } <span class="hljs-keyword">from</span> <span class="hljs-string">'stringman'</span>; <span class="hljs-comment">// const parens = require('stringman').parens;</span>
+<span class="hljs-keyword">const</span> noParens = parens.remove(<span class="hljs-string">'this will come back (and this will be removed)'</span>);
+<span class="hljs-built_in">console</span>.log(noParens); <span class="hljs-comment">// 'this will come back'</span></code></pre>
 				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
 					<h2>Documentation</h2>
 				</a>
@@ -94,7 +102,7 @@
 				<a href="#functionality" id="functionality" style="color: inherit; text-decoration: none;">
 					<h2>Functionality</h2>
 				</a>
-				<p>Stringman is written in modules with a variety of functionality and that can be imported individually. See the documentation for more details and usage examples.</p>
+				<p>Stringman is written in modules with a variety of functionality and that can be imported individually. See the documentation in the link above for more details and usage examples.</p>
 				<a href="#colors-module" id="colors-module" style="color: inherit; text-decoration: none;">
 					<h4>colors module</h4>
 				</a>
@@ -191,6 +199,9 @@
 				<ul>
 					<li class="globals  ">
 						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_models_colors_model_.html">"models/colors.model"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_models_password_model_.html">"models/password.model"</a>
