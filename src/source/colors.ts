@@ -143,47 +143,17 @@ function luminance(color: string, percent: number): string | null {
  * ```
  *
  * @param {string} str
- * @returns {string[]}
+ * @returns {(IHsl | null)}
  */
 function hexToHsl(str: string): IHsl | null {
   if (isHex(str)) {
     const hex = str.charAt(0) === '#' ? str.slice(1) : str;
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     if (result && result.length) {
-      let r = parseInt(result[1], 16);
-      let g = parseInt(result[2], 16);
-      let b = parseInt(result[3], 16);
-      r /= 255;
-      g /= 255;
-      b /= 255;
-      const max = Math.max(r, g, b);
-      const min = Math.min(r, g, b);
-      let h;
-      let s;
-      const l = (max + min) / 2;
-      if (max === min) {
-        h = s = 0; // achromatic
-      } else {
-        const d = max - min;
-        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-        switch (max) {
-          case r:
-            h = (g - b) / d + (g < b ? 6 : 0);
-            break;
-          case g:
-            h = (b - r) / d + 2;
-            break;
-          case b:
-            h = (r - g) / d + 4;
-            break;
-        }
-        h = h ? h / 6 : 0;
-      }
-      return {
-        h: parseFloat((h * 360).toFixed(1)),
-        l: parseFloat((l * 100).toFixed(1)),
-        s: parseFloat((s * 100).toFixed(1))
-      };
+      const r = parseInt(result[1], 16);
+      const g = parseInt(result[2], 16);
+      const b = parseInt(result[3], 16);
+      return rgbToHsl(r, g, b);
     } else {
       return null;
     }
@@ -192,12 +162,65 @@ function hexToHsl(str: string): IHsl | null {
   }
 }
 
+/**
+ * Takes r, g, and b and numbers in 3 separate agurments, convert to hsl, and returns in object with h, s, and l as keys
+ *
+ * Basic usage example:
+ * ```js
+ * const colors = require('stringman').colors; // or `import {colors} from 'stringman'`;
+ * const toHsl = colors.rgbToHSL(99, 198, 255);
+ * console.log(toHsl); // {h: 201.9, s: '100%', l: '69.4%'}
+ * ```
+ *
+ * @param {number} r
+ * @param {number} g
+ * @param {number} b
+ * @returns {(IHsl | null)}
+ */
+function rgbToHsl(r: number, g: number, b: number): IHsl | null {
+  if (typeof r !== 'number' || typeof g !== 'number' || typeof b !== 'number') {
+    return null;
+  }
+  r /= 255;
+  g /= 255;
+  b /= 255;
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  let h;
+  let s;
+  const l = (max + min) / 2;
+  if (max === min) {
+    h = s = 0; // achromatic
+  } else {
+    const d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    switch (max) {
+      case r:
+        h = (g - b) / d + (g < b ? 6 : 0);
+        break;
+      case g:
+        h = (b - r) / d + 2;
+        break;
+      case b:
+        h = (r - g) / d + 4;
+        break;
+    }
+    h = h ? h / 6 : 0;
+  }
+  return {
+    h: parseFloat((h * 360).toFixed(1)),
+    l: parseFloat((l * 100).toFixed(1)),
+    s: parseFloat((s * 100).toFixed(1))
+  };
+}
+
 const colors = {
   hexToHsl,
   hexToRgb,
   isHex,
   luminance,
-  rgbToHex
+  rgbToHex,
+  rgbToHsl
 };
 
 export { colors };

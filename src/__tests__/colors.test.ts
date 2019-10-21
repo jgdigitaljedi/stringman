@@ -30,4 +30,11 @@ describe('tests the various methods for "colors"', () => {
     expect(colors.hexToHsl('63C6FF')!['l']).toBe(69.4);
     expect(colors.hexToHsl('nope')).toBe(null);
   });
+
+  test('rgbToHsl => converts rgb to hsl', () => {
+    const hsl = colors.rgbToHsl(99, 198, 255);
+    expect(hsl.h).toBe(201.9); // {h: 201.9, s: 100, l: 69.4}
+    expect(hsl.s).toBe(100);
+    expect(hsl.l).toBe(69.4);
+  });
 });

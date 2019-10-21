@@ -78,6 +78,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_colors_.html#ishex" class="tsd-kind-icon">is<wbr>Hex</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_colors_.html#luminance" class="tsd-kind-icon">luminance</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_colors_.html#rgbtohex" class="tsd-kind-icon">rgb<wbr>ToHex</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_colors_.html#rgbtohsl" class="tsd-kind-icon">rgb<wbr>ToHsl</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
@@ -101,7 +102,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e1f768e/src/source/colors.ts#L148">source/colors.ts:148</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/7285fd7/src/source/colors.ts#L148">source/colors.ts:148</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -136,7 +137,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e1f768e/src/source/colors.ts#L60">source/colors.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/7285fd7/src/source/colors.ts#L60">source/colors.ts:60</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -171,7 +172,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e1f768e/src/source/colors.ts#L39">source/colors.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/7285fd7/src/source/colors.ts#L39">source/colors.ts:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -205,7 +206,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e1f768e/src/source/colors.ts#L107">source/colors.ts:107</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/7285fd7/src/source/colors.ts#L107">source/colors.ts:107</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -246,7 +247,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e1f768e/src/source/colors.ts#L20">source/colors.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/7285fd7/src/source/colors.ts#L20">source/colors.ts:20</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -274,6 +275,47 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="rgbtohsl" class="tsd-anchor"></a>
+					<h3>rgb<wbr>ToHsl</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">rgb<wbr>ToHsl<span class="tsd-signature-symbol">(</span>r<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, g<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_models_colors_model_.ihsl.html" class="tsd-signature-type">IHsl</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/7285fd7/src/source/colors.ts#L180">source/colors.ts:180</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes r, g, and b and numbers in 3 separate agurments, convert to hsl, and returns in object with h, s, and l as keys</p>
+								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">const</span> colors = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).colors; <span class="hljs-comment">// or `import {colors} from 'stringman'`;</span>
+<span class="hljs-keyword">const</span> toHsl = colors.rgbToHSL(<span class="hljs-number">99</span>, <span class="hljs-number">198</span>, <span class="hljs-number">255</span>);
+<span class="hljs-built_in">console</span>.log(toHsl); <span class="hljs-comment">// {h: 201.9, s: '100%', l: '69.4%'}</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>r: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>g: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>b: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_models_colors_model_.ihsl.html" class="tsd-signature-type">IHsl</a>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">null</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Object literals</h2>
@@ -283,7 +325,7 @@
 					<div class="tsd-signature tsd-kind-icon">colors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e1f768e/src/source/colors.ts#L195">source/colors.ts:195</a></li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/7285fd7/src/source/colors.ts#L217">source/colors.ts:217</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -292,7 +334,7 @@
 						<div class="tsd-signature tsd-kind-icon">hex<wbr>ToHsl<span class="tsd-signature-symbol">:</span> <a href="_source_colors_.html#hextohsl" class="tsd-signature-type">hexToHsl</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e1f768e/src/source/colors.ts#L196">source/colors.ts:196</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/7285fd7/src/source/colors.ts#L218">source/colors.ts:218</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -302,7 +344,7 @@
 						<div class="tsd-signature tsd-kind-icon">hex<wbr>ToRgb<span class="tsd-signature-symbol">:</span> <a href="_source_colors_.html#hextorgb" class="tsd-signature-type">hexToRgb</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e1f768e/src/source/colors.ts#L197">source/colors.ts:197</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/7285fd7/src/source/colors.ts#L219">source/colors.ts:219</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -312,7 +354,7 @@
 						<div class="tsd-signature tsd-kind-icon">is<wbr>Hex<span class="tsd-signature-symbol">:</span> <a href="_source_colors_.html#ishex" class="tsd-signature-type">isHex</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e1f768e/src/source/colors.ts#L198">source/colors.ts:198</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/7285fd7/src/source/colors.ts#L220">source/colors.ts:220</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -322,7 +364,7 @@
 						<div class="tsd-signature tsd-kind-icon">luminance<span class="tsd-signature-symbol">:</span> <a href="_source_colors_.html#luminance" class="tsd-signature-type">luminance</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e1f768e/src/source/colors.ts#L199">source/colors.ts:199</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/7285fd7/src/source/colors.ts#L221">source/colors.ts:221</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -332,7 +374,17 @@
 						<div class="tsd-signature tsd-kind-icon">rgb<wbr>ToHex<span class="tsd-signature-symbol">:</span> <a href="_source_colors_.html#rgbtohex" class="tsd-signature-type">rgbToHex</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/e1f768e/src/source/colors.ts#L200">source/colors.ts:200</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/7285fd7/src/source/colors.ts#L222">source/colors.ts:222</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="colors.rgbtohsl-1" class="tsd-anchor"></a>
+						<h3>rgb<wbr>ToHsl</h3>
+						<div class="tsd-signature tsd-kind-icon">rgb<wbr>ToHsl<span class="tsd-signature-symbol">:</span> <a href="_source_colors_.html#rgbtohsl" class="tsd-signature-type">rgbToHsl</a></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/7285fd7/src/source/colors.ts#L223">source/colors.ts:223</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -399,6 +451,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_source_colors_.html#rgbtohex" class="tsd-kind-icon">rgb<wbr>ToHex</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_source_colors_.html#rgbtohsl" class="tsd-kind-icon">rgb<wbr>ToHsl</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_source_colors_.html#colors" class="tsd-kind-icon">colors</a>
