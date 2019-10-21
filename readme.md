@@ -50,6 +50,8 @@ Stringman is written in modules with a variety of functionality and that can be 
 - isHex => Takes a string and returns boolean indicating whether it is a valid hexidecimal color
 - hexToRgb => Takes a hexidecimal color string and returns the rgb value
 - luminance => Takes a hex color value and a percentage and returns a hex color string that is the result of lightening or darkening the original color by the percentage. Does not work on black or white (yet)!
+- hexToHsl => Takes a string representing a hex color code and returns the hsl equivalent in an object with keys for h, s, and l
+- rgbToHsl => Takes each of the 3 rgb number values as individual arguments and returns the hsl equivalent in an object with keys for h, s, and l
 
 #### email module
 
