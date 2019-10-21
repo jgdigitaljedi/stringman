@@ -1,6 +1,6 @@
+import { IHsl } from '../models/colors.model';
 import { numbers } from './numbers';
 import { common } from './utility/common';
-import { IHsl } from '../models/colors.model';
 
 /**
  * Takes rgb color values and returns hexidecimal equivalent
@@ -158,9 +158,9 @@ function hexToHsl(str: string): IHsl | null {
       b /= 255;
       const max = Math.max(r, g, b);
       const min = Math.min(r, g, b);
-      var h,
-        s,
-        l = (max + min) / 2;
+      let h;
+      let s;
+      const l = (max + min) / 2;
       if (max === min) {
         h = s = 0; // achromatic
       } else {
@@ -181,8 +181,8 @@ function hexToHsl(str: string): IHsl | null {
       }
       return {
         h: parseFloat((h * 360).toFixed(1)),
-        s: parseFloat((s * 100).toFixed(1)),
-        l: parseFloat((l * 100).toFixed(1))
+        l: parseFloat((l * 100).toFixed(1)),
+        s: parseFloat((s * 100).toFixed(1))
       };
     } else {
       return null;
