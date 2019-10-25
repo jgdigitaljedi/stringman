@@ -1,6 +1,6 @@
 {
   "name": "stringman",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "Stringman does string manipulation. Do anything from lightening color codes to swapping email address in a string!",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -33,6 +33,14 @@
     "email": "joey@joeyg.me",
     "url": "https://joeyg.me"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jgdigitaljedi/stringman.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jgdigitaljedi/stringman/issues"
+  },
+  "homepage": "https://github.com/jgdigitaljedi/stringman",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^24.0.18",
