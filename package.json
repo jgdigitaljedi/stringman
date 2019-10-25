@@ -1,6 +1,6 @@
 {
   "name": "stringman",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Stringman does string manipulation. Do anything from lightening color codes to swapping email address in a string!",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

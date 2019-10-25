@@ -117,3 +117,8 @@ NOTE: This module uses look-behinds right now so it will not work in IE, Edge, a
 - removeAll => Takes a string and returns that string with all whitespace removed
 - singleSpace => Takes a string, replaces all instances or 2 or more consecutive spaces with a single space, and returns string
 - replaceWith => Takes a string, an enumerable object with boolean values to detrermine what will be replaced, another string to replace things, and an optional 4th argument for whether it should be returned with multiple consecutive spaces changed to single spaces with and returns the result of replacing the values designated in the 2nd argument with the contents of the 3 argument
+
+#### words module
+
+- specificWordCount => Takes 2 strings and returns a number for the number of times the second string exists in the first string; optionally takes third boolean argument to make case sensitive
+- wordCount => Takes a string and returns the number of words in the string as a number

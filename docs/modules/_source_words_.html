@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;source/parens&quot; | Stringman</title>
+	<title>&quot;source/words&quot; | Stringman</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_source_parens_.html">&quot;source/parens&quot;</a>
+					<a href="_source_words_.html">&quot;source/words&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;source/parens&quot;</h1>
+			<h1>External module &quot;source/words&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -71,77 +71,104 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_words_.html#allwords" class="tsd-kind-icon">all<wbr>Words</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_words_.html#wordssplitchars" class="tsd-kind-icon">words<wbr>Split<wbr>Chars</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_parens_.html#inside" class="tsd-kind-icon">inside</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_parens_.html#remove" class="tsd-kind-icon">remove</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_parens_.html#swap" class="tsd-kind-icon">swap</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_words_.html#specificwordcount" class="tsd-kind-icon">specific<wbr>Word<wbr>Count</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_words_.html#wordcount" class="tsd-kind-icon">word<wbr>Count</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Object literals</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_parens_.html#parens" class="tsd-kind-icon">parens</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_words_.html#words" class="tsd-kind-icon">words</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="allwords" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> all<wbr>Words</h3>
+					<div class="tsd-signature tsd-kind-icon">all<wbr>Words<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/\w+/g</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in source/words.ts:3</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="wordssplitchars" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> words<wbr>Split<wbr>Chars</h3>
+					<div class="tsd-signature tsd-kind-icon">words<wbr>Split<wbr>Chars<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(\.|,|\?| |-|!)/gm</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in source/words.ts:4</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="inside" class="tsd-anchor"></a>
-					<h3>inside</h3>
+					<a name="specificwordcount" class="tsd-anchor"></a>
+					<h3>specific<wbr>Word<wbr>Count</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">inside<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">specific<wbr>Word<wbr>Count<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, word<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, strict<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fe1e8b5/src/source/parens.ts#L33">source/parens.ts:33</a></li>
+									<li>Defined in source/words.ts:13</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Takes string and returns array of strings containing what was inside any number of sets of parenthesis</p>
+									<p>Takes 2 strings and returns a number for the number of times the second string exists in the first string; optionally takes third boolean argument to make case sensitive</p>
 								</div>
-								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> parens = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).parens; <span class="hljs-comment">// or `import {parens} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> fromInside = parens.inside(<span class="hljs-string">'this is ignored (and this is returned)'</span>);
-<span class="hljs-built_in">console</span>.log(fromInside); <span class="hljs-comment">// 'this is returned'</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
+								<li>
+									<h5>word: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> strict: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="remove" class="tsd-anchor"></a>
-					<h3>remove</h3>
+					<a name="wordcount" class="tsd-anchor"></a>
+					<h3>word<wbr>Count</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">word<wbr>Count<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fe1e8b5/src/source/parens.ts#L16">source/parens.ts:16</a></li>
+									<li>Defined in source/words.ts:37</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Takes string and returns string with parenthesis and contain between parenthesis removed</p>
+									<p>Takes a string and returns the number of words in the string as a number</p>
 								</div>
-								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> parens = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).parens; <span class="hljs-comment">// or `import {parens} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> noParens = parens.remove(<span class="hljs-string">'this will come back (and this will be removed)'</span>);
-<span class="hljs-built_in">console</span>.log(noParens); <span class="hljs-comment">// 'this will come back'</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -149,44 +176,7 @@
 									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="swap" class="tsd-anchor"></a>
-					<h3>swap</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">swap<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, other<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fe1e8b5/src/source/parens.ts#L54">source/parens.ts:54</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Takes 2 strings, swaps anything in parenthesis INCLUDING THE PARENTHESIS from the first string with the second string</p>
-								</div>
-								<p>Basic usage example:</p>
-								<pre><code class="language-js"><span class="hljs-keyword">const</span> parens = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).parens; <span class="hljs-comment">// or `import {parens} from 'stringman'`;</span>
-<span class="hljs-keyword">const</span> noParens = parens.swap(<span class="hljs-string">'this has (stuff) in parens'</span>, <span class="hljs-string">'things'</span>);
-<span class="hljs-keyword">const</span> withParens = parens.swap(<span class="hljs-string">'this has (other stuff) in parens too'</span>, <span class="hljs-string">'(more things)'</span>);
-<span class="hljs-built_in">console</span>.log(noParens); <span class="hljs-comment">// 'this has things in parens'</span>
-<span class="hljs-built_in">console</span>.log(withParens); <span class="hljs-comment">// 'this has (more things) in parens too'</span></code></pre>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>str: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>other: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -194,41 +184,31 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Object literals</h2>
 				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="parens" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> parens</h3>
-					<div class="tsd-signature tsd-kind-icon">parens<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<a name="words" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> words</h3>
+					<div class="tsd-signature tsd-kind-icon">words<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fe1e8b5/src/source/parens.ts#L58">source/parens.ts:58</a></li>
+							<li>Defined in source/words.ts:48</li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="parens.inside-1" class="tsd-anchor"></a>
-						<h3>inside</h3>
-						<div class="tsd-signature tsd-kind-icon">inside<span class="tsd-signature-symbol">:</span> <a href="_source_parens_.html#inside" class="tsd-signature-type">inside</a></div>
+						<a name="words.specificwordcount-1" class="tsd-anchor"></a>
+						<h3>specific<wbr>Word<wbr>Count</h3>
+						<div class="tsd-signature tsd-kind-icon">specific<wbr>Word<wbr>Count<span class="tsd-signature-symbol">:</span> <a href="_source_words_.html#specificwordcount" class="tsd-signature-type">specificWordCount</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fe1e8b5/src/source/parens.ts#L59">source/parens.ts:59</a></li>
+								<li>Defined in source/words.ts:49</li>
 							</ul>
 						</aside>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="parens.remove-1" class="tsd-anchor"></a>
-						<h3>remove</h3>
-						<div class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">:</span> <a href="_source_parens_.html#remove" class="tsd-signature-type">remove</a></div>
+						<a name="words.wordcount-1" class="tsd-anchor"></a>
+						<h3>word<wbr>Count</h3>
+						<div class="tsd-signature tsd-kind-icon">word<wbr>Count<span class="tsd-signature-symbol">:</span> <a href="_source_words_.html#wordcount" class="tsd-signature-type">wordCount</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fe1e8b5/src/source/parens.ts#L60">source/parens.ts:60</a></li>
-							</ul>
-						</aside>
-					</section>
-					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
-						<a name="parens.swap-1" class="tsd-anchor"></a>
-						<h3>swap</h3>
-						<div class="tsd-signature tsd-kind-icon">swap<span class="tsd-signature-symbol">:</span> <a href="_source_parens_.html#swap" class="tsd-signature-type">swap</a></div>
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fe1e8b5/src/source/parens.ts#L61">source/parens.ts:61</a></li>
+								<li>Defined in source/words.ts:50</li>
 							</ul>
 						</aside>
 					</section>
@@ -262,7 +242,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="_source_numbers_.html">"source/numbers"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="_source_parens_.html">"source/parens"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -277,24 +257,27 @@
 					<li class=" tsd-kind-external-module">
 						<a href="_source_whitespace_.html">"source/whitespace"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="_source_words_.html">"source/words"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_source_parens_.html#inside" class="tsd-kind-icon">inside</a>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_source_words_.html#allwords" class="tsd-kind-icon">all<wbr>Words</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_source_words_.html#wordssplitchars" class="tsd-kind-icon">words<wbr>Split<wbr>Chars</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_source_parens_.html#remove" class="tsd-kind-icon">remove</a>
+						<a href="_source_words_.html#specificwordcount" class="tsd-kind-icon">specific<wbr>Word<wbr>Count</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_source_parens_.html#swap" class="tsd-kind-icon">swap</a>
+						<a href="_source_words_.html#wordcount" class="tsd-kind-icon">word<wbr>Count</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_source_parens_.html#parens" class="tsd-kind-icon">parens</a>
+						<a href="_source_words_.html#words" class="tsd-kind-icon">words</a>
 					</li>
 				</ul>
 			</nav>
