@@ -101,7 +101,7 @@
 					<div class="tsd-signature tsd-kind-icon">all<wbr>Words<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/\w+/g</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in source/words.ts:3</li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/60f1303/src/source/words.ts#L3">source/words.ts:3</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -111,7 +111,7 @@
 					<div class="tsd-signature tsd-kind-icon">words<wbr>Split<wbr>Chars<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(\.|,|\?| |-|!)/gm</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in source/words.ts:4</li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/60f1303/src/source/words.ts#L4">source/words.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -128,13 +128,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in source/words.ts:13</li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/60f1303/src/source/words.ts#L22">source/words.ts:22</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Takes 2 strings and returns a number for the number of times the second string exists in the first string; optionally takes third boolean argument to make case sensitive</p>
 								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">import</span> {words} <span class="hljs-keyword">from</span> <span class="hljs-string">'stringman'</span>; <span class="hljs-comment">// or const words = require('stringman').words;</span>
+<span class="hljs-keyword">const</span> insensitive = words.specificWordCount(<span class="hljs-string">'Maybe-this will, trip it up! Will it? We WILL see.'</span>, <span class="hljs-string">'will'</span>);
+<span class="hljs-keyword">const</span> sensitive = words.specificWordCount(<span class="hljs-string">'Maybe-this will, trip it up! Will it? We WILL see.'</span>, <span class="hljs-string">'will'</span>, <span class="hljs-literal">true</span>);
+<span class="hljs-built_in">console</span>.log(insensitive); <span class="hljs-comment">// 3</span>
+<span class="hljs-built_in">console</span>.log(sensitive); <span class="hljs-comment">// 1</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -162,13 +168,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in source/words.ts:37</li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/60f1303/src/source/words.ts#L55">source/words.ts:55</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Takes a string and returns the number of words in the string as a number</p>
 								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">import</span> {words} <span class="hljs-keyword">from</span> <span class="hljs-string">'stringman'</span>; <span class="hljs-comment">// or const words = require('stringman').words;</span>
+<span class="hljs-keyword">const</span> count = words.wordCount(<span class="hljs-string">'This sentence has 4 words.'</span>);
+<span class="hljs-keyword">const</span> countAgain = words.wordCount(<span class="hljs-string">'This sentence has five words.'</span>);
+<span class="hljs-built_in">console</span>.log(count); <span class="hljs-comment">// 4</span>
+<span class="hljs-built_in">console</span>.log(countAgain); <span class="hljs-comment">// 5</span></code></pre>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -189,7 +201,7 @@
 					<div class="tsd-signature tsd-kind-icon">words<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in source/words.ts:48</li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/60f1303/src/source/words.ts#L66">source/words.ts:66</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -198,7 +210,7 @@
 						<div class="tsd-signature tsd-kind-icon">specific<wbr>Word<wbr>Count<span class="tsd-signature-symbol">:</span> <a href="_source_words_.html#specificwordcount" class="tsd-signature-type">specificWordCount</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in source/words.ts:49</li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/60f1303/src/source/words.ts#L67">source/words.ts:67</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -208,7 +220,7 @@
 						<div class="tsd-signature tsd-kind-icon">word<wbr>Count<span class="tsd-signature-symbol">:</span> <a href="_source_words_.html#wordcount" class="tsd-signature-type">wordCount</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in source/words.ts:50</li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/60f1303/src/source/words.ts#L68">source/words.ts:68</a></li>
 							</ul>
 						</aside>
 					</section>
