@@ -12,6 +12,7 @@ Examples of the type of functionality include (but are not limited to):
 - convert a hex color to rgb and vice versa
 - remove extra whitespace, line breaks, tabs, etc from a string
 - validate passwords with given parameters
+- return word counts for a given string
 - much more
 
 Also, typescript types are included. A full list of funtionality/features is below.
@@ -35,6 +36,7 @@ console.log(noParens); // 'this will come back'
 ## Documentation
 
 [https://jgdigitaljedi.github.io/stringman/](https://jgdigitaljedi.github.io/stringman/)
+If you have further questions, viewing the [tests in the repo](https://github.com/jgdigitaljedi/stringman/tree/master/src/__tests__) can really clear some things up as well.
 
 ## Contributing
 
@@ -122,3 +124,4 @@ NOTE: This module uses look-behinds right now so it will not work in IE, Edge, a
 
 - specificWordCount => Takes 2 strings and returns a number for the number of times the second string exists in the first string; optionally takes third boolean argument to make case sensitive
 - wordCount => Takes a string and returns the number of words in the string as a number
+- allWordCount => Takes a string, counts the number of occurences of each word in the string, and returns as an object
