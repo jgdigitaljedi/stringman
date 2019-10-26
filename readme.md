@@ -20,7 +20,7 @@ Also, typescript types are included. A full list of funtionality/features is bel
 ## Install
 
 ```
-npm i -S stringman
+npm i -s stringman
 ```
 
 ## Example usage
