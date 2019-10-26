@@ -1,4 +1,5 @@
 // import { common } from './utility/common';
+import { whitespace } from './whitespace';
 
 const allWords = /\w+/g;
 const wordsSplitChars = /(\.|,|\?| |-|!)/gm;
@@ -57,13 +58,70 @@ function wordCount(str: string): number {
   const cleaned = strSplit.filter(t => {
     return allWords.test(t);
   });
-  const counted = cleaned.filter(w => {
-    return isNaN(parseFloat(w));
-  });
-  return counted && counted.length ? counted.length : 0;
+  if (cleaned && cleaned.length) {
+    const counted = cleaned.filter(w => {
+      return isNaN(parseFloat(w));
+    });
+    return counted && counted.length ? counted.length : 0;
+  }
+  return 0;
+}
+
+/**
+ * Takes a string, counts all instances of words in the string, and returns an object with each word and the number of occurences
+ *
+ * Basic usage example:
+ * ```js
+ * import {words} from 'stringman'; // or const words = require('stringman').words;
+ * const test = `This is my stupid test.
+ *  Its a small test, but it is my test.
+ *  `;
+ * const lax = words.allWordCount(test);
+ * const strict = words.allWordCount(test, true);
+ * console.log(lax); // {"this": 1, "is": 2, "my": 2, "stupid": 1, "test": 3, "its": 1, "a": 1, "small": 1, "but": 1, "it": 1}
+ * console.log(strict); // {"This": 1, "is": 2, "my": 2, "stupid": 1, "test": 3, "Its": 1, "a": 1, "small": 1, "but": 1, "it": 1}
+ * ```
+ *
+ * @param {string} str
+ * @param {boolean} [strict]
+ * @returns {*}
+ */
+function allWordCount(str: string, strict?: boolean): any {
+  const strSplit = whitespace
+    .replaceWith(str, { tabs: true, breaks: true, multiSpace: true }, ' ')
+    .split(wordsSplitChars);
+  if (strSplit && strSplit.length) {
+    const cleaned = strSplit.filter(t => {
+      return allWords.test(t);
+    });
+    if (cleaned && cleaned.length) {
+      return cleaned.reduce((acc: any, word: string) => {
+        if (strict) {
+          if (acc[word]) {
+            acc[word] += 1;
+          } else {
+            acc[word] = 1;
+          }
+        } else {
+          const lower = word.toLowerCase();
+          if (acc[lower]) {
+            acc[lower] += 1;
+          } else {
+            acc[lower] = 1;
+          }
+        }
+        return acc;
+      }, {});
+    } else {
+      return {};
+    }
+  } else {
+    return {};
+  }
 }
 
 const words = {
+  allWordCount,
   specificWordCount,
   wordCount
 };

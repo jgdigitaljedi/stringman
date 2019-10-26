@@ -80,6 +80,7 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_words_.html#allwordcount" class="tsd-kind-icon">all<wbr>Word<wbr>Count</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_words_.html#specificwordcount" class="tsd-kind-icon">specific<wbr>Word<wbr>Count</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_words_.html#wordcount" class="tsd-kind-icon">word<wbr>Count</a></li>
 							</ul>
@@ -101,7 +102,7 @@
 					<div class="tsd-signature tsd-kind-icon">all<wbr>Words<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/\w+/g</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/220e2f6/src/source/words.ts#L3">source/words.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/63f2ee2/src/source/words.ts#L4">source/words.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -111,13 +112,53 @@
 					<div class="tsd-signature tsd-kind-icon">words<wbr>Split<wbr>Chars<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(\.|,|\?| |-|!)/gm</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/220e2f6/src/source/words.ts#L4">source/words.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/63f2ee2/src/source/words.ts#L5">source/words.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="allwordcount" class="tsd-anchor"></a>
+					<h3>all<wbr>Word<wbr>Count</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">all<wbr>Word<wbr>Count<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, strict<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/63f2ee2/src/source/words.ts#L89">source/words.ts:89</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes a string, counts all instances of words in the string, and returns an object with each word and the number of occurences</p>
+								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">import</span> {words} <span class="hljs-keyword">from</span> <span class="hljs-string">'stringman'</span>; <span class="hljs-comment">// or const words = require('stringman').words;</span>
+<span class="hljs-keyword">const</span> test = <span class="hljs-string">`This is my stupid test.
+ Its a small test, but it is my test.
+ `</span>;
+<span class="hljs-keyword">const</span> lax = words.allWordCount(test);
+<span class="hljs-keyword">const</span> strict = words.allWordCount(test, <span class="hljs-literal">true</span>);
+<span class="hljs-built_in">console</span>.log(lax); <span class="hljs-comment">// {"this": 1, "is": 2, "my": 2, "stupid": 1, "test": 3, "its": 1, "a": 1, "small": 1, "but": 1, "it": 1}</span>
+<span class="hljs-built_in">console</span>.log(strict); <span class="hljs-comment">// {"This": 1, "is": 2, "my": 2, "stupid": 1, "test": 3, "Its": 1, "a": 1, "small": 1, "but": 1, "it": 1}</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> strict: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="specificwordcount" class="tsd-anchor"></a>
 					<h3>specific<wbr>Word<wbr>Count</h3>
@@ -128,7 +169,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/220e2f6/src/source/words.ts#L22">source/words.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/63f2ee2/src/source/words.ts#L23">source/words.ts:23</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -168,7 +209,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/220e2f6/src/source/words.ts#L55">source/words.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/63f2ee2/src/source/words.ts#L56">source/words.ts:56</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -201,16 +242,26 @@
 					<div class="tsd-signature tsd-kind-icon">words<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/220e2f6/src/source/words.ts#L66">source/words.ts:66</a></li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/63f2ee2/src/source/words.ts#L123">source/words.ts:123</a></li>
 						</ul>
 					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="words.allwordcount-1" class="tsd-anchor"></a>
+						<h3>all<wbr>Word<wbr>Count</h3>
+						<div class="tsd-signature tsd-kind-icon">all<wbr>Word<wbr>Count<span class="tsd-signature-symbol">:</span> <a href="_source_words_.html#allwordcount" class="tsd-signature-type">allWordCount</a></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/63f2ee2/src/source/words.ts#L124">source/words.ts:124</a></li>
+							</ul>
+						</aside>
+					</section>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
 						<a name="words.specificwordcount-1" class="tsd-anchor"></a>
 						<h3>specific<wbr>Word<wbr>Count</h3>
 						<div class="tsd-signature tsd-kind-icon">specific<wbr>Word<wbr>Count<span class="tsd-signature-symbol">:</span> <a href="_source_words_.html#specificwordcount" class="tsd-signature-type">specificWordCount</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/220e2f6/src/source/words.ts#L67">source/words.ts:67</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/63f2ee2/src/source/words.ts#L125">source/words.ts:125</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -220,7 +271,7 @@
 						<div class="tsd-signature tsd-kind-icon">word<wbr>Count<span class="tsd-signature-symbol">:</span> <a href="_source_words_.html#wordcount" class="tsd-signature-type">wordCount</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/220e2f6/src/source/words.ts#L68">source/words.ts:68</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/63f2ee2/src/source/words.ts#L126">source/words.ts:126</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -281,6 +332,9 @@
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_source_words_.html#wordssplitchars" class="tsd-kind-icon">words<wbr>Split<wbr>Chars</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_source_words_.html#allwordcount" class="tsd-kind-icon">all<wbr>Word<wbr>Count</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_source_words_.html#specificwordcount" class="tsd-kind-icon">specific<wbr>Word<wbr>Count</a>
