@@ -81,6 +81,8 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_words_.html#allwordcount" class="tsd-kind-icon">all<wbr>Word<wbr>Count</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_words_.html#capitalize" class="tsd-kind-icon">capitalize</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_words_.html#replaceword" class="tsd-kind-icon">replace<wbr>Word</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_words_.html#specificwordcount" class="tsd-kind-icon">specific<wbr>Word<wbr>Count</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_source_words_.html#wordcount" class="tsd-kind-icon">word<wbr>Count</a></li>
 							</ul>
@@ -102,7 +104,7 @@
 					<div class="tsd-signature tsd-kind-icon">all<wbr>Words<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/\w+/g</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6303d8b/src/source/words.ts#L4">source/words.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fafab7b/src/source/words.ts#L4">source/words.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -112,7 +114,7 @@
 					<div class="tsd-signature tsd-kind-icon">words<wbr>Split<wbr>Chars<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/(\.|,|\?| |-|!)/gm</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6303d8b/src/source/words.ts#L5">source/words.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fafab7b/src/source/words.ts#L5">source/words.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -129,7 +131,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6303d8b/src/source/words.ts#L89">source/words.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fafab7b/src/source/words.ts#L89">source/words.ts:89</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -160,6 +162,93 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="capitalize" class="tsd-anchor"></a>
+					<h3>capitalize</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">capitalize<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fafab7b/src/source/words.ts#L138">source/words.ts:138</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes a string and returns with the first character capitalized</p>
+								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">import</span> {words} <span class="hljs-keyword">from</span> <span class="hljs-string">'stringman'</span>; <span class="hljs-comment">// or const words = require('stringman').words;</span>
+<span class="hljs-keyword">const</span> cap = words.capitalize(<span class="hljs-string">'test'</span>);
+<span class="hljs-keyword">const</span> failure = words.capitalize(<span class="hljs-literal">true</span>);
+<span class="hljs-built_in">console</span>.log(test); <span class="hljs-comment">// 'Test'</span>
+<span class="hljs-built_in">console</span>.log(failure); <span class="hljs-comment">// null</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">null</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="replaceword" class="tsd-anchor"></a>
+					<h3>replace<wbr>Word</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">replace<wbr>Word<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, word<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, replaceWith<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cases<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fafab7b/src/source/words.ts#L167">source/words.ts:167</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Takes a string, the string to replace, the string to replace the other string with, and the optional boolean argument for case sensitivity and returns the
+									original string with the 2nd argument replaced with the 3rd. Can return null if a failure happens along the way.</p>
+								</div>
+								<p>Basic usage example:</p>
+								<pre><code class="language-js"><span class="hljs-keyword">import</span> {words} <span class="hljs-keyword">from</span> <span class="hljs-string">'stringman'</span>; <span class="hljs-comment">// or const words = require('stringman').words;</span>
+<span class="hljs-keyword">const</span> test = <span class="hljs-string">'We hope this works because we put some serious work into this and we are invested.'</span>;
+<span class="hljs-keyword">const</span> sens = words.replaceWord(test, <span class="hljs-string">'we'</span>, <span class="hljs-string">'they'</span>, <span class="hljs-literal">true</span>);
+<span class="hljs-keyword">const</span> ins =  words.replaceWord(test, <span class="hljs-string">'we'</span>, <span class="hljs-string">'they'</span>);
+<span class="hljs-keyword">const</span> failure =  words.replaceWord(test, <span class="hljs-number">5</span>, <span class="hljs-string">'they'</span>);
+<span class="hljs-built_in">console</span>.log(sens); <span class="hljs-comment">// 'They hope this works because they put some serious work into this and they are invested.'</span>
+<span class="hljs-built_in">console</span>.log(ins); <span class="hljs-comment">// 'they hope this works because they put some serious work into this and they are invested.'</span>
+<span class="hljs-built_in">console</span>.log(failure); <span class="hljs-comment">// null</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>word: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>replaceWith: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> cases: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">null</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 					<a name="specificwordcount" class="tsd-anchor"></a>
 					<h3>specific<wbr>Word<wbr>Count</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
@@ -169,7 +258,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6303d8b/src/source/words.ts#L23">source/words.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fafab7b/src/source/words.ts#L23">source/words.ts:23</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -209,7 +298,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6303d8b/src/source/words.ts#L56">source/words.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fafab7b/src/source/words.ts#L56">source/words.ts:56</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -242,7 +331,7 @@
 					<div class="tsd-signature tsd-kind-icon">words<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6303d8b/src/source/words.ts#L123">source/words.ts:123</a></li>
+							<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fafab7b/src/source/words.ts#L189">source/words.ts:189</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
@@ -251,7 +340,27 @@
 						<div class="tsd-signature tsd-kind-icon">all<wbr>Word<wbr>Count<span class="tsd-signature-symbol">:</span> <a href="_source_words_.html#allwordcount" class="tsd-signature-type">allWordCount</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6303d8b/src/source/words.ts#L124">source/words.ts:124</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fafab7b/src/source/words.ts#L190">source/words.ts:190</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="words.capitalize-1" class="tsd-anchor"></a>
+						<h3>capitalize</h3>
+						<div class="tsd-signature tsd-kind-icon">capitalize<span class="tsd-signature-symbol">:</span> <a href="_source_words_.html#capitalize" class="tsd-signature-type">capitalize</a></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fafab7b/src/source/words.ts#L191">source/words.ts:191</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-not-exported">
+						<a name="words.replaceword-1" class="tsd-anchor"></a>
+						<h3>replace<wbr>Word</h3>
+						<div class="tsd-signature tsd-kind-icon">replace<wbr>Word<span class="tsd-signature-symbol">:</span> <a href="_source_words_.html#replaceword" class="tsd-signature-type">replaceWord</a></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fafab7b/src/source/words.ts#L192">source/words.ts:192</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -261,7 +370,7 @@
 						<div class="tsd-signature tsd-kind-icon">specific<wbr>Word<wbr>Count<span class="tsd-signature-symbol">:</span> <a href="_source_words_.html#specificwordcount" class="tsd-signature-type">specificWordCount</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6303d8b/src/source/words.ts#L125">source/words.ts:125</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fafab7b/src/source/words.ts#L193">source/words.ts:193</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -271,7 +380,7 @@
 						<div class="tsd-signature tsd-kind-icon">word<wbr>Count<span class="tsd-signature-symbol">:</span> <a href="_source_words_.html#wordcount" class="tsd-signature-type">wordCount</a></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/6303d8b/src/source/words.ts#L126">source/words.ts:126</a></li>
+								<li>Defined in <a href="https://github.com/jgdigitaljedi/stringman/blob/fafab7b/src/source/words.ts#L194">source/words.ts:194</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -335,6 +444,12 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_source_words_.html#allwordcount" class="tsd-kind-icon">all<wbr>Word<wbr>Count</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_source_words_.html#capitalize" class="tsd-kind-icon">capitalize</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_source_words_.html#replaceword" class="tsd-kind-icon">replace<wbr>Word</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_source_words_.html#specificwordcount" class="tsd-kind-icon">specific<wbr>Word<wbr>Count</a>

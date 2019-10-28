@@ -35,4 +35,31 @@ describe('test various methods of "words"', () => {
     expect(strict.some).toBe(4);
     expect(strict.WORDS).toBe(1);
   });
+
+  it('capitalize => Takes a string and returns the string with the first character capitalized', () => {
+    expect(words.capitalize('test')).toBe('Test');
+    expect(words.capitalize('teSt')).toBe('TeSt');
+    expect(words.capitalize('TeSt')).toBe('TeSt');
+    /* tslint:disable */
+    // @ts-ignore
+    expect(words.capitalize(true)).toBe(null);
+    // @ts-ignore
+    expect(words.capitalize(5)).toBe(null);
+    /* tslint:enable */
+  });
+
+  it('replaceWord => Takes 3 to 4 arguments (original string, string to be replaced, string to replace with, and optional boolean for case sensitivity) and returns original string with replacements made', () => {
+    const test =
+      'We hope this works because we put some serious work into this and we are invested.';
+    expect(words.replaceWord(test, 'we', 'they', true)).toBe(
+      'They hope this works because they put some serious work into this and they are invested.'
+    );
+    expect(words.replaceWord(test, 'we', 'they')).toBe(
+      'they hope this works because they put some serious work into this and they are invested.'
+    );
+    /* tslint:disable */
+    // @ts-ignore
+    expect(words.replaceWord(test, 5, 'they')).toBe(null);
+    /* tslint:enable */
+  });
 });

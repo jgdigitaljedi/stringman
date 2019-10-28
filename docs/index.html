@@ -106,103 +106,105 @@
 				</a>
 				<p>Stringman is written in modules with a variety of functionality and that can be imported individually. See the documentation in the link above for more details and usage examples.</p>
 				<a href="#colors-module" id="colors-module" style="color: inherit; text-decoration: none;">
-					<h4>colors module</h4>
+					<h3>colors module</h3>
 				</a>
 				<ul>
-					<li>rgbToHex =&gt; Takes rgb color values and returns hexidecimal equivalent</li>
-					<li>isHex =&gt; Takes a string and returns boolean indicating whether it is a valid hexidecimal color</li>
-					<li>hexToRgb =&gt; Takes a hexidecimal color string and returns the rgb value</li>
-					<li>luminance =&gt; Takes a hex color value and a percentage and returns a hex color string that is the result of lightening or darkening the original color by the percentage. Does not work on black or white (yet)!</li>
-					<li>hexToHsl =&gt; Takes a string representing a hex color code and returns the hsl equivalent in an object with keys for h, s, and l</li>
-					<li>rgbToHsl =&gt; Takes each of the 3 rgb number values as individual arguments and returns the hsl equivalent in an object with keys for h, s, and l</li>
+					<li><b>hexToHsl</b> =&gt; Takes a string representing a hex color code and returns the hsl equivalent in an object with keys for h, s, and l</li>
+					<li><b>hexToRgb</b> =&gt; Takes a hexidecimal color string and returns the rgb value</li>
+					<li><b>isHex</b> =&gt; Takes a string and returns boolean indicating whether it is a valid hexidecimal color</li>
+					<li><b>luminance</b> =&gt; Takes a hex color value and a percentage and returns a hex color string that is the result of lightening or darkening the original color by the percentage. Does not work on black or white (yet)!</li>
+					<li><b>rgbToHex</b> =&gt; Takes rgb color values and returns hexidecimal equivalent</li>
+					<li><b>rgbToHsl</b> =&gt; Takes each of the 3 rgb number values as individual arguments and returns the hsl equivalent in an object with keys for h, s, and l</li>
 				</ul>
 				<a href="#email-module" id="email-module" style="color: inherit; text-decoration: none;">
-					<h4>email module</h4>
+					<h3>email module</h3>
 				</a>
 				<ul>
-					<li>retrieve =&gt; Takes a string and returns a valid email address if one is present in the string</li>
-					<li>isValid =&gt; Takes a string and returns boolean to represent whether or not string is a valid email address</li>
-					<li>remove =&gt; Takes a string and returns the string with any email addresses removed</li>
-					<li>swap =&gt; Takes 2 strings (a string with an email address and another string) and returns the first string with the email address swapped for the second string</li>
+					<li><b>isValid</b> =&gt; Takes a string and returns boolean to represent whether or not string is a valid email address</li>
+					<li><b>remove</b> =&gt; Takes a string and returns the string with any email addresses removed</li>
+					<li><b>retrieve</b> =&gt; Takes a string and returns a valid email address if one is present in the string</li>
+					<li><b>swap</b> =&gt; Takes 2 strings (a string with an email address and another string) and returns the first string with the email address swapped for the second string</li>
 				</ul>
 				<a href="#ip-module" id="ip-module" style="color: inherit; text-decoration: none;">
-					<h4>ip module</h4>
+					<h3>ip module</h3>
 				</a>
 				<ul>
-					<li>isValid =&gt; Takes a string and returns boolean to represent whether or not string is a valid IP address</li>
-					<li>retrieve =&gt; Takes a string and returns a valid IP address if one is present in the string</li>
-					<li>remove =&gt; Takes a string and returns the string with any ip addresses removed</li>
-					<li>swap =&gt; Takes 2 strings (a string with an IP address and another string) and returns the first string with the IP address swapped for the second string</li>
-					<li>expression =&gt; optionally takes boolean to add global flag and returns regular expression used for matching an IP address</li>
+					<li><b>expression</b> =&gt; optionally takes boolean to add global flag and returns regular expression used for matching an IP address</li>
+					<li><b>isValid</b> =&gt; Takes a string and returns boolean to represent whether or not string is a valid IP address</li>
+					<li><b>remove</b> =&gt; Takes a string and returns the string with any ip addresses removed</li>
+					<li><b>retrieve</b> =&gt; Takes a string and returns a valid IP address if one is present in the string</li>
+					<li><b>swap</b> =&gt; Takes 2 strings (a string with an IP address and another string) and returns the first string with the IP address swapped for the second string</li>
 				</ul>
 				<a href="#numbers-module" id="numbers-module" style="color: inherit; text-decoration: none;">
-					<h4>numbers module</h4>
+					<h3>numbers module</h3>
 				</a>
 				<ul>
-					<li>containsNum =&gt; returns boolean indicating whether argument contains a number</li>
-					<li>whole =&gt; Takes a string or a number and returns boolean for whether it is a valid whole number (integer)</li>
-					<li>decimal =&gt; Takes a string or a number and returns a boolean for whether it is a valid decimal (float)</li>
-					<li>fraction =&gt; Takes a string and returns a boolean for whether it is a valid fraction.</li>
-					<li>containsDecimal =&gt; Takes a string and returns boolean indicating whether string contains a decimal (float) somwhere in it</li>
-					<li>containsFraction =&gt; Takes a string and returns a boolean indicating whether the string contains a fraction</li>
-					<li>convertToHex =&gt; Takes a number as a string or number form and returns the hexidecimal equivalent</li>
-					<li>isPhoneNumber =&gt; Takes a string or number and validates whether it is a valid phone number format.</li>
+					<li><b>containsDecimal</b> =&gt; Takes a string and returns boolean indicating whether string contains a decimal (float) somwhere in it</li>
+					<li><b>containsFraction</b> =&gt; Takes a string and returns a boolean indicating whether the string contains a fraction</li>
+					<li><b>containsNum</b> =&gt; returns boolean indicating whether argument contains a number</li>
+					<li><b>convertToHex</b> =&gt; Takes a number as a string or number form and returns the hexidecimal equivalent</li>
+					<li><b>decimal</b> =&gt; Takes a string or a number and returns a boolean for whether it is a valid decimal (float)</li>
+					<li><b>fraction</b> =&gt; Takes a string and returns a boolean for whether it is a valid fraction.</li>
+					<li><b>isPhoneNumber</b> =&gt; Takes a string or number and validates whether it is a valid phone number format.</li>
+					<li><b>whole</b> =&gt; Takes a string or a number and returns boolean for whether it is a valid whole number (integer)</li>
 				</ul>
 				<a href="#parens-module" id="parens-module" style="color: inherit; text-decoration: none;">
-					<h4>parens module</h4>
+					<h3>parens module</h3>
 				</a>
 				<ul>
-					<li>remove =&gt; Takes string and returns string with parenthesis and contain between parenthesis removed</li>
-					<li>inside =&gt; Takes string and returns array of strings containing what was inside any number of sets of parenthesis</li>
-					<li>swap =&gt; Takes 2 strings, swaps anything in parenthesis INCLUDING THE PARENTHESIS from the first string with the second string</li>
+					<li><b>inside</b> =&gt; Takes string and returns array of strings containing what was inside any number of sets of parenthesis</li>
+					<li><b>remove</b> =&gt; Takes string and returns string with parenthesis and contain between parenthesis removed</li>
+					<li><b>swap</b> =&gt; Takes 2 strings, swaps anything in parenthesis INCLUDING THE PARENTHESIS from the first string with the second string</li>
 				</ul>
 				<a href="#password-module" id="password-module" style="color: inherit; text-decoration: none;">
-					<h4>password module</h4>
+					<h3>password module</h3>
 				</a>
 				<ul>
-					<li>buildRegex =&gt; Takes min, max, and string of special characters and returns a RegExp for validating passwords</li>
-					<li>isValid =&gt; Takes parameters for building a regular expression then validates the string sent and returns a boolean value</li>
-					<li>isValidAdvanced =&gt; Validates using regex like isValid but also checks for specific number of different types of characters (slightly slower than &#39;isValid&#39;)</li>
+					<li><b>buildRegex</b> =&gt; Takes min, max, and string of special characters and returns a RegExp for validating passwords</li>
+					<li><b>isValid</b> =&gt; Takes parameters for building a regular expression then validates the string sent and returns a boolean value</li>
+					<li><b>isValidAdvanced</b> =&gt; Validates using regex like isValid but also checks for specific number of different types of characters (slightly slower than &#39;isValid&#39;)</li>
 				</ul>
 				<a href="#semver-module" id="semver-module" style="color: inherit; text-decoration: none;">
-					<h4>semver module</h4>
+					<h3>semver module</h3>
 				</a>
 				<p>NOTE: This module uses look-behinds right now so it will not work in IE, Edge, and older versions of other browsers. I plan on revisiting this module to see if the same functionality can be achieved without this restriction.</p>
 				<ul>
-					<li>retrieve =&gt; returns semantic version from string if present</li>
-					<li>isValid =&gt; Tests if argument is valid semantic version</li>
-					<li>remove =&gt; Removes semantic version from string, trims, and returns result</li>
-					<li>expression =&gt; Returns RegExp variable used to test for semantic version</li>
-					<li>swap =&gt; takes 2 strings and returns string with any semantic versions in the first string replaced by the second string</li>
+					<li><b>expression</b> =&gt; Returns RegExp variable used to test for semantic version</li>
+					<li><b>isValid</b> =&gt; Tests if argument is valid semantic version</li>
+					<li><b>remove</b> =&gt; Removes semantic version from string, trims, and returns result</li>
+					<li><b>retrieve</b> =&gt; returns semantic version from string if present</li>
+					<li><b>swap</b> =&gt; takes 2 strings and returns string with any semantic versions in the first string replaced by the second string</li>
 				</ul>
 				<a href="#url-module" id="url-module" style="color: inherit; text-decoration: none;">
-					<h4>url module</h4>
+					<h3>url module</h3>
 				</a>
 				<ul>
-					<li>retrieve =&gt; Takes string and returns any matches for a valid URL from the string</li>
-					<li>isValid =&gt; Takes a string and returns whether string is a valid URL as a boolean</li>
-					<li>remove =&gt; Takes string, removes any URLs, trims, and returns string</li>
-					<li>getDomain =&gt; Takes url string, tries to return just the domain</li>
-					<li>expression =&gt; Returns RegExp for testing URLs</li>
-					<li>swap =&gt; takes a string with a url and a second string, swaps any urls in the first string with the second string, and returns the result</li>
+					<li><b>expression</b> =&gt; Returns RegExp for testing URLs</li>
+					<li><b>getDomain</b> =&gt; Takes url string, tries to return just the domain</li>
+					<li><b>isValid</b> =&gt; Takes a string and returns whether string is a valid URL as a boolean</li>
+					<li><b>remove</b> =&gt; Takes string, removes any URLs, trims, and returns string</li>
+					<li><b>retrieve</b> =&gt; Takes string and returns any matches for a valid URL from the string</li>
+					<li><b>swap</b> =&gt; takes a string with a url and a second string, swaps any urls in the first string with the second string, and returns the result</li>
 				</ul>
 				<a href="#whitespace-module" id="whitespace-module" style="color: inherit; text-decoration: none;">
-					<h4>whitespace module</h4>
+					<h3>whitespace module</h3>
 				</a>
 				<ul>
-					<li>removeBreaks =&gt; Takes a string and returns that string with all carriage returns and line breaks removed</li>
-					<li>removeTabs =&gt; Takes a string and returns that string with alltabs removed</li>
-					<li>removeAll =&gt; Takes a string and returns that string with all whitespace removed</li>
-					<li>singleSpace =&gt; Takes a string, replaces all instances or 2 or more consecutive spaces with a single space, and returns string</li>
-					<li>replaceWith =&gt; Takes a string, an enumerable object with boolean values to detrermine what will be replaced, another string to replace things, and an optional 4th argument for whether it should be returned with multiple consecutive spaces changed to single spaces with and returns the result of replacing the values designated in the 2nd argument with the contents of the 3 argument</li>
+					<li><b>removeAll</b> =&gt; Takes a string and returns that string with all whitespace removed</li>
+					<li><b>removeBreaks</b> =&gt; Takes a string and returns that string with all carriage returns and line breaks removed</li>
+					<li><b>removeTabs</b> =&gt; Takes a string and returns that string with alltabs removed</li>
+					<li><b>replaceWith</b> =&gt; Takes a string, an enumerable object with boolean values to detrermine what will be replaced, another string to replace things, and an optional 4th argument for whether it should be returned with multiple consecutive spaces changed to single spaces with and returns the result of replacing the values designated in the 2nd argument with the contents of the 3 argument</li>
+					<li><b>singleSpace</b> =&gt; Takes a string, replaces all instances or 2 or more consecutive spaces with a single space, and returns string</li>
 				</ul>
 				<a href="#words-module" id="words-module" style="color: inherit; text-decoration: none;">
-					<h4>words module</h4>
+					<h3>words module</h3>
 				</a>
 				<ul>
-					<li>specificWordCount =&gt; Takes 2 strings and returns a number for the number of times the second string exists in the first string; optionally takes third boolean argument to make case sensitive</li>
-					<li>wordCount =&gt; Takes a string and returns the number of words in the string as a number</li>
-					<li>allWordCount =&gt; Takes a string, counts the number of occurences of each word in the string, and returns as an object</li>
+					<li><b>allWordCount</b> =&gt; Takes a string, counts the number of occurences of each word in the string, and returns as an object</li>
+					<li><b>capitalize</b> =&gt; Takes a string and returns the string with the first character capitalized</li>
+					<li><b>replaceWord</b> =&gt; Takes 3 to 4 arguments (original string, string to be replaced, string to replace with, and optional boolean for case sensitivity) and returns original string with replacements made</li>
+					<li><b>specificWordCount</b> =&gt; Takes 2 strings and returns a number for the number of times the second string exists in the first string; optionally takes third boolean argument to make case sensitive</li>
+					<li><b>wordCount</b> =&gt; Takes a string and returns the number of words in the string as a number</li>
 				</ul>
 			</div>
 		</div>

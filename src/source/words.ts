@@ -120,8 +120,76 @@ function allWordCount(str: string, strict?: boolean): any {
   }
 }
 
+/**
+ * Takes a string and returns with the first character capitalized
+ *
+ * Basic usage example:
+ * ```js
+ * import {words} from 'stringman'; // or const words = require('stringman').words;
+ * const cap = words.capitalize('test');
+ * const failure = words.capitalize(true);
+ * console.log(test); // 'Test'
+ * console.log(failure); // null
+ * ```
+ *
+ * @param {string} str
+ * @returns {(string | null)}
+ */
+function capitalize(str: string): string | null {
+  if (typeof str !== 'string') {
+    return null;
+  }
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+/**
+ * Takes a string, the string to replace, the string to replace the other string with, and the optional boolean argument for case sensitivity and returns the
+ * original string with the 2nd argument replaced with the 3rd. Can return null if a failure happens along the way.
+ *
+ * Basic usage example:
+ * ```js
+ * import {words} from 'stringman'; // or const words = require('stringman').words;
+ * const test = 'We hope this works because we put some serious work into this and we are invested.';
+ * const sens = words.replaceWord(test, 'we', 'they', true);
+ * const ins =  words.replaceWord(test, 'we', 'they');
+ * const failure =  words.replaceWord(test, 5, 'they');
+ * console.log(sens); // 'They hope this works because they put some serious work into this and they are invested.'
+ * console.log(ins); // 'they hope this works because they put some serious work into this and they are invested.'
+ * console.log(failure); // null
+ * ```
+ *
+ * @param {string} str
+ * @param {string} word
+ * @param {string} replaceWith
+ * @param {boolean} [cases]
+ * @returns {(string | null)}
+ */
+function replaceWord(
+  str: string,
+  word: string,
+  replaceWith: string,
+  cases?: boolean
+): string | null {
+  if (typeof str !== 'string' || typeof word !== 'string' || typeof replaceWith !== 'string') {
+    return null;
+  }
+  if (cases) {
+    const regExp = new RegExp(word, 'gm');
+    const capWord = capitalize(word);
+    const capRw = capitalize(replaceWith);
+    const capExp = capWord ? new RegExp(capWord, 'gm') : null;
+    const lc = str.replace(regExp, replaceWith);
+    return capExp && capRw ? lc.replace(capExp, capRw) : null;
+  } else {
+    const insExp = new RegExp(word, 'gim');
+    return str.replace(insExp, replaceWith);
+  }
+}
+
 const words = {
   allWordCount,
+  capitalize,
+  replaceWord,
   specificWordCount,
   wordCount
 };
