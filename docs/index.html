@@ -80,11 +80,21 @@
 					<li>return word counts for a given string</li>
 					<li>much more</li>
 				</ul>
-				<p>Also, typescript types are included. A full list of funtionality/features is below.</p>
+				<p>Also, typescript types are generated. A full list of funtionality/features is below.</p>
 				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
 					<h2>Install</h2>
 				</a>
-				<pre><code>npm <span class="hljs-selector-tag">i</span> -s stringman</code></pre>
+				<pre><code>npm <span class="hljs-selector-tag">i</span> -s stringman</code></pre><p>modern JavaScript/TypeScript import (importing &#39;words&#39; module and using &#39;capitalize&#39; method for example):</p>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> {words} <span class="hljs-keyword">from</span> <span class="hljs-string">'stringman'</span>;
+<span class="hljs-keyword">const</span> cap = words.capitalize(<span class="hljs-string">'test'</span>); <span class="hljs-comment">// 'Test'</span></code></pre>
+				<p>older JavaScript/Node import (importing &#39;words&#39; module and using &#39;capitalize&#39; method for example):</p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> words = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>).words;
+<span class="hljs-keyword">const</span> cap = words.capitalize(<span class="hljs-string">'test'</span>); <span class="hljs-comment">// 'Test'</span>
+<span class="hljs-comment">// or</span>
+<span class="hljs-keyword">const</span> stringman = <span class="hljs-built_in">require</span>(<span class="hljs-string">'stringman'</span>);
+<span class="hljs-keyword">const</span> cap = stringman.words.capitalize(<span class="hljs-string">'test'</span>); <span class="hljs-comment">// 'Test'</span></code></pre>
+				<p>minified JavaScript example:</p>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> {stringman} <span class="hljs-keyword">from</span> <span class="hljs-string">'node_modules/stringman/lib/minified'</span>;</code></pre>
 				<a href="#example-usage" id="example-usage" style="color: inherit; text-decoration: none;">
 					<h2>Example usage</h2>
 				</a>

@@ -9,7 +9,7 @@
     "test": "jest --config jestconfig.json",
     "_clear": "rimraf lib/*",
     "_tsc": "tsc",
-    "build": "run-s _clear _tsc docs",
+    "build": "run-s _clear _tsc docs uglify",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
@@ -18,7 +18,8 @@
     "watch": "tsc --watch",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "docs": "rimraf ./docs && typedoc --exclude \"**/**/*+(index|test|spec|common).ts\" --name Stringman --out docs/ src/ && touch ./docs/.nojekyll"
+    "docs": "rimraf ./docs && typedoc --exclude \"**/**/*+(index|test|spec|common).ts\" --name Stringman --out docs/ src/ && touch ./docs/.nojekyll",
+    "uglify": "minify lib -d lib/minified"
   },
   "keywords": [
     "javascript",
@@ -44,6 +45,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^24.0.18",
+    "babel-minify": "^0.5.1",
+    "babel-preset-minify": "^0.5.1",
     "jest": "^24.9.0",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.0",

@@ -15,12 +15,31 @@ Examples of the type of functionality include (but are not limited to):
 - return word counts for a given string
 - much more
 
-Also, typescript types are included. A full list of funtionality/features is below.
+Also, typescript types are generated. A full list of funtionality/features is below.
 
 ## Install
 
 ```
 npm i -s stringman
+```
+modern JavaScript/TypeScript import (importing 'words' module and using 'capitalize' method for example):
+```js
+import {words} from 'stringman';
+const cap = words.capitalize('test'); // 'Test'
+```
+
+older JavaScript/Node import (importing 'words' module and using 'capitalize' method for example):
+```js
+const words = require('stringman').words;
+const cap = words.capitalize('test'); // 'Test'
+// or
+const stringman = require('stringman');
+const cap = stringman.words.capitalize('test'); // 'Test'
+```
+
+minified JavaScript example:
+```js
+import {stringman} from 'node_modules/stringman/lib/minified';
 ```
 
 ## Example usage
