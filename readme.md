@@ -40,6 +40,7 @@ const cap = stringman.words.capitalize('test'); // 'Test'
 minified JavaScript example:
 ```js
 import {stringman} from 'node_modules/stringman/lib/minified';
+const cap = stringman.words.capitalize('test'); // 'Test'
 ```
 
 ## Example usage
