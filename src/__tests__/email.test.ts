@@ -12,10 +12,14 @@ describe('tests the various methods for "email"', () => {
   test('isValid => determines if string is valid email address', () => {
     expect(email.isValid('joey@joeyg.me')).toBe(true);
     expect(email.isValid('joey-joeyg.me')).toBe(false);
+    expect(email.isValid('joey@joeyg')).toBe(false);
   });
 
   test('remove => remove email address, if any, from string', () => {
     expect(email.remove('my email address is joey@joeyg.me')).toBe('my email address is');
+    expect(
+      email.remove('my email address is joey@joeyg.me but make it difficult @ with stuff.com')
+    ).toBe('my email address is  but make it difficult @ with stuff.com');
   });
 
   test('swap => swaps email address, if any, in string', () => {

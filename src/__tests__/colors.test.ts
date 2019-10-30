@@ -1,10 +1,14 @@
-// const colors = require('../../lib').colors;
 import { colors } from '../../lib';
 
 describe('tests the various methods for "colors"', () => {
   test('isHex => verifies that string passed is hexidecimal color', () => {
     expect(colors.isHex('#ff00ff')).toBe(true);
+    expect(colors.isHex('#fff')).toBe(true);
     expect(colors.isHex('nope')).toBe(false);
+    /* tslint:disable */
+    // @ts-ignore
+    expect(colors.isHex(5)).toBe(false);
+    /* tslint:enable */
   });
 
   test('rgbToHex => converts rgb color to hex', () => {
@@ -14,7 +18,9 @@ describe('tests the various methods for "colors"', () => {
   });
 
   test('hexToRgb => converts hex color to rgb', () => {
-    expect(colors.hexToRgb('#00ff00')).toContain(255);
+    expect(colors.hexToRgb('#00ff00')).toContain(255); // [0, 255, 0]
+    expect(colors.hexToRgb('00ff00')).toContain(255); // [0, 255, 0]
+    expect(colors.hexToRgb('#fff')).toContain(255); // [255, 255, 255]
     expect(colors.hexToRgb('nope')).toBe(null);
   });
 
@@ -33,8 +39,13 @@ describe('tests the various methods for "colors"', () => {
 
   test('rgbToHsl => converts rgb to hsl', () => {
     const hsl = colors.rgbToHsl(99, 198, 255);
+    /* tslint:disable */
+    // @ts-ignore
     expect(hsl.h).toBe(201.9); // {h: 201.9, s: 100, l: 69.4}
+    // @ts-ignore
     expect(hsl.s).toBe(100);
+    // @ts-ignore
     expect(hsl.l).toBe(69.4);
+    /* tslint:enable */
   });
 });

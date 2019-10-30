@@ -7,6 +7,12 @@ describe('test various methods for "ip"', () => {
     expect(ip.isValid('255.255.255.256')).toBe(false);
     expect(ip.isValid('192.168.0.1.1')).toBe(false);
     expect(ip.isValid('192.168.0')).toBe(false);
+    /* tslint:disable */
+    // @ts-ignore
+    expect(ip.isValid(true)).toBe(false);
+    // @ts-ignore
+    expect(ip.isValid(15.15)).toBe(false);
+    /* tslint:enable */
   });
 
   test('retrieve => gets ip address from string', () => {
