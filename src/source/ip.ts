@@ -56,7 +56,7 @@ function retrieve(str: string): string[] {
  * @returns {RegExp}
  */
 function expression(global?: boolean): RegExp {
-  if (expression) {
+  if (global) {
     return new RegExp(ipAddrOnly, 'g');
   }
   return ipAddrOnly;
