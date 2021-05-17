@@ -1,6 +1,6 @@
 import { words } from '../../lib';
 
-describe('test various methods of "words"', () => {
+describe('"words" module"', () => {
   it('wordCount => give us a word count', () => {
     expect(words.wordCount('This sentence has 4 words.')).toBe(4);
     expect(words.wordCount('This sentence has five words.')).toBe(5);
@@ -61,5 +61,14 @@ describe('test various methods of "words"', () => {
     // @ts-ignore
     expect(words.replaceWord(test, 5, 'they')).toBe(null);
     /* tslint:enable */
+  });
+
+  it('readingTime => Takes wordCount, imageCount, valueOnly, and wordsPerMinute and returns expected reading time', () => {
+    const wordCount = 1200;
+    const imageCount = 5;
+    expect(words.readingTime(wordCount, imageCount)).toEqual('5 min read');
+    expect(words.readingTime(wordCount, imageCount, true)).toEqual(5);
+    expect(words.readingTime(wordCount, imageCount, false, 400)).toEqual('4 min read');
+    expect(words.readingTime(wordCount, imageCount, true, 400)).toEqual(4);
   });
 });

@@ -186,12 +186,43 @@ function replaceWord(
   }
 }
 
+/**
+ * Takes word count, image count, boolean for valueOnly which will return only the minutes if set to 'true', 
+ * and optionally a words per minute value (defaults to 270) and returns estimated reading time
+ * 
+ *  * Basic usage example:
+ * ```js
+ * import {words} from 'stringman'; // or const words = require('stringman').words;
+ * const wordCount = 1200;
+ * const imageCount = 5;
+ * const readTime =  words.readingTime(wordCount, imageCount);
+ * const readTimeValueOnly =  words.readingTime(wordCount, imageCount, true);
+ * const readTimeSpeedReader =  words.readingTime(wordCount, imageCount, false, 400);
+ * console.log(readTime); // '5 min read'
+ * console.log(readTimeValueOnly); // 5
+ * console.log(readTimeSpeedReader); // 4
+ * ```
+ *
+ * @param {number} wordCount
+ * @param {number} imageCount
+ * @param {boolean} [valueOnly=false]
+ * @param {number} [wordsPerMinute=270]
+ * @return {string | number} 
+ */
+function readingTime(wCount: number, imageCount: number, valueOnly = false, wordsPerMinute = 270): string | number {
+  if (valueOnly) {
+    return Math.round(wCount / wordsPerMinute) + (imageCount * .2);
+  }
+  return `${Math.round(wCount / wordsPerMinute) + (imageCount * .2)} min read`;
+}
+
 const words = {
   allWordCount,
   capitalize,
   replaceWord,
   specificWordCount,
-  wordCount
+  wordCount,
+  readingTime
 };
 
 export { words };

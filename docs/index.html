@@ -7,6 +7,7 @@
 	<meta name="description" content="Documentation for Stringman">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -40,8 +41,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -51,11 +50,6 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<ul class="tsd-breadcrumb">
-				<li>
-					<a href="globals.html">Globals</a>
-				</li>
-			</ul>
 			<h1>Stringman</h1>
 		</div>
 	</div>
@@ -84,14 +78,16 @@
 				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
 					<h2>Install</h2>
 				</a>
-				<pre><code>npm i -s <span class="hljs-built_in">string</span>man</code></pre>
+				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">i</span><span style="color: #000000"> -</span><span style="color: #001080">s</span><span style="color: #000000"> </span><span style="color: #001080">stringman</span>
+</code></pre>
 				<a href="#example-usage" id="example-usage" style="color: inherit; text-decoration: none;">
 					<h2>Example usage</h2>
 				</a>
 				<p>The documentation has examples for every single method, but here is a simple example to get an idea of how to use Stringman:</p>
-				<pre><code class="language-js"><span class="hljs-keyword">import</span> { parens } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;stringman&#x27;</span>; <span class="hljs-comment">// const parens = require(&#x27;stringman&#x27;).parens;</span>
-<span class="hljs-keyword">const</span> noParens = parens.remove(<span class="hljs-string">&#x27;this will come back (and this will be removed)&#x27;</span>);
-<span class="hljs-built_in">console</span>.log(noParens); <span class="hljs-comment">// &#x27;this will come back&#x27;</span></code></pre>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">parens</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;stringman&#039;</span><span style="color: #000000">; </span><span style="color: #008000">// const parens = require(&#039;stringman&#039;).parens;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">noParens</span><span style="color: #000000"> = </span><span style="color: #001080">parens</span><span style="color: #000000">.</span><span style="color: #795E26">remove</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;this will come back (and this will be removed)&#039;</span><span style="color: #000000">);</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">noParens</span><span style="color: #000000">); </span><span style="color: #008000">// &#039;this will come back&#039;</span>
+</code></pre>
 				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
 					<h2>Documentation</h2>
 				</a>
@@ -211,47 +207,47 @@
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_models_colors_model_.html">&quot;models/colors.model&quot;</a>
+						<a href="modules/models_colors_model.html">models/colors.model</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_models_password_model_.html">&quot;models/password.model&quot;</a>
+						<a href="modules/models_password_model.html">models/password.model</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_models_whitespace_model_.html">&quot;models/whitespace.model&quot;</a>
+						<a href="modules/models_whitespace_model.html">models/whitespace.model</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_source_colors_.html">&quot;source/colors&quot;</a>
+						<a href="modules/source_colors.html">source/colors</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_source_email_.html">&quot;source/email&quot;</a>
+						<a href="modules/source_email.html">source/email</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_source_ip_.html">&quot;source/ip&quot;</a>
+						<a href="modules/source_ip.html">source/ip</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_source_numbers_.html">&quot;source/numbers&quot;</a>
+						<a href="modules/source_numbers.html">source/numbers</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_source_parens_.html">&quot;source/parens&quot;</a>
+						<a href="modules/source_parens.html">source/parens</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_source_password_.html">&quot;source/password&quot;</a>
+						<a href="modules/source_password.html">source/password</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_source_semver_.html">&quot;source/semver&quot;</a>
+						<a href="modules/source_semver.html">source/semver</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_source_url_.html">&quot;source/url&quot;</a>
+						<a href="modules/source_url.html">source/url</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_source_whitespace_.html">&quot;source/whitespace&quot;</a>
+						<a href="modules/source_whitespace.html">source/whitespace</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_source_words_.html">&quot;source/words&quot;</a>
+						<a href="modules/source_words.html">source/words</a>
 					</li>
 				</ul>
 			</nav>
@@ -267,9 +263,7 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
