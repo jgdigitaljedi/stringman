@@ -32,7 +32,7 @@ function remove(str: string): string {
  */
 function inside(str: string): string[] {
   const matched = str.match(/\(([^()]+)\)/g);
-  return matched ? matched.map(m => m.replace('(', '').replace(')', '')) : [];
+  return matched ? matched.map((m) => m.replace('(', '').replace(')', '')) : [];
 }
 
 /**

@@ -16,9 +16,9 @@ import { common } from './utility/common';
  */
 function buildRegex(options: IPwOptions): RegExp {
   return new RegExp(
-    `^[${options.lc ? 'a-z' : ''}${options.capital ? 'A-Z' : ''}${
-      options.num ? '0-9' : ''
-    }${options.special || ''}]{${options.min},${options.max}}$`
+    `^[${options.lc ? 'a-z' : ''}${options.capital ? 'A-Z' : ''}${options.num ? '0-9' : ''}${
+      options.special || ''
+    }]{${options.min},${options.max}}$`
   );
 }
 
@@ -81,7 +81,7 @@ function isValidAdvanced(str: string, options: IPwOptions, advOptions: IPwOption
             return matched && matched.length >= advOptions[key];
             /* tslint:enable */
           })
-          .filter(c => !c).length < 1
+          .filter((c) => !c).length < 1
       );
     } else {
       return true;

@@ -22,10 +22,10 @@ const wordsSplitChars = /(\.|,|\?| |-|!)/gm;
  */
 function specificWordCount(str: string, word: string, strict?: boolean): number {
   const strSplit = str.split(wordsSplitChars);
-  const cleaned = strSplit.filter(t => {
+  const cleaned = strSplit.filter((t) => {
     return allWords.test(t);
   });
-  const counted = cleaned.filter(w => {
+  const counted = cleaned.filter((w) => {
     const num = !isNaN(parseFloat(w));
     if (num) {
       return false;
@@ -55,11 +55,11 @@ function specificWordCount(str: string, word: string, strict?: boolean): number 
  */
 function wordCount(str: string): number {
   const strSplit = str.split(wordsSplitChars);
-  const cleaned = strSplit.filter(t => {
+  const cleaned = strSplit.filter((t) => {
     return allWords.test(t);
   });
   if (cleaned && cleaned.length) {
-    const counted = cleaned.filter(w => {
+    const counted = cleaned.filter((w) => {
       return isNaN(parseFloat(w));
     });
     return counted && counted.length ? counted.length : 0;
@@ -91,7 +91,7 @@ function allWordCount(str: string, strict?: boolean): any {
     .replaceWith(str, { tabs: true, breaks: true, multiSpace: true }, ' ')
     .split(wordsSplitChars);
   if (strSplit && strSplit.length) {
-    const cleaned = strSplit.filter(t => {
+    const cleaned = strSplit.filter((t) => {
       return allWords.test(t);
     });
     if (cleaned && cleaned.length) {
@@ -187,9 +187,9 @@ function replaceWord(
 }
 
 /**
- * Takes word count, image count, boolean for valueOnly which will return only the minutes if set to 'true', 
+ * Takes word count, image count, boolean for valueOnly which will return only the minutes if set to 'true',
  * and optionally a words per minute value (defaults to 270) and returns estimated reading time
- * 
+ *
  *  * Basic usage example:
  * ```js
  * import {words} from 'stringman'; // or const words = require('stringman').words;
@@ -207,13 +207,18 @@ function replaceWord(
  * @param {number} imageCount
  * @param {boolean} [valueOnly=false]
  * @param {number} [wordsPerMinute=270]
- * @return {string | number} 
+ * @return {string | number}
  */
-function readingTime(wCount: number, imageCount: number, valueOnly = false, wordsPerMinute = 270): string | number {
+function readingTime(
+  wCount: number,
+  imageCount: number,
+  valueOnly = false,
+  wordsPerMinute = 270
+): string | number {
   if (valueOnly) {
-    return Math.round(wCount / wordsPerMinute) + (imageCount * .2);
+    return Math.round(wCount / wordsPerMinute) + imageCount * 0.2;
   }
-  return `${Math.round(wCount / wordsPerMinute) + (imageCount * .2)} min read`;
+  return `${Math.round(wCount / wordsPerMinute) + imageCount * 0.2} min read`;
 }
 
 const words = {
