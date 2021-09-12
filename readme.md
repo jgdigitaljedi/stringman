@@ -1,5 +1,11 @@
 # Stringman
 
+**DEPRECATION WARNING**
+
+This project is being deprecated. I have rebuilt this project as [stringman-utils](https://www.npmjs.com/package/stringman-utils) to offer better modularity and many more features/functionality as well as a better all around dev setup and unit test coverage. Please migrate soon as I will be removing this repo in the near future. You can view the documentation for the new project [here](https://jgdigitaljedi.gitlab.io/stringman-utils/) and view the source code on [Gitlab](https://gitlab.com/jgdigitaljedi/stringman-utils).
+
+---
+
 Stringman (short for "string manipulator") aims to make some of the common types of string manipulation easier. Most of the functionality contained within Stringman isn't particularly difficult to write, but the value it provides lies within the fact that Stringman has an ever-growing collection of functionality that will save you time and headaches. A lot of the typical regular expression scenarios that JavaScript developers encounter are covered here.
 
 Stringman is in the early stages right now and I am adding functionality fairly regularly while making so I don't make breaking changes to existing methods.
